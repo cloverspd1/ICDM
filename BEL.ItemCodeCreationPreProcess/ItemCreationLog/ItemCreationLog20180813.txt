@@ -1,0 +1,590 @@
+2018-08-13 11:59:36,061 [5] INFO  - WCF - Application_Start_Done, 
+2018-08-13 11:59:36,168 [5] INFO  - WCF - Begin Request http://localhost:62403/powerbireport/bireport, 
+2018-08-13 11:59:50,326 [4] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFE7KdbuHaAq3rLDn_B0XIsZ_AwfrIBVtCnqGnQ1h3qSyYcxXaWFjRqWNl6FQaUjgLGsaiYw6Nl8EmDEe8FGc1G3bs9EkGAGMn_xCi2Vo_rvTqLvDUmv6GC9FNCsB0RI4A9hM87bf6hsNJx5urY9CbOZoqamW80wbI28YIm5P0fPLY9UkHPyg8MFp7moQjpx68lVb7mHBRKnxQuaKkSO6EyAupQJw7G9J2LBPFlYtGunqGJcli4BDL4GIyTuRhFKw3zHxqlUhJcg5a1HcFvCzMsGNkpA3vtcUU8pk--1dKjIEy1cOBzRl-kzYdQpCncrgkg6UTDZVovpnXWc1C8nA0EtroRNbGPd5-XRwMkco_8D9ORut9UbNS7pp4k4mtc6wIEXcG97ix7AFc_8Whwb5erCNtXiArMHUJYzObfgID_pnR-4aAsI6ACeqjAuU-JBOYxyGLOn3BOhsxPnMg8WOgY2Fh54TbGVwKqBjNapziYfTUWj74zp3hG-ImQhgecxTYbnqNtHSeTlEdWsXaejlks3M8NXMog3TxOc2OpVNVYORW5B3vzaN_HsSgyhh9NVZoQ1PG6Ih2KNKZiBCE5hwkAJ5Llg0EhIY8kaO3CRNM0IIVg7ayTZoQuJDHZueUNPJXOIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-13 12:00:23,199 [10] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 12:00:23,236 [6] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 12:00:37,641 [7] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/BIReport, 
+2018-08-13 12:00:38,214 [4] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFEvXhB33lpcljOYfFDIKuF_CwrgsSlcjMz5k_SUhX0i_sotUmjVx3kgwLHqRrOO6dfwGAuXNbsnjgO_GyZ1-QCmXv0wJPD__kdPXpvPma1Mr6n-T9av9X5ZvfjNfURIzY3Vc6Esk2zuET661xLMRPx5PNJmHAOUWmVTkdMgMXeLLndcyCT0WGD8pHHI-n3KW8gTlkiaRHaaYwSaDMjQpJZiQjYGOCAFb3Px3g44L7_LBDCaY_iGJQ8TML8OLVqfjzwcAZO_QNzYu4c79YBPpNhNsys2An5NusdqtJeJ1zfZoGsOcaKwIcfWCrb-Ol7EPPSdh8zXoeVd_r_QnzsUf68O4hnn0a04ELoWrbalLaBvM4Q7-tMfIfpk9zIQNDnr20RloiGmEg89zZoeMdUjJykdtT8UpOLcB53LoDH3FRwTY8BIIXvuCxfOXK8-XkomUHiFz2_YjPM1JxXQUh1quokOcthp-SOQFztW5Q7LUswUnrq-Z-TrT4MM4hdkfTH045HtQAHcIPxGYNK6Sh6W9oI7iejL6tLdED2pu8lhUGEKBGMZWgUQuIvmtjriFZSPVSoCW5cZj9sTDmP7NEacljEvGsjy5DLxXyCWE_3qc3esUhQTluGJgmx42hB2DFqMI4cIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-13 12:03:34,888 [7] INFO  - WCF - Application_Start_Done, 
+2018-08-13 12:03:34,904 [7] INFO  - WCF - Begin Request http://localhost:62403/powerbireport/bireport, 
+2018-08-13 12:03:38,040 [8] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFE1wKiesxNeXgrAp3lCJIikwEMpeXcB8UJmXiIOTDKs_RIsqxtXH5WCgG84TYtHD25GN0TC_kdrDiFiN8_jHBBllUWdlBzg5rRGeytrrFpcBu0rNv_8DYhaNdFbu2zrh9ybb54-e0iLNlwRT9RvSyrRc3NzMfNlih-OtmgnTdy8fPul43vxNn0dpxHOhXzva_oBDoNnSFWw1wwNJppjcW6gUbpHpKdnZYL3Qr4HJ7xHvm3e5X9K2YvxEumLfWwgyw9Fe7ICI0bGtJBCQ9kKEloHvFOj-S3Y5wJ5mYkSoVIzgtyfJd_9rd-86X6nM4KbpLGCjLPybSEb1JVRl73EGfYwAeBlgtKjwjgvyUV1sOpbpce1Al7umCEg4jGSj_NletH08t4rSbG4jemU1wcFSmQoUBLICAmlWeryXcfpf0KF42EEy1SBDfnLBuNld-6gPF1N_O3CNre5L8WRXbzdUEKyqSyWUOoLlS-OlvEk9RbWAQrw9mJO7hoygPYrGM0bCfEE3xg7Muvy7Ddemfjzdb_6rVj8qMfhR7yYakdz3pxL_OMZUF0TGnJICday-_6aosf2lloEgt7g4wqyGjWJk2BcFZeNM17JYBx6PGoEmOjG1KkMIDVcM5WrZ0uXlHv5n7KIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-13 12:05:24,278 [13] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 12:05:37,640 [7] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 12:10:31,203 [18] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 12:10:31,217 [14] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 16:49:07,608 [5] INFO  - WCF - Application_Start_Done, 
+2018-08-13 16:49:07,885 [5] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 16:49:07,978 [5] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/BIReport, 
+2018-08-13 16:49:11,494 [5] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 16:50:58,624 [6] INFO  - WCF - Application_Start_Done, 
+2018-08-13 16:50:58,888 [7] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/BIReport, 
+2018-08-13 16:51:12,755 [9] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/BIReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFE5vXtixQi98DGvboosxkxZ716eFDCOpLEH0t_nOYxBhEZJiNyD4_cXqXw__JSOa13D_v7JYb2ZnnH7MGMIRbaidSG-5SlF29mi4-XFSjTmK31J8b0dc_cdmSt9OhHa3fntBtO7nKOhC0u4_ICix9383qC9zbufmc8Pq1JIMP-RrsSztn_JpEW1q8CIxJaVElf0vk1wcTjeReH_QvQNFWoedqxX2715baF6bDfNG0jxbPguALXvm73oeQ-nx-zVKf2xRhvbQ1wa2KvAJd-OwGhTDrEsE7jN5gVF_5PRIbBkYlkFI9nVm2iVZ9TUqx4bNE68GiMpBjMyd4icRR3jQu2VTU61v-mhRxQqyjxbXTZRD9ootid49OkT98rnFieO6nx0zP6cb3Df7QhLkInee2qJURKMja9lTiybRcKfUtI0LeD9UC7IizYrKhzOMZf9EjC7ZANY4tDw05G1cDIw0kVdLqVH95wf-Ey71I0FqvxUDxr9CCdRwRpKFDXWh7kywMwIjxlgh8JQ7YWNisKyzTLOPD60wnTlimyEkKxq6szNHw2KFPWD4VJMix3QNuXK06kxFD3wypHhdtf8n5-pnLVRgOhJeTYANC77NhF-CgmIWtUP8A09XWrfbQAOtKmYGoWIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-13 16:54:29,578 [6] INFO  - WCF - Application_Start_Done, 
+2018-08-13 16:54:29,578 [8] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/BIReport, 
+2018-08-13 16:54:32,998 [6] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFEqNlFzB7APqOPcMLoB2AkppDWHeOeeZUKvflV7hOULNsdUOKp4Yl_IQtNUItyKgB0cGLke8oBIHN9-2KkVfkvJAor2_F3ZjjvVAc1LdKrWi0aQWslS_VMbtNrtEUVxsooeJx8OGYMkt5sGEAcnI0xx0mWz8UNKOzUBvN0raBH-lbA4OEr9V5yuJ4JonmVKUWGndL5EOQWS4y7yzRsRjgGQmWmZ16i2kW2CtmFl21DZgociTTrffCFSr4E4cW9hv0QvHSu2V1nPyyZM_3xhfg2VFVCyaTivOCZKRNBU2rqO4ZYrhzOgfsdKxowmxUV-y1YhjyCNfcqfKbP1nplAGQaxhxOXAMNsah2Ocg6cZ15JfdpPXCbtzALaGEngzAYdEorWqRAwWySnyfoS7Qkk4f8ivgKn8cai1S7Xea9V8eg4u6Iwq0KpelQR7s9Wmx2yEZuNa2H2RDCq7UlxVnL3ZUyDFC9OqQZ21kO6jJEwe_4jQMO5z-EY1CTW3z1IJpjZIc27bFASIm-fa9XcvvF8KiFnLB1YRD_P8xLXRT5IXKd5vgshCsacleplHEDJOkBYoIl46WvLzjI3-EeK2JsyPpNgo1XgS9nFRTW_vgzSXEKFU0MNt9zKzorGv23oI9DHnvuIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-13 16:55:54,233 [7] INFO  - WCF - Application_Start_Done, 
+2018-08-13 16:55:54,242 [8] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/BIReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFEUy_9-_rPzrWaZRw_wZrfZMdSpIKgydzGq9QzPWq4YnHji24AxfGvjBIIZrTNAH9siWMbkUobM7WO3NA2Lat7zKUo917h2VH5TBxuu5YhAkxGI_Asgnc-WrspI0zb9PkeewXw_RMJejeYAXcop34rPC9PGzWwFFCx3jp8zZCaiDFraYkKwVA_m3LJcY3DyZ0I3G6WVEYdmqq8Mkaoz_0vr0vGSsFHxqQCY8bRq55tWaA0nuWClByO4tOkFELfHVzs3GDuycUGWrEE4uIaZlhZZxxFJ6JEQN2R2qes7MfoERGecgqRZbp-uyO79Nt5wM87T5rF_ECtXFW1O6DEkp95SXRvQDLFUadtTl-zx9UWL5VSU_vIQGsQ23yiQCGTV7QDshio7Jnn70AGVY988gcK7Lea-KwTGggU1aa9wHhiAzOsPftPK-yXToMAvR8KhQZYNO49FRJFmdChNJeBZXkjBccJSkvAxZybkcNuiZAZt9jmd_7x3DyQUUStHCnz-41K7BlVPRO1XGbEci6b4BueMghKwFKswu7IMTTrexb9VZ9cSc_5fJsHZofed9-genIJFBkJqxP9w5l_z3x3MPOu3D4Urwn5QEV-2bKa9NsTJ8iIA0fWUKUK02my-byIaqnmIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-13 16:55:58,338 [6] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFEqrnCsdZ7fdIA14RL5fpHrM7AxHIUzR0oUrhY9n3lvtuXm8aktDjDpNhuRzPK0YjFcpYEV7xZVSlVqiryEyT91kq_TCMFzTZUe-m9En5bZVXWN8FlhUUJMwbCAq4HqujKYrNPCWYhw02y3UaBoUFIXioOrSqfhc3dkSTKwj1eCIfuluMwa3DE7sVOj9kQunrU9zYpf_sdRZr10Hf2eCDwlfFC8JY9J3ZTniqwVneSIFEWMpaFPlqEmPmu2xnDmsdbYdUXN_ayIB3hPrkF33_7U9ozOEpUnpg6MY0C6SRYRnVl_lkVAR2e4HrTx-jbJgwBBn6RnamX4bwUvcwjwAjjCAGe21-Yggus8DTqkwOGO81IAS0XZybxIGw3-TO6nNqrH1EgTk8TASwcp_xverhAYFgdD8wuBHb08crm8Lj9AiBt6b4idEcjXvNrPp70goU-vZnq1biEiSF77abQhxD2bHi15q_lh_mIjqkxNajyisa9EGbQSZp-R36Wb706c5xDIMjw6RqvAZP1-Pv0VxCOngBzK7EFGNTSxGLoiNqknGy-tBjAunsqQCSr6r-qK8DW86tpntPzfwmJCm6cjraExEdz9D93qbXIW15d7rF_bMvpORc0GbHuaB7_VUCWHbFiIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-13 16:57:54,674 [8] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/BIReport, 
+2018-08-13 16:57:54,681 [9] INFO  - WCF - Application_Start_Done, 
+2018-08-13 16:57:56,058 [7] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFEN6_GAbqF0UrGl1HIezOEtV5QLLEBsqp7fDI9kxe0zebHHwcJkP_fO88YLVFDhDWvno5EIQwXm4YcZLkzp1QCrVNylX4mnew3roAcf26l8309RsrkWgwjgwraUGZWWl9ugvta2s17DnzOmeW5A9aoOkI5B0FgkDXDwDXW3npIOx9wKcooPa9ww_aBKptkaOohURJog6hWlKNJUv8b_x8OmMdy5123kJDSjFRSihihawnMNfIafN431w8hH_Nq_SL0h_0cVg5k9mwpOtp_eu_ZyYcU4GpUJdccoQQf5NYnCUPKbbjUY9PE726pUoaZSEFp6vnl7t0nJB1VH1Lnvbox4BanmjR5b93MEodl0RWpHwp_8m4dsRN3gAypQidnHvh1rZVdUeUZ7eRVO1ifeR-2l3ZOI97wOpwUrplKO4-PW-HN5725BFrqK78KKjJlU5EbvVHlD1NrIKwe-wRWSizjZ7rsMyvbSzOaxLd2Muzgb8U70bUrL5XNfXyPbBVZnss9FNnI6Iky1hh6ulxequK8j6ByNcUIyO36O2mazmwVjcbVE6CgMVdtfqYuoyu3GKqBv2quSnMxvYPkX4PIZp081Fxs22JgcEhwL886SQBdYyoGElMiagfOjuwWqKV7HSJhIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-13 16:59:15,263 [15] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 16:59:15,404 [15] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 16:59:28,783 [13] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/bireport, 
+2018-08-13 17:03:26,105 [9] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:03:26,120 [12] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:04:16,195 [9] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:04:16,213 [17] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:08:26,137 [9] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:08:26,137 [19] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:09:17,232 [9] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:09:17,232 [19] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:13:26,213 [19] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:13:26,213 [22] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:14:18,212 [22] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:14:18,227 [18] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:18:27,196 [27] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:18:27,211 [29] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:19:19,199 [32] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:19:19,213 [25] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:23:28,195 [35] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:23:28,217 [34] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:24:20,200 [37] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:24:20,212 [36] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:28:29,200 [40] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:28:29,215 [38] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:29:21,196 [38] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:29:21,214 [40] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:33:30,201 [45] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:33:30,211 [40] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:34:22,217 [46] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:34:22,217 [44] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:39:23,196 [47] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:39:23,196 [49] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:44:24,199 [55] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:44:24,216 [51] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 17:47:41,883 [55] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/bireport, 
+2018-08-13 17:49:25,197 [54] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 17:49:25,237 [59] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 19:13:25,026 [5] INFO  - WCF - Application_Start_Done, 
+2018-08-13 19:13:25,261 [5] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-08-13 19:13:52,252 [10] INFO  - MVC - sp user == , 
+2018-08-13 19:13:57,239 [5] INFO  - MVC -  ViewBag.UserID =, String="9"
+2018-08-13 19:13:57,239 [7] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-08-13 19:13:58,182 [5] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-08-13 19:13:58,182 [8] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-13 19:13:58,237 [7] INFO  - WCF - Called Helper GetFormData, 
+2018-08-13 19:13:58,182 [10] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-08-13 19:14:00,351 [5] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-13 19:14:00,351 [7] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-08-13 19:14:13,618 [8] INFO  - WCF - called Helper.GetFormData, 
+2018-08-13 19:14:14,284 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:14:14,291 [5] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:14:14,317 [5] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:14:14,328 [5] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-13 19:14:14,338 [5] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:14:14,343 [5] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:14:14,349 [5] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-13 19:14:14,291 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-13 19:14:14,306 [8] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-13 19:14:14,358 [7] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-08-13 19:14:14,362 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-13 19:14:14,367 [7] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-13 19:14:14,372 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-13 19:14:14,353 [5] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-08-13 19:14:14,386 [5] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-08-13 19:14:14,391 [5] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:14:14,394 [5] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-13 19:14:14,401 [5] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-13 19:14:14,377 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:14:14,381 [8] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-13 19:14:14,405 [5] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-13 19:14:16,562 [5] INFO  - WCF - Helper.GetAllButtons, 
+2018-08-13 19:14:16,562 [7] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-08-13 19:14:18,403 [5] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 
+2018-08-13 19:14:37,177 [6] ERROR - Id: f6cd6c15-a9e6-4af6-9ae7-ac6af06bb9da
+2018-08-13 19:14:37,182 [6] ERROR - StatusCode: 200
+2018-08-13 19:14:37,186 [6] ERROR - Controller: 
+2018-08-13 19:14:37,190 [6] ERROR - Action: 
+2018-08-13 19:14:37,195 [6] ERROR - d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Views\Shared\_ApplicationStatus.cshtml(35): error CS0201: Only assignment, call, increment, decrement, await, and new object expressions can be used as a statement
+System.Web.HttpCompileException (0x80004005): d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Views\Shared\_ApplicationStatus.cshtml(35): error CS0201: Only assignment, call, increment, decrement, await, and new object expressions can be used as a statement
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   at ASP._Page_Views_ItemCodeCreation_Index_cshtml.Execute() in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Views\ItemCodeCreation\Index.cshtml:line 116
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.RunPage()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-13 19:14:37,415 [6] ERROR - d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Views\Shared\_ApplicationStatus.cshtml(35): error CS0201: Only assignment, call, increment, decrement, await, and new object expressions can be used as a statement
+System.Web.HttpCompileException (0x80004005): d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Views\Shared\_ApplicationStatus.cshtml(35): error CS0201: Only assignment, call, increment, decrement, await, and new object expressions can be used as a statement
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   at ASP._Page_Views_ItemCodeCreation_Index_cshtml.Execute() in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Views\ItemCodeCreation\Index.cshtml:line 116
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.RunPage()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-13 19:14:37,571 [7] INFO  - WCF - Begin Request http://localhost:62403/Master/Error?msg=d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Views\Shared\_ApplicationStatus.cshtml(35): error CS0201: Only assignment, call, increment, decrement, await, and new object expressions can be used as a statement&errorId=f6cd6c15-a9e6-4af6-9ae7-ac6af06bb9da, 
+2018-08-13 19:15:15,588 [16] INFO  - WCF - Application_Start_Done, 
+2018-08-13 19:15:15,588 [7] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 19:15:15,604 [6] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-08-13 19:15:24,415 [7] INFO  - MVC - sp user == , 
+2018-08-13 19:15:19,043 [16] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 19:15:26,379 [6] INFO  - MVC -  ViewBag.UserID =, String="9"
+2018-08-13 19:15:26,379 [7] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-08-13 19:15:26,867 [6] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-13 19:15:26,867 [16] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-08-13 19:15:26,867 [7] INFO  - WCF - Called Helper GetFormData, 
+2018-08-13 19:15:26,895 [6] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-08-13 19:15:28,449 [7] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-08-13 19:15:28,449 [6] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-13 19:17:15,441 [5] ERROR - Id: 11e5fe88-db62-4c54-9d03-d08365b87864
+2018-08-13 19:17:15,506 [5] ERROR - StatusCode: 200
+2018-08-13 19:17:15,522 [5] ERROR - Controller: 
+2018-08-13 19:17:15,538 [5] ERROR - Action: 
+2018-08-13 19:17:15,548 [5] ERROR - The request channel timed out while waiting for a reply after 00:00:30. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+Microsoft.SharePoint.Client.ServerException: The request channel timed out while waiting for a reply after 00:00:30. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at BEL.DataAccessLayer.AppApprovalMatrixHelper.GetAllGlobalAppApproverMatrix() in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\AppApprovalMatrixHelper.cs:line 951
+   at BEL.DataAccessLayer.AppApprovalMatrixHelper.GetGlobalAppApproverMatrix(String applicationName, String formName, String role) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\AppApprovalMatrixHelper.cs:line 216
+   at BEL.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form, String role, Dictionary`2 activeAndHiddenSections, Dictionary`2 otherParamDictionary) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2966
+   at BEL.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2715
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer.GetItemCodeCreationDetails(Dictionary`2 objDict) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 90
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationBaseController.GetItemCodeCreationDetails(Dictionary`2 objDict) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationBaseController.cs:line 25
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 42
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-13 19:17:15,625 [5] ERROR - The request channel timed out while waiting for a reply after 00:00:30. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+Microsoft.SharePoint.Client.ServerException: The request channel timed out while waiting for a reply after 00:00:30. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at BEL.DataAccessLayer.AppApprovalMatrixHelper.GetAllGlobalAppApproverMatrix() in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\AppApprovalMatrixHelper.cs:line 951
+   at BEL.DataAccessLayer.AppApprovalMatrixHelper.GetGlobalAppApproverMatrix(String applicationName, String formName, String role) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\AppApprovalMatrixHelper.cs:line 216
+   at BEL.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form, String role, Dictionary`2 activeAndHiddenSections, Dictionary`2 otherParamDictionary) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2966
+   at BEL.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2715
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer.GetItemCodeCreationDetails(Dictionary`2 objDict) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 90
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationBaseController.GetItemCodeCreationDetails(Dictionary`2 objDict) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationBaseController.cs:line 25
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 42
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-13 19:17:15,737 [5] INFO  - WCF - Begin Request http://localhost:62403/Master/Error?msg=The request channel timed out while waiting for a reply after 00:00:30. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.&errorId=11e5fe88-db62-4c54-9d03-d08365b87864, 
+2018-08-13 19:17:24,819 [6] INFO  - MVC - sp user == , 
+2018-08-13 19:17:24,819 [22] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-08-13 19:17:30,793 [23] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-08-13 19:17:30,793 [22] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-08-13 19:17:30,838 [7] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-13 19:17:30,839 [23] INFO  - MVC -  ViewBag.UserID =, String="9"
+2018-08-13 19:17:30,793 [6] INFO  - WCF - Called Helper GetFormData, 
+2018-08-13 19:17:30,838 [22] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-08-13 19:17:32,078 [6] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-13 19:17:32,079 [7] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-08-13 19:17:45,618 [6] INFO  - WCF - called Helper.GetFormData, 
+2018-08-13 19:17:46,020 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-13 19:17:46,061 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:17:46,073 [7] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-13 19:17:46,020 [23] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-13 19:17:46,095 [23] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:17:46,021 [22] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-13 19:17:46,135 [24] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:17:46,115 [13] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-08-13 19:17:46,115 [20] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:17:46,169 [8] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-13 19:17:46,205 [8] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-08-13 19:17:46,169 [11] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-08-13 19:17:46,115 [25] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-13 19:17:46,220 [7] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-13 19:17:46,244 [20] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:17:46,168 [21] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:17:46,243 [13] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:17:46,021 [6] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-13 19:17:46,249 [22] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-13 19:17:46,243 [19] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-13 19:17:46,246 [24] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-13 19:17:48,214 [23] INFO  - WCF - Helper.GetAllButtons, 
+2018-08-13 19:17:48,214 [24] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-08-13 19:17:54,867 [6] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 
+2018-08-13 19:20:05,545 [27] INFO  - WCF - Called Helper GetFormData, 
+2018-08-13 19:20:05,546 [22] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-13 19:20:05,545 [7] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-08-13 19:20:05,545 [24] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-08-13 19:20:05,753 [7] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-08-13 19:20:05,744 [22] INFO  - MVC -  ViewBag.UserID =, String="9"
+2018-08-13 19:20:05,735 [27] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-08-13 19:20:07,263 [24] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-08-13 19:20:07,276 [6] INFO  - WCF - called Helper.GetFormData, 
+2018-08-13 19:20:07,292 [7] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 
+2018-08-13 19:20:16,260 [22] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 19:20:16,275 [7] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 19:20:33,520 [7] INFO  - WCF - Begin Ajax Request http://localhost:62403/ItemCodeCreation/SaveLUMMarketingInchrageSection?Length=16Form Data: ["ListDetails[0].ItemId","ListDetails[0].ListName","SectionName","ActionStatus","Status","WorkflowStatus","__RequestVerificationToken","RequestDate","ProposedBy","ProposedByName","LUMMarketingDelegateUser","LUMMarketingDelegate","LUMMarketingDelegateName","CurrentApprover.Comments","CurrentApprover.Approver","CurrentApprover.Role","CurrentApprover.AssignDate","ApproversList[0].Role","ApproversList[0].Division","ApproversList[0].Approver","ApproversList[0].ApproverName","ApproversList[1].Role","ApproversList[1].Division","ApproversList[1].Approver","ApproversList[1].ApproverName","ApproversList[2].Role","ApproversList[2].Division","ApproversList[2].Approver","ApproversList[2].ApproverName","ApproversList[3].Role","ApproversList[3].Division","ApproversList[3].Approver","ApproversList[3].ApproverName","ApproversList[4].Role","ApproversList[4].Division","ApproversList[4].Approver","ApproversList[4].ApproverName","ApproversList[5].Role","ApproversList[5].Division","ApproversList[5].Approver","ApproversList[5].ApproverName","ApproversList[6].Role","ApproversList[6].Division","ApproversList[6].Approver","ApproversList[6].ApproverName","ItemDescription","ProductGroup","ConfirmedOrderFromCustomer","TypeOfPackaging","ReferenceProduct","ExpectedAnnualBusinessVolume","ItemToBePhasedOut","ItemPhasedOutWithEffectFrom","ButtonCaption","X-Requested-With"], 
+2018-08-13 19:20:33,521 [6] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/GetToken?_=1534168208291, 
+2018-08-13 19:20:33,903 [27] INFO  - WCF - Item Code No is ICCP-2018-Aug-00039, 
+2018-08-13 19:20:33,903 [18] INFO  - WCF - Item Code No Current Value + 1 = 39, 
+2018-08-13 19:20:33,934 [6] INFO  - WCF - helper.SaveData, Dictionary`2={"UserID":"9","ActionPer":" Delegate|Delegate","ActivityLog":"ItemCodeActivityLog","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","IsNewItem":"True"}
+2018-08-13 19:20:34,070 [6] INFO  - WCF - Saving Actual Section Properties, 
+2018-08-13 19:20:34,213 [7] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="9"
+2018-08-13 19:20:34,233 [16] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="21"
+2018-08-13 19:20:37,683 [40] INFO  - WCF - Set Viewer  Approver ID='' and RequestId='143', 
+2018-08-13 19:20:37,688 [27] INFO  - WCF - Set Viewer  Approver ID='' and RequestId='143', 
+2018-08-13 19:20:37,697 [27] INFO  - WCF - Set Viewer  Approver ID='' and RequestId='143', 
+2018-08-13 19:20:37,702 [27] INFO  - WCF - Set Viewer  Approver ID='' and RequestId='143', 
+2018-08-13 19:20:37,706 [27] INFO  - WCF - Set Viewer  Approver ID='19' and RequestId='143', 
+2018-08-13 19:20:37,688 [10] INFO  - WCF - Set Viewer  Approver ID='9,21' and RequestId='143', 
+2018-08-13 19:20:37,690 [40] INFO  - WCF - Set Viewer  Approver ID='9' and RequestId='143', 
+2018-08-13 19:20:37,760 [10] INFO  - WCF - Set Viewer  Approver ID='20' and RequestId='143', 
+2018-08-13 19:20:37,770 [10] INFO  - WCF - Set Viewer  Approver ID='21' and RequestId='143', 
+2018-08-13 19:20:37,781 [29] INFO  - WCF - Set Viewer  Approver ID='9' and RequestId='143', 
+2018-08-13 19:20:37,781 [36] INFO  - WCF - Saving Local Approver Matrix 'ItemCodeApprovalMatrix'List=null, 
+2018-08-13 19:20:37,783 [38] INFO  - WCF - Helper.GenerateReferenceNo, String="Item Code Preprocess Form-2018-143"
+2018-08-13 19:20:37,762 [16] INFO  - WCF - Set Viewer  Approver ID='9' and RequestId='143', 
+2018-08-13 19:20:39,022 [39] INFO  - WCF - Set Viewer  Approver ID='' and RequestId='143', 
+2018-08-13 19:20:37,786 [33] INFO  - WCF - Actual Section Properties Saved, Int32=143
+2018-08-13 19:20:37,781 [34] INFO  - WCF - Reference Number Generated 'Item Code Preprocess Form-2018-143', 
+2018-08-13 19:20:37,787 [15] INFO  - WCF - Started form level assignment, 
+2018-08-13 19:20:39,022 [35] INFO  - WCF - context.ExecuteQuery() Save Main List Item., 
+2018-08-13 19:20:39,074 [31] INFO  - WCF - Set Viewer  Approver ID='9' and RequestId='143', 
+2018-08-13 19:20:37,765 [7] INFO  - WCF - Set Viewer  Approver ID='19' and RequestId='143', 
+2018-08-13 19:20:41,566 [18] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="9"
+2018-08-13 19:20:37,763 [27] INFO  - WCF - Set Viewer  Approver ID='' and RequestId='143', 
+2018-08-13 19:20:39,074 [6] INFO  - WCF - Set Viewer  Approver ID='' and RequestId='143', 
+2018-08-13 19:20:42,549 [18] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="20"
+2018-08-13 19:20:42,550 [27] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="19"
+2018-08-13 19:20:42,559 [33] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="21"
+2018-08-13 19:20:42,559 [15] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="9"
+2018-08-13 19:20:42,550 [16] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="21"
+2018-08-13 19:20:43,458 [41] INFO  - WCF - called approversDataFromList.UpdateStatusofApprovalMatrix => currlevel=0, previousLevel=-1, param={"UserID":"9","ActionPer":" Delegate|Delegate","ActivityLog":"ItemCodeActivityLog","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","IsNewItem":"True"}, actionperformed=Delegate, list=[{"ID":0,"Title":"LUM Marketing Incharge Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"LUM Marketing Incharge Section","HiddenSection":"","Levels":"0","Role":"Creator","Days":3.0,"IsAutoApproval":false,"FillByRole":"","Division":"","SubDivision":null,"Approver":"9","ApproverName":null,"Status":"Approved","Comments":"asdsad","AssignDate":null,"DueDate":null,"ApprovalDate":"2018-08-13T19:20:42.5781842+05:30","IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":"9","IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"LUM Marketing Delegate Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"LUM Marketing Delegate Section","HiddenSection":"","Levels":"1","Role":"LUM Marketing Delegate","Days":1.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"21","ApproverName":null,"Status":"Pending","Comments":null,"AssignDate":"2018-08-13T19:20:42.5781842+05:30","DueDate":"2018-08-14T19:20:42.5781842+05:30","ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"SCM LUM Design Incharge Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"SCM LUM Design Incharge Section","HiddenSection":"","Levels":"2","Role":"SCM LUM Design Incharge","Days":3.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"19","ApproverName":"DCR DCN Management Sytem User 2","Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"SCM LUM Design Delegate Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"SCM LUM Design Delegate Section","HiddenSection":"","Levels":"2","Role":"SCM LUM Design Delegate","Days":3.0,"IsAutoApproval":false,"FillByRole":"SCM LUM Design Incharge","Division":"","SubDivision":null,"Approver":"","ApproverName":null,"Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"SMS Incharge Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"SMS Incharge Section","HiddenSection":"","Levels":"3","Role":"SMS Incharge","Days":3.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"9","ApproverName":"SharePoint Notifications","Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"SMS Delegate Incharge","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"SMS Delegate Section","HiddenSection":"","Levels":"3","Role":"SMS Delegate","Days":3.0,"IsAutoApproval":false,"FillByRole":"SMS Incharge","Division":"","SubDivision":null,"Approver":"","ApproverName":null,"Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"QA Incharge Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"QA Incharge Section","HiddenSection":"","Levels":"4","Role":"QA Incharge","Days":3.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"20","ApproverName":"DCR DCN Management Sytem User 3","Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"QA Delegate Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"QA Delegate Section","HiddenSection":"","Levels":"4","Role":"QA Delegate","Days":3.0,"IsAutoApproval":false,"FillByRole":"QA Incharge","Division":"","SubDivision":null,"Approver":"","ApproverName":null,"Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"Final SMS Incharge Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"Final SMS Incharge Section","HiddenSection":"","Levels":"5","Role":"Final SMS Incharge","Days":3.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"9","ApproverName":"SharePoint Notifications","Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"Final SMS Delegate Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"Final SMS Delegate Section","HiddenSection":"","Levels":"5","Role":"Final SMS Delegate","Days":3.0,"IsAutoApproval":false,"FillByRole":"Final SMS Incharge","Division":"","SubDivision":null,"Approver":"","ApproverName":null,"Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"Costing Incharge Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"Costing Incharge Section","HiddenSection":"","Levels":"5","Role":"Costing Incharge","Days":3.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"19","ApproverName":"DCR DCN Management Sytem User 2","Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"Costing Delegate1 Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"Costing Delegate1 Section","HiddenSection":"","Levels":"5","Role":"Costing Delegate1","Days":3.0,"IsAutoApproval":false,"FillByRole":"Costing Incharge","Division":"","SubDivision":null,"Approver":"","ApproverName":null,"Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"Costing Delegate2 Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"Costing Delegate2 Section","HiddenSection":"","Levels":"5","Role":"Costing Delegate2","Days":3.0,"IsAutoApproval":false,"FillByRole":"Costing Incharge,Costing Delegate1","Division":"","SubDivision":null,"Approver":"","ApproverName":null,"Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"TDS Incharge Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"TDS Incharge Section","HiddenSection":"","Levels":"6","Role":"TDS Incharge","Days":3.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"9","ApproverName":"SharePoint Notifications","Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"TDS Delegate Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"TDS Delegate Section","HiddenSection":"","Levels":"6","Role":"TDS Delegate","Days":3.0,"IsAutoApproval":false,"FillByRole":"TDS Incharge","Division":"","SubDivision":null,"Approver":"","ApproverName":null,"Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"Viewer","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"","HiddenSection":"","Levels":"-2","Role":"Viewer","Days":0.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"9,21","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":false,"IsReminder":false,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null}], 
+2018-08-13 19:20:42,554 [29] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="9"
+2018-08-13 19:20:42,554 [10] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="9"
+2018-08-13 19:20:42,554 [28] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="19"
+2018-08-13 19:20:42,557 [32] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="9"
+2018-08-13 19:20:42,550 [7] INFO  - WCF - Calling approversDataFromList.UpdateStatusofApprovalMatrix => currlevel=0, previousLevel=-1, param={"UserID":"9","ActionPer":" Delegate|Delegate","ActivityLog":"ItemCodeActivityLog","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","IsNewItem":"True"}, actionperformed=Delegate, list=[{"ID":0,"Title":"LUM Marketing Incharge Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"LUM Marketing Incharge Section","HiddenSection":"","Levels":"0","Role":"Creator","Days":3.0,"IsAutoApproval":false,"FillByRole":"","Division":"","SubDivision":null,"Approver":"9","ApproverName":null,"Status":"Not Assigned","Comments":"asdsad","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"LUM Marketing Delegate Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"LUM Marketing Delegate Section","HiddenSection":"","Levels":"1","Role":"LUM Marketing Delegate","Days":1.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"21","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"SCM LUM Design Incharge Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"SCM LUM Design Incharge Section","HiddenSection":"","Levels":"2","Role":"SCM LUM Design Incharge","Days":3.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"19","ApproverName":"DCR DCN Management Sytem User 2","Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"SCM LUM Design Delegate Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"SCM LUM Design Delegate Section","HiddenSection":"","Levels":"2","Role":"SCM LUM Design Delegate","Days":3.0,"IsAutoApproval":false,"FillByRole":"SCM LUM Design Incharge","Division":"","SubDivision":null,"Approver":"","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"SMS Incharge Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"SMS Incharge Section","HiddenSection":"","Levels":"3","Role":"SMS Incharge","Days":3.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"9","ApproverName":"SharePoint Notifications","Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"SMS Delegate Incharge","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"SMS Delegate Section","HiddenSection":"","Levels":"3","Role":"SMS Delegate","Days":3.0,"IsAutoApproval":false,"FillByRole":"SMS Incharge","Division":"","SubDivision":null,"Approver":"","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"QA Incharge Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"QA Incharge Section","HiddenSection":"","Levels":"4","Role":"QA Incharge","Days":3.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"20","ApproverName":"DCR DCN Management Sytem User 3","Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"QA Delegate Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"QA Delegate Section","HiddenSection":"","Levels":"4","Role":"QA Delegate","Days":3.0,"IsAutoApproval":false,"FillByRole":"QA Incharge","Division":"","SubDivision":null,"Approver":"","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"Final SMS Incharge Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"Final SMS Incharge Section","HiddenSection":"","Levels":"5","Role":"Final SMS Incharge","Days":3.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"9","ApproverName":"SharePoint Notifications","Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"Final SMS Delegate Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"Final SMS Delegate Section","HiddenSection":"","Levels":"5","Role":"Final SMS Delegate","Days":3.0,"IsAutoApproval":false,"FillByRole":"Final SMS Incharge","Division":"","SubDivision":null,"Approver":"","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"Costing Incharge Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"Costing Incharge Section","HiddenSection":"","Levels":"5","Role":"Costing Incharge","Days":3.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"19","ApproverName":"DCR DCN Management Sytem User 2","Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"Costing Delegate1 Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"Costing Delegate1 Section","HiddenSection":"","Levels":"5","Role":"Costing Delegate1","Days":3.0,"IsAutoApproval":false,"FillByRole":"Costing Incharge","Division":"","SubDivision":null,"Approver":"","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"Costing Delegate2 Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"Costing Delegate2 Section","HiddenSection":"","Levels":"5","Role":"Costing Delegate2","Days":3.0,"IsAutoApproval":false,"FillByRole":"Costing Incharge,Costing Delegate1","Division":"","SubDivision":null,"Approver":"","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"TDS Incharge Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"TDS Incharge Section","HiddenSection":"","Levels":"6","Role":"TDS Incharge","Days":3.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"9","ApproverName":"SharePoint Notifications","Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"TDS Delegate Section","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"TDS Delegate Section","HiddenSection":"","Levels":"6","Role":"TDS Delegate","Days":3.0,"IsAutoApproval":false,"FillByRole":"TDS Incharge","Division":"","SubDivision":null,"Approver":"","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"Viewer","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","SectionName":"","HiddenSection":"","Levels":"-2","Role":"Viewer","Days":0.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"9,21","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":false,"IsReminder":false,"RequestID":143,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null}], 
+2018-08-13 19:20:45,196 [7] INFO  - WCF - End of form level assignment, 
+2018-08-13 19:20:45,211 [29] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="21"
+2018-08-13 19:20:45,196 [6] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="9"
+2018-08-13 19:20:45,196 [27] INFO  - WCF - Case Action Performed 'Delegate', 
+2018-08-13 19:20:45,262 [32] INFO  - WCF - Helper.SaveFormFields in list 'ItemCodePreProcess' id='143' with values = {"ReferenceNo":"Item Code Preprocess Form-2018-143","Creator":[{"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":9,"LookupValue":null}],"LUMMarketingDelegate":[{"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":21,"LookupValue":null}],"SCMLUMDesignIncharge":[{"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":19,"LookupValue":null}],"SMSIncharge":[{"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":9,"LookupValue":null}],"QAIncharge":[{"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":20,"LookupValue":null}],"FinalSMSIncharge":[{"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":9,"LookupValue":null}],"CostingIncharge":[{"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":19,"LookupValue":null}],"TDSIncharge":[{"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":9,"LookupValue":null}],"Viewer":[{"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":9,"LookupValue":null},{"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":21,"LookupValue":null}],"LastActionPerformed":"Delegate","LastActionBy":{"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":9,"LookupValue":null},"LastActionByRole":"Creator","PendingWith":"LUM Marketing Delegate","NextApprover":[{"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":21,"LookupValue":null}],"FormLevel":"0|1","ApprovalStatus":"In Progress","Status":"Submitted","WorkflowStatus":"Pending With LUM Marketing Delegate"}, 
+2018-08-13 19:20:46,769 [22] ERROR - Error While Save Fields FieldName:LUMMarketingDelegate, MessageObject must implement IConvertible., StackTrace   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType)
+   at BEL.DataAccessLayer.BELDataAccessLayer.SaveDataInList(ClientContext context, Web web, Object actualSection, ListItem item, String listName, Dictionary`2 param, Dictionary`2 mailCustomValues, List`1 emailAttachments, Boolean isTranRequestIdUpdate) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 1923
+2018-08-13 19:20:46,883 [6] INFO  - WCF - Save Form Field Name='WorkflowStatus'='Pending With LUM Marketing Delegate', 
+2018-08-13 19:20:46,883 [7] INFO  - WCF - Save Form Field Name='Status'='Submitted', 
+2018-08-13 19:20:46,901 [29] INFO  - WCF - Calling SetItemPermission -> itemid=143, listname=ItemCodePreProcess, {"9,19,20,9,21":"Read","21":"Contribute"}, 
+2018-08-13 19:20:47,135 [7] INFO  - WCF - item ResetRoleInheritance Called, 
+2018-08-13 19:20:47,135 [27] INFO  - WCF - Condition PAssed (context != null && web != null && usersWithPermission != null && item != null), 
+2018-08-13 19:20:47,149 [10] INFO  - WCF - item BreakRoleInheritance(false,true); Called, 
+2018-08-13 19:20:47,149 [29] INFO  - WCF - Get User Emails from RoleDefinitionBindingCollection -> 9,19,20,9,21, 
+2018-08-13 19:20:48,587 [27] INFO  - WCF - Adding collRoleDefinitionBindingAssignee -> web.RoleDefinitions.GetByName(Read), 
+2018-08-13 19:20:49,153 [6] INFO  - WCF - Get User Emails from RoleDefinitionBindingCollection -> 21, 
+2018-08-13 19:20:49,153 [7] INFO  - WCF - User Permission set for -> 9,19,20,9,21, 
+2018-08-13 19:20:49,436 [6] INFO  - WCF - Adding collRoleDefinitionBindingAssignee -> web.RoleDefinitions.GetByName(Contribute), 
+2018-08-13 19:20:49,998 [7] INFO  - WCF - User Permission set for -> 21, 
+2018-08-13 19:20:51,639 [10] INFO  - WCF - Calling SetItemPermission -> Complete, 
+2018-08-13 19:20:51,643 [32] INFO  - WCF - Called SetItemPermission Permission Assigned ->False, 
+2018-08-13 19:20:51,639 [28] INFO  - WCF - Calling SaveAproverMatrix -> ItemCodeApprovalMatrix, 
+2018-08-13 19:20:51,639 [29] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="9"
+2018-08-13 19:20:51,639 [16] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="9"
+2018-08-13 19:20:53,013 [6] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="21"
+2018-08-13 19:20:53,734 [6] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="19"
+2018-08-13 19:20:55,758 [6] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="9"
+2018-08-13 19:20:57,310 [18] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="20"
+2018-08-13 19:20:58,681 [18] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="9"
+2018-08-13 19:20:59,748 [18] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="19"
+2018-08-13 19:21:01,514 [18] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="9"
+2018-08-13 19:21:02,587 [6] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="21"
+2018-08-13 19:21:02,587 [7] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="9"
+2018-08-13 19:21:04,487 [29] INFO  - WCF - Calling SaveAproverMatrix -> Complete, 
+2018-08-13 19:21:04,487 [16] INFO  - WCF - Async update Item Code No Current value currentValue : 39 Title : ICCP, 
+2018-08-13 19:21:04,619 [29] INFO  - WCF - Calling Activity Log -> {"UserID":"9","ActionPer":" Delegate|Delegate","ActivityLog":"ItemCodeActivityLog","ApplicationName":"Item Code Creation Preprocess","FormName":"Item Code Preprocess Form","IsNewItem":"True"}, 
+2018-08-13 19:21:04,619 [18] INFO  - WCF - Called Activity Log Condition Passed-> listname=ItemCodeActivityLog, lookupid=143, activityby=9, 
+2018-08-13 19:21:04,650 [15] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="9"
+2018-08-13 19:21:05,155 [18] INFO  - WCF - Update Item Code No ICCP-2018-Aug-00039, 
+2018-08-13 19:21:05,476 [10] ERROR - The property or field 'LoginName' has not been initialized. It has not been requested or the request has not been executed. It may need to be explicitly requested.
+Microsoft.SharePoint.Client.PropertyOrFieldNotInitializedException: The property or field 'LoginName' has not been initialized. It has not been requested or the request has not been executed. It may need to be explicitly requested.
+   at Microsoft.SharePoint.Client.ClientObject.CheckUninitializedProperty(String propName)
+   at Microsoft.SharePoint.Client.Principal.get_LoginName()
+   at BEL.DataAccessLayer.MasterDataHelper.GetAllEmployee(ClientContext context, Web web) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\MasterDataHelper.cs:line 400
+   at BEL.DataAccessLayer.BELDataAccessLayer.GetNameUsingUserID(ClientContext context, Web web, String ids) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 714
+   at BEL.DataAccessLayer.BELDataAccessLayer.SendMail(ButtonActionStatus actionPerformed, ClientContext context, Web web, String currentUserID, Int32 itemId, List`1 approversDataFromList, String listname, Int32 nextLevel, Int32 currLevel, String role, Dictionary`2 paraml, Dictionary`2 mailCustomValues, List`1 emailAttachments) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2118
+2018-08-13 19:21:12,515 [7] INFO  - WCF - Calling Activity Log -> Complete, 
+2018-08-13 19:21:12,515 [6] INFO  - WCF - ############### Error in SendMail for following details : currlevel 0nextLevel 1 from : 9 To :  Action Performed :Delegate Nextapprovalemails :21Stacktrace:   at Microsoft.SharePoint.Client.ClientObject.CheckUninitializedProperty(String propName)
+   at Microsoft.SharePoint.Client.Principal.get_LoginName()
+   at BEL.DataAccessLayer.MasterDataHelper.GetAllEmployee(ClientContext context, Web web) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\MasterDataHelper.cs:line 400
+   at BEL.DataAccessLayer.BELDataAccessLayer.GetNameUsingUserID(ClientContext context, Web web, String ids) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 714
+   at BEL.DataAccessLayer.BELDataAccessLayer.SendMail(ButtonActionStatus actionPerformed, ClientContext context, Web web, String currentUserID, Int32 itemId, List`1 approversDataFromList, String listname, Int32 nextLevel, Int32 currLevel, String role, Dictionary`2 paraml, Dictionary`2 mailCustomValues, List`1 emailAttachments) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2118, 
+2018-08-13 19:21:12,515 [18] INFO  - WCF - Activity Log Parameter Saved -> Activity= Delegate, 
+Changes=ICCPNo	ICCP-2018-Aug-00039~Status	Submitted~ProposedBy	app@sharepoint~RequestDate	8/13/2018 7:20:33 PM~WorkflowStatus	Pending With LUM Marketing Delegate~Assigned date	~Approved/Updated date	13/08/2018~Approved/Updated time	07:21 PM~Approver Comment	asdsad~Month	August~Year	2018~LUMMarketingDelegate	Training Management Sytem User 1~ItemDescription	~ProductGroup	~ConfirmedOrderFromCustomer	~TypeOfPackaging	~ReferenceProduct	~ExpectedAnnualBusinessVolume	~ItemToBePhasedOut	~ItemPhasedOutWithEffectFrom	, 
+ActivityDate=8/13/2018, 
+ActivityBy=9, 
+RequestID=143, 
+SectionName=LUM Marketing Incharge Section, 
+, 
+2018-08-13 19:21:14,127 [10] ERROR - [Message: The given key was not present in the dictionary.]
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BEL.DataAccessLayer.EmailHelper.GetEmailBody(ClientContext appContext, Web appWeb, String templateName, List`1 listItemDetails, Dictionary`2 customValues, String role, String applicationName, String formName) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\EmailHelper.cs:line 110
+   at BEL.DataAccessLayer.BELDataAccessLayer.SendMail(ButtonActionStatus actionPerformed, ClientContext context, Web web, String currentUserID, Int32 itemId, List`1 approversDataFromList, String listname, Int32 nextLevel, Int32 currLevel, String role, Dictionary`2 paraml, Dictionary`2 mailCustomValues, List`1 emailAttachments) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2172
+   at BEL.DataAccessLayer.BELDataAccessLayer.<>c__DisplayClassb5.<SaveDataInList>b__8b(Object obj) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 1975
+   at BEL.DataAccessLayer.AsyncHelper.<>c__DisplayClass3.<<Call>b__1>d__5.MoveNext() in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\AsyncHelper.cs:line 45
+2018-08-13 19:23:01,197 [43] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-13 19:23:01,212 [10] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-13 19:23:15,057 [44] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-08-13 19:23:15,057 [43] INFO  - WCF - Called Helper GetFormData, 
+2018-08-13 19:23:15,057 [45] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-08-13 19:23:15,198 [44] INFO  - MVC -  ViewBag.UserID =, String="9"
+2018-08-13 19:23:15,213 [43] INFO  - WCF - Begin Request http://localhost:62403/?ID=143, 
+2018-08-13 19:23:15,821 [44] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=Viewer, 
+2018-08-13 19:23:16,352 [43] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:23:16,368 [45] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:23:16,368 [43] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:23:16,368 [10] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-13 19:23:16,416 [49] INFO  - WCF - called Helper.GetFormData, 
+2018-08-13 19:23:16,429 [49] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:23:16,427 [50] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:23:16,420 [43] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:23:16,368 [44] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-13 19:23:16,427 [10] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-13 19:23:16,420 [45] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:23:16,807 [10] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:23:16,920 [10] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:23:16,920 [43] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:23:16,934 [48] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:23:16,920 [44] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:23:16,964 [53] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:23:17,305 [47] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:23:17,305 [46] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:23:17,342 [49] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:23:17,342 [50] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:23:17,354 [52] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:23:17,387 [46] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:23:17,354 [53] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:23:17,387 [47] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:23:17,370 [10] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:23:17,370 [43] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:23:17,387 [48] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:23:17,386 [45] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:23:18,032 [10] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-08-13 19:23:18,040 [44] INFO  - WCF - Helper.GetButtons for role 'Viewer', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='Submitted', other params={"CurrentFromLevel":"1"}, 
+2018-08-13 19:24:01,888 [51] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-08-13 19:24:01,888 [53] INFO  - MVC -  ViewBag.UserID =, String="9"
+2018-08-13 19:24:01,888 [52] INFO  - WCF - Called Helper GetFormData, 
+2018-08-13 19:24:01,888 [50] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-08-13 19:24:01,951 [53] INFO  - WCF - Begin Request http://localhost:62403/?ID=143, 
+2018-08-13 19:24:02,636 [50] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=Viewer, 
+2018-08-13 19:24:03,219 [50] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:24:03,219 [53] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:24:03,227 [52] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-13 19:24:03,431 [53] INFO  - WCF - called Helper.GetFormData, 
+2018-08-13 19:24:03,456 [53] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:24:03,462 [53] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:24:03,467 [53] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:24:03,449 [52] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-13 19:24:03,415 [50] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:24:03,473 [53] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-13 19:24:03,478 [52] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:24:03,607 [53] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:24:03,607 [52] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:24:03,616 [52] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:24:03,621 [52] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:24:03,625 [52] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:24:03,629 [52] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:24:03,607 [50] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:24:03,611 [53] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:24:03,653 [53] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:24:03,648 [50] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:24:03,661 [50] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:24:03,635 [52] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:24:03,670 [52] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:24:03,674 [52] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:24:03,657 [53] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:24:03,665 [50] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:24:03,707 [53] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-13 19:24:03,702 [52] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-13 19:24:04,072 [50] INFO  - WCF - Helper.GetButtons for role 'Viewer', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='Submitted', other params={"CurrentFromLevel":"1"}, 
+2018-08-13 19:24:04,072 [52] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-08-13 19:53:41,027 [8] INFO  - WCF - Application_Start_Done, 
+2018-08-13 19:53:41,039 [9] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-08-13 19:53:41,095 [8] INFO  - WCF - Begin Request http://localhost:62403/RoleActivity/Index, 
+2018-08-13 19:54:04,352 [8] INFO  - MVC - sp user == , 
+2018-08-13 19:54:06,365 [8] INFO  - MVC -  ViewBag.UserID =, String="27"
+2018-08-13 19:54:06,365 [9] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-08-13 19:54:06,964 [11] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-08-13 19:54:06,969 [11] INFO  - WCF - Called Helper GetFormData, 
+2018-08-13 19:54:06,964 [9] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=27, 
+2018-08-13 19:54:06,964 [8] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-13 19:54:08,607 [8] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-13 19:54:08,607 [9] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-08-13 19:54:18,583 [9] INFO  - WCF - called Helper.GetFormData, 
+2018-08-13 19:54:18,893 [9] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-08-13 19:54:18,906 [9] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:54:18,912 [9] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-13 19:54:18,919 [9] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-08-13 19:54:18,926 [9] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:54:18,934 [9] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-13 19:54:18,893 [11] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-13 19:54:18,946 [11] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:54:18,893 [7] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-13 19:54:18,894 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-13 19:54:18,962 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-13 19:54:18,971 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:54:18,980 [8] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-13 19:54:18,990 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-13 19:54:18,939 [9] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-13 19:54:19,002 [9] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:54:18,952 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-13 19:54:18,957 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-13 19:54:19,009 [9] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-13 19:54:18,997 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-13 19:54:19,024 [11] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-08-13 19:54:20,585 [7] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-08-13 19:54:20,585 [9] INFO  - WCF - Helper.GetAllButtons, 
+2018-08-13 19:54:22,359 [9] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 
+2018-08-13 19:54:52,946 [7] INFO  - WCF - Begin Request http://localhost:62403/RoleActivity/Index, 
+2018-08-13 19:55:04,914 [6] INFO  - WCF - Begin Request http://localhost:62403/RoleActivity/Index, 
+2018-08-13 19:59:53,843 [12] INFO  - WCF - Application_Start_Done, 
+2018-08-13 19:59:53,843 [6] INFO  - WCF - Begin Request http://localhost:62403/RoleActivity/Index, 
+2018-08-13 20:00:24,903 [12] INFO  - WCF - Begin Ajax Request http://localhost:62403/RoleActivity/AddNewRole, 
+2018-08-13 20:00:28,776 [18] INFO  - WCF - Begin Request http://localhost:62403/RoleActivity/Index, 
+2018-08-13 20:00:31,357 [20] INFO  - WCF - Begin Ajax Request http://localhost:62403/RoleActivity/GetRoleActivityByRoleId?roleName=Poooja&_=1534170629007, 
+2018-08-13 20:00:34,904 [6] INFO  - WCF - Begin Ajax Request http://localhost:62403/RoleActivity/DeleteRoleByIdForm Data: ["Id"], 
+2018-08-13 20:00:38,540 [20] INFO  - WCF - Begin Request http://localhost:62403/RoleActivity/Index, 

@@ -1,0 +1,145 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.ItemCode
+@using BEL.CommonDataContract
+
+@model VendorItemCode
+
+
+<div class="modal fade" id="addeditVendorModel" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">
+                    @if (Model.Index > 0)
+                    {
+                        <span>
+                            @Html.ResourceValue("Popup_Title_EditVendor", ResourceName.ICCPForm)
+                        </span>
+                    }
+                    else
+                    {
+                        <span>
+                            @Html.ResourceValue("Popup_Title_AddVendor", ResourceName.ICCPForm)
+                        </span>
+                    }
+                </h4>
+            </div>
+            @using (Ajax.BeginForm("SaveVendor", "ItemCodeCreation", new AjaxOptions
+            {
+                HttpMethod = "POST",
+                LoadingElementId = "loading",
+                OnFailure = "OnFailure",
+                OnSuccess = "OnVendoraddSuccess",
+                OnBegin = "BeginClient"
+            }, new { enctype = "multipart/form-data", id = "frmSaveVendor" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.RequestBy)
+                @Html.HiddenFor(m => m.RequestDate)
+                @Html.HiddenFor(m => m.RequestID)
+                @Html.HiddenFor(m => m.ID)
+                @Html.HiddenFor(m => m.Index)
+                @Html.HiddenFor(m => m.ItemAction)
+                <div id="divSCMLLUMSection" class="modal-body form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="Objective" class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.VendorName, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-md-8 ">
+                                    @Html.TextBoxFor(m => m.VendorName, new { @class = "user-tags form-control required", @data_val = "true", @data_val_required = "Please Enter Vendor Name.", @maxlength = "255", data_toggle = "tooltip", title = "Max 255 characters", @data_hint = "Type and Select Vendor Name", @data_url = "/ItemCodeCreation/GetVendors", @data_limit = "1", @data_onadd = "VendorAdded", @data_onremove = "VendorRemoved", @data_displaycolumn = "name" })
+                                    @Html.ValidationMessageFor(m => m.VendorName, ResourceName.ICCPForm)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="DesiredResult" class="col-md-4 control-label">
+                                    @*<span class="text-danger text-default-light">*</span>*@
+                                    @Html.LabelFor(m => m.FGStock, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-md-8 ">
+                                    @Html.TextBoxFor(m => m.FGStock, new { @class = "form-control integeronly", maxlength = 15, data_toggle = "tooltip", title = "Max 255 characters" })
+                                    @*@Html.ValidationMessageFor(m => m.FGStock, ResourceName.ICCPForm)*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="DesiredResult" class="col-md-4 control-label">
+                                    @*<span class="text-danger text-default-light">*</span>*@
+                                    @Html.LabelFor(m => m.ExistingComponentStock, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-md-8 ">
+                                    @Html.TextBoxFor(m => m.ExistingComponentStock, new { @class = "form-control integeronly", maxlength = 15, data_toggle = "tooltip", title = "Max 255 characters" })
+                                    @*@Html.ValidationMessageFor(m => m.ExistingComponentStock, ResourceName.ICCPForm)*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="Objective" class="col-md-4 control-label">
+                                    @Html.LabelFor(m => m.DateOfImplementation, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-md-8 ">
+                                    <div class='input-group date datepicker'>
+                                        @Html.TextBoxFor(m => m.DateOfImplementation, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+                                        @Html.TextBoxFor(m => m.DateOfImplementation, "{0:dd/MM/yyyy hh:mm tt}", new { @class = "notvisible", @id = "hdnDateofIssueofNew", @Name = "hdnDateofIssueofNew" })
+                                        <span class="input-group-addon">
+                                            <span class="fa fa-calendar"></span>
+                                        </span>
+                                    </div>
+                                    @*@Html.ValidationMessageFor(m => m.DateOfImplementation, ResourceName.ICCPForm)*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="OnVendorModelSubmit(this.form.id)">@Html.ResourceValue("Button_Text_Save", ResourceName.Common)</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        @Html.ResourceValue("Button_Text_Close", ResourceName.Common)
+                    </button>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#addeditVendorModel").modal().on('shown.bs.modal', function () {
+            BindDatePicker("#addeditVendorModel");
+            BindUserTags("#addeditVendorModel");
+            $.validator.unobtrusive.parsePopup("#addeditVendorModel");
+            BindValidation();
+        });
+    });
+    function VendorAdded(ele, id, text) {
+        ShowWaitDialog();
+        $(ele).val(decodeURIComponent(text));
+     //   $("#VendorName").tokenInput("add", { id: decodeURIComponent(text), name: decodeURIComponent(text) });
+        $("#VendorName").val(id);
+        HideWaitDialog();
+    }
+
+    function VendorRemoved(ele) {
+        $(ele).tokenInput("clear");
+        $("#VendorName").val("");
+    }
+    function validateform() {
+        var validator = $("#" + frmid).validate();
+        return validator.element("#VendorName");
+    }
+</script>

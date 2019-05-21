@@ -1,0 +1,149 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.ItemCode
+@using BEL.ItemCodeCreationPreProcess.Models.Master
+@using BEL.ItemCodeCreationPreProcess.Models.Common
+@model CostingDelegate1Section
+@{
+    string sectionActiveCss = Model.IsActive ? string.Empty : "disabled";
+    ApproverMaster approverusrelist = Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.APPROVERMASTER)) as ApproverMaster;
+    List<ApproverMasterListItem> costingDelegateUser2List = approverusrelist.Items.Where(x => (x as ApproverMasterListItem).Role == ICCPRoles.COSTINGDELEGATE2).ToList().ConvertAll(p => (ApproverMasterListItem)p);
+    costingDelegateUser2List = Helper.SplitUser(costingDelegateUser2List);
+}
+<div class="form-horizontal">
+    @using (Ajax.BeginForm("SaveCostingDelegate1Section", "ItemCodeCreation", new AjaxOptions
+    {
+        HttpMethod = "POST",
+        LoadingElementId = "loading",
+        OnFailure = "OnFailure",
+        OnSuccess = "OnSuccess",
+        OnBegin = "BeginClient"
+    }, new { enctype = "multipart/form-data", @class = sectionActiveCss }))
+    {
+        @Html.HiddenFor(m => m.ListDetails[0].ItemId)
+        @Html.HiddenFor(m => m.ListDetails[0].ListName)
+        @Html.HiddenFor(m => m.SectionName)
+        @Html.HiddenFor(m => m.ActionStatus)
+        @Html.HiddenFor(m => m.SendBackTo)
+        @Html.HiddenFor(m => m.Status)
+        @Html.HiddenFor(m => m.WorkflowStatus)
+        @Html.Partial("_ApproversList", Model.ApproversList)
+        @Html.AntiForgeryToken()
+        <div class="card @sectionActiveCss">
+            <div class="card-head" data-toggle="collapse" data-target="#sectionCostingDelegate1">
+                <b>
+                    @Html.ResourceValue("Section_Title_CostingDelegate1Section", ResourceName.ICCPForm)
+                </b>
+                <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+</div>
+            <div class="card-body" id="sectionCostingDelegate1">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.CostPrice, ResourceName.ICCPForm)
+                                </label>
+                                
+                                    <div class="col-md-4">
+                                        @Html.TextBoxFor(m => m.CostPrice, new { maxlength = 15, @class = "form-control fixedtwodecimal", data_toggle = "tooltip", title = "Max 15 characters" })
+                                        @Html.ValidationMessageFor(m => m.CostPrice, ResourceName.ICCPForm)
+                                    </div>
+                                    <div class="col-md-4">
+                                        @Html.DropDownListFor(m => m.Currency, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.CURRENCYMASTER)) as CurrencyMaster).Items, "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.Currency })
+                                        @Html.ValidationMessageFor(m => m.Currency, ResourceName.ICCPForm)
+                                    </div>
+                               
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.HSNCode, ResourceName.ICCPForm)
+
+                                </label>
+                                <div class="col-md-8 ">
+                                    @Html.TextBoxFor(m => m.HSNCode, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+                                    @Html.ValidationMessageFor(m => m.HSNCode, ResourceName.ICCPForm)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.GSTRate, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-md-8 ">
+                                    @Html.TextBoxFor(m => m.GSTRate, new { maxlength = 5, @class = "form-control fixedtwodecimal", data_toggle = "tooltip", title = "Max 5 characters" })
+                                    @Html.ValidationMessageFor(m => m.GSTRate, ResourceName.ICCPForm)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.Warranty, ResourceName.ICCPForm)
+
+                                </label>
+                                <div class="col-md-8 ">
+                                    @Html.DropDownListFor(m => m.Warranty, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.WARRANTYMASTER)) as WarrantyMaster).Items, "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.Warranty })
+                                    @Html.ValidationMessageFor(m => m.Warranty, ResourceName.ICCPForm)
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.CostingDelegate2, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-8">
+                                    <div class="form-control noborder text-left">
+                                        @{string isddlhide1 = Model.IsActive ? string.Empty : " hide";}
+                                        <div class=@isddlhide1>
+                                            @Html.ListBox("CostingDelegate2User", new MultiSelectList(costingDelegateUser2List, "UserID", "UserName"), new { @required = "required", @id = "CostingDelegate2User", @data_val = "true", @data_val_required = "Please select Costing Delegate 2 User.", @name = "CostingDelegate2User", @class = "form-control multiselectrequired", @data_selected = Model.CostingDelegate2 })
+                                            @Html.ValidationMessageFor(m => m.CostingDelegate2, ResourceName.ICCPForm)
+                                            @Html.ValidationMessage("CostingDelegate2User", Html.ResourceValue("Error_CostingDelegate2", ResourceName.ICCPForm))
+                                        </div>
+                                        @Html.HiddenFor(m => m.CostingDelegate2)
+                                        @Html.HiddenFor(m => m.CostingDelegate2Name)
+
+                                        @(!Model.IsActive && !string.IsNullOrEmpty(Model.CostingDelegate2Name) ? Model.CostingDelegate2Name : string.Empty)
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @*<div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        <span class="text-danger text-default-light">*</span>
+                                        @Html.ResourceValue("Label_Comments", ResourceName.Common)
+                                    </label>
+                                    <div class="col-md-8 ">
+                                        <div class="form-control noborder">
+                                            @Html.TextAreaFor(m => m.CurrentApprover.Comments, new { maxLength = 1000, @class = "form-control", @data_val = "true", @data_val_required = "Please Enter Comments", data_toggle = "tooltip", title = "Max 1000 characters" })
+                                            @Html.HiddenFor(x => x.CurrentApprover.Approver)
+                                            @Html.HiddenFor(x => x.CurrentApprover.Role)
+                                            @Html.HiddenFor(x => x.CurrentApprover.AssignDate)
+                                            @Html.ValidationMessageFor(m => m.CurrentApprover.Comments, ResourceName.Common)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>*@
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    }
+</div>

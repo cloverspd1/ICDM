@@ -1,0 +1,47 @@
+2018-11-27 18:52:10,141 [5] INFO  - WCF - Application_Start_Done, 
+2018-11-27 18:52:10,385 [7] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-11-27 18:54:48,917 [6] INFO  - MVC - sp user == , 
+2018-11-27 18:54:55,304 [7] INFO  - MVC - ViewBag.UserName = , String="SharePoint Notifications"
+2018-11-27 18:54:55,318 [6] INFO  - MVC - ViewBag.UserID =, String="9"
+2018-11-27 18:55:00,312 [13] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-11-27 18:55:00,312 [6] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-11-27 18:55:00,312 [7] INFO  - WCF - Called Helper GetFormData, 
+2018-11-27 18:55:00,312 [17] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-11-27 18:55:03,433 [6] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-11-27 18:55:03,505 [17] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-11-27 18:55:22,514 [13] INFO  - WCF - called Helper.GetFormData, 
+2018-11-27 18:55:23,547 [17] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-11-27 18:55:23,569 [17] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-11-27 18:55:23,560 [13] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-11-27 18:55:23,599 [13] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-11-27 18:55:23,560 [7] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-11-27 18:55:23,617 [7] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-11-27 18:55:23,623 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-11-27 18:55:23,629 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-11-27 18:55:23,592 [17] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-11-27 18:55:23,609 [13] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-11-27 18:55:23,635 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-11-27 18:55:23,753 [7] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-11-27 18:55:23,742 [13] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-11-27 18:55:23,772 [13] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-11-27 18:55:23,778 [13] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-11-27 18:55:23,723 [17] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-11-27 18:55:23,764 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-11-27 18:55:23,784 [13] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-11-27 18:55:32,685 [13] INFO  - WCF - Helper.GetAllButtons, 
+2018-11-27 18:55:32,685 [7] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-11-27 18:55:40,574 [6] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 
+2018-11-27 19:01:03,979 [21] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-11-27 19:01:04,057 [27] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-27 19:06:04,088 [37] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-11-27 19:06:04,103 [35] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-27 19:11:04,135 [42] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-27 19:11:04,135 [52] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-11-27 19:16:04,152 [57] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-11-27 19:16:04,164 [56] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-27 19:21:04,181 [73] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-11-27 19:21:04,199 [72] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-27 19:26:04,232 [82] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-27 19:26:04,232 [81] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-11-27 19:31:04,261 [81] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-27 19:31:04,261 [78] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 

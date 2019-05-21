@@ -1,0 +1,183 @@
+2018-10-30 10:46:01,060 [7] INFO  - WCF - Application_Start_Done, 
+2018-10-30 10:46:01,197 [8] INFO  - WCF - Begin Request http://localhost:62403/?ID=365, 
+2018-10-30 10:46:01,197 [13] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-10-30 10:48:42,963 [8] INFO  - MVC - sp user == , 
+2018-10-30 10:48:42,963 [7] INFO  - MVC - sp user == , 
+2018-10-30 10:49:03,650 [9] ERROR - Id: e39a6302-abb4-4f25-9e80-2c7dcf8c56a7
+2018-10-30 10:49:03,654 [9] ERROR - StatusCode: 200
+2018-10-30 10:49:03,661 [9] ERROR - Controller: 
+2018-10-30 10:49:03,665 [9] ERROR - Action: 
+2018-10-30 10:49:03,670 [9] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.set_Item(TKey key, TValue value)
+   at Microsoft.SharePoint.Client.Web.GetUserById(Int32 userId)
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.GetUserDetail(Int32 id) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 196
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.get_CurrentUser() in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 126
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id, Boolean isRetrieve) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 35
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-10-30 10:49:04,319 [9] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.set_Item(TKey key, TValue value)
+   at Microsoft.SharePoint.Client.Web.GetUserById(Int32 userId)
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.GetUserDetail(Int32 id) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 196
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.get_CurrentUser() in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 126
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id, Boolean isRetrieve) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 35
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-10-30 10:49:04,432 [8] INFO  - WCF - Begin Request http://localhost:62403/Master/Error?msg=Object reference not set to an instance of an object.&errorId=e39a6302-abb4-4f25-9e80-2c7dcf8c56a7, 
+2018-10-30 10:49:06,512 [8] INFO  - MVC -  ViewBag.UserID =, String="9"
+2018-10-30 10:49:06,538 [14] INFO  - MVC -   ViewBag.UserName = , String="SharePoint Notifications"
+2018-10-30 10:49:09,095 [8] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-10-30 10:49:09,102 [8] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-10-30 10:49:09,095 [14] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-10-30 10:49:09,162 [8] INFO  - WCF - Called Helper GetFormData, 
+2018-10-30 10:49:14,045 [7] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-10-30 10:49:14,384 [7] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-10-30 10:50:19,486 [14] INFO  - MVC - sp user == , 
+2018-10-30 10:50:19,487 [13] INFO  - WCF - Begin Request http://localhost:62403/?ID=365, 
+2018-10-30 10:50:19,634 [7] INFO  - WCF - Called Helper GetFormData, 
+2018-10-30 10:50:19,634 [14] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-10-30 10:50:19,886 [7] INFO  - WCF - called Helper.GetFormData, 
+2018-10-30 10:50:19,933 [14] INFO  - MVC -  ViewBag.UserID =, String="9"
+2018-10-30 10:50:20,965 [14] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-10-30 10:50:20,965 [13] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-10-30 10:50:20,985 [13] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-10-30 10:50:20,994 [13] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-10-30 10:50:20,965 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-10-30 10:50:21,008 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-10-30 10:50:21,015 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-10-30 10:50:21,022 [7] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-10-30 10:50:21,001 [13] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-10-30 10:50:21,038 [13] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-10-30 10:50:21,044 [13] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-10-30 10:50:21,049 [13] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-10-30 10:50:21,030 [7] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-10-30 10:50:21,064 [7] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-10-30 10:50:21,071 [7] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-10-30 10:50:21,080 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-10-30 10:50:21,057 [13] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-10-30 10:50:21,085 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-10-30 10:50:22,120 [13] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=Final SMS Incharge, 
+2018-10-30 10:50:22,964 [13] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-10-30 10:50:22,978 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-10-30 10:50:22,984 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-10-30 10:50:22,990 [7] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-10-30 10:50:22,998 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-10-30 10:50:23,003 [7] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-10-30 10:50:22,978 [13] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-10-30 10:50:23,017 [13] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-10-30 10:50:23,023 [13] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-10-30 10:50:23,029 [13] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-10-30 10:50:23,011 [7] INFO  - WCF - called Helper.GetFormData, 
+2018-10-30 10:50:23,373 [7] INFO  - WCF - Helper.GetAllButtons, 
+2018-10-30 10:50:23,373 [13] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-10-30 10:50:23,483 [13] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-10-30 10:50:23,562 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-10-30 10:50:23,575 [14] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-10-30 10:50:23,581 [16] INFO  - WCF - Helper.GetNameFromPersonField, Int32=19
+2018-10-30 10:50:23,578 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-10-30 10:50:23,604 [7] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-10-30 10:50:24,123 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-10-30 10:50:24,134 [10] INFO  - WCF - Helper.GetNameFromPersonField, Int32=19
+2018-10-30 10:50:24,134 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-10-30 10:50:24,135 [16] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-10-30 10:50:24,134 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-10-30 10:50:24,431 [17] INFO  - WCF - Helper.GetNameFromPersonField, Int32=19
+2018-10-30 10:50:24,431 [18] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-10-30 10:50:24,431 [16] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-10-30 10:50:24,432 [10] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-10-30 10:50:24,432 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-10-30 10:50:24,651 [17] INFO  - WCF - Helper.GetNameFromPersonField, Int32=19
+2018-10-30 10:50:24,651 [16] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-10-30 10:50:24,651 [18] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-10-30 10:50:24,651 [14] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-10-30 10:50:24,651 [11] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-10-30 10:50:24,889 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-10-30 10:50:24,889 [14] INFO  - WCF - Helper.GetNameFromPersonField, Int32=19
+2018-10-30 10:50:24,889 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-10-30 10:50:24,889 [7] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-10-30 10:50:25,125 [10] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-10-30 10:50:25,125 [7] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-10-30 10:50:25,125 [18] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-10-30 10:50:25,125 [19] INFO  - WCF - Helper.GetNameFromPersonField, Int32=19
+2018-10-30 10:50:25,499 [19] INFO  - WCF - Helper.GetNameFromPersonField, Int32=19
+2018-10-30 10:50:25,500 [17] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-10-30 10:50:25,501 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-10-30 10:50:25,500 [18] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-10-30 10:50:27,091 [7] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-10-30 10:50:27,274 [7] INFO  - WCF - User resolved : , String="tmsuser1@bajajelectricals.com"
+2018-10-30 10:50:27,436 [7] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-10-30 10:50:27,622 [13] INFO  - WCF - User resolved : , String="dcrdcnuser3@bajajelectricals.com"
+2018-10-30 10:50:27,734 [7] INFO  - WCF - User resolved : , String="tmsuser1@bajajelectricals.com"
+2018-10-30 10:50:27,932 [7] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-10-30 10:50:28,042 [13] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-10-30 10:50:28,042 [14] INFO  - WCF - Helper.GetAllButtons, 
+2018-10-30 10:50:28,042 [18] INFO  - WCF - User resolved : , String="dcrdcnuser3@bajajelectricals.com"
+2018-10-30 10:50:33,942 [7] INFO  - WCF - Helper.GetButtons for role 'Final SMS Incharge', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='Submitted', other params={"CurrentFromLevel":"5"}, 
+2018-10-30 10:50:34,683 [7] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 

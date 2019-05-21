@@ -1,0 +1,68 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.Master
+@model List<PendingRequest>
+<style type="text/css">
+    .modal-dialog {
+        width: 75% !important;
+        height: 75% !important;
+    }
+</style>
+
+<div class="modal fade" id="pendingrequestmodel" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">
+                    <span>
+                        Pending Request List
+                    </span>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel-body grid-view table-gridmodal" id="pendingrequestlist">
+                    <table class="table table-hover table-bordered someTable" id="pendingrequesttable">
+                        <thead>
+                            <tr>
+                                <th width="20%">@Html.ResourceValue("Grid_Title_ICDMNo", ResourceName.ChangeApproverForm)</th>
+                                <th width="18%">Current Status of Request</th>
+                                <th width="15%">@Html.ResourceValue("Grid_Title_CreationDate", ResourceName.ChangeApproverForm)</th>
+                                <th width="15%">Role</th>
+                                <th width="32%">@Html.ResourceValue("Grid_Title_PendingWith", ResourceName.ChangeApproverForm)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="changeapprovertbody">
+                            @if (Model != null && Model.Count() > 0)
+            {
+                foreach (PendingRequest item in Model)
+                {
+                                    <tr>
+                                        <td width="20%">@item.ICDMNo</td>
+                                        <td width="18%">@item.Status</td>
+                                        <td width="15%">@(item.CreationDate.HasValue ? @item.CreationDate.Value.ToShortDateString() : "-" )</td>
+                                        @*<td width="25%">@item.PreparedBy</td>*@
+                                        <td width="15%">@item.Role</td>                                       
+                                        <td width="32%">@item.PendingWith</td>
+                                    </tr>
+
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="4" class="text-center text-danger" id="nodata">
+                                        @Html.ResourceValue("Grid_Text_NoData", ResourceName.Common)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    @Html.ResourceValue("Button_Text_Close", ResourceName.Common)
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

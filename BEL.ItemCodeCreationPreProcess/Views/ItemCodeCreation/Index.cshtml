@@ -1,0 +1,150 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.ItemCode
+@using BEL.ItemCodeCreationPreProcess.Models.Common
+@using BEL.CommonDataContract
+@model ItemCodeContract
+@{
+    ViewBag.Title = Html.ResourceValue("Page_Title", ResourceName.ICCPForm);
+    ItemCodeContract contract = Model as ItemCodeContract;
+    ItemCodeForm form = contract.Forms.FirstOrDefault() as ItemCodeForm;
+    LUMMktInchargeSection lummarketingInchargeSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.LUMMKTINCHARGESECTION)) as LUMMktInchargeSection;
+    LUMMktDelegateSection lummarketingDelegateSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.LUMMKTDELEGATEESECTION)) as LUMMktDelegateSection;
+    SCMLUMDesignInchargeSection scmlumDesignInginchargeSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.SCMLUMDESIGNINCHARGESECTION)) as SCMLUMDesignInchargeSection;
+    SCMLUMDesignDelegateSection scmlummarketingDelegateSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.SCMLUMDESIGNDELEGATESECTION)) as SCMLUMDesignDelegateSection;
+    SMSInchargeSection smsmInchargeSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.SMSINCHARGESECTION)) as SMSInchargeSection;
+    SMSDelegateSection smsDelegateSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.SMSDELEGATESECTION)) as SMSDelegateSection;
+    QAInchargeSection qaInchargeSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.QAINCHARGESECTION)) as QAInchargeSection;
+    QADelegateSection qaDelegateSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.QADELEGATESECTION)) as QADelegateSection;
+    FinalSMSInchargeSection finalSMSInchargeSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.FINALSMSINCHARGESECTION)) as FinalSMSInchargeSection;
+    FinalSMSDelegateSection finalSMSDelegateSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.FINALSMSDELEGATESECTION)) as FinalSMSDelegateSection;
+    CostingInchargeSection costingInchargeSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.COSTINGINCHARGESECTION)) as CostingInchargeSection;
+    CostingDelegate1Section costingDelegate1Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.COSTINGDELEGATE1SECTION)) as CostingDelegate1Section;
+    CostingDelegate2Section costingDelegate2Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.COSTINGDELEGATE2SECTION)) as CostingDelegate2Section;
+    TDSInchargeSection tdsInchargeSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.TDSINCHARGESECTION)) as TDSInchargeSection;
+    TDSDelegateSection tdsDelegateSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.TDSDELEGATESECTION)) as TDSDelegateSection;
+}
+@if (form != null)
+{
+    @section buttons{
+        @Html.Partial("_ButtonGroup", form.Buttons)
+    }
+
+    if (!string.IsNullOrEmpty(form.FormStatus))
+    {
+        <div class="card-body text-right pad-bot-15">
+            <div class="label label-primary">
+                @form.FormStatus
+            </div>
+        </div>
+    }
+    <div id="divICCPForm">
+        <div id="tab-general">
+            <div class="row mbl">
+                <div class="col-lg-12">
+                    <div class="tab-content responsive " id="generalTabContent">
+                        @if (lummarketingInchargeSection != null)
+                        {
+                            @Html.Partial("_LUMmktInchargeSection", lummarketingInchargeSection)
+                        }
+
+                        @if (lummarketingInchargeSection != null && lummarketingDelegateSection != null && !lummarketingInchargeSection.IsSubmitted)
+                        {
+                            @Html.Partial("_LUMmktDelegateSection", lummarketingDelegateSection)
+                        }
+
+                        @if (scmlumDesignInginchargeSection != null)
+                        {
+                            @Html.Partial("_SCMLUMDesignInchargeSection", scmlumDesignInginchargeSection)
+                        }
+                        @if (scmlumDesignInginchargeSection != null && scmlummarketingDelegateSection != null && !scmlumDesignInginchargeSection.IsSubmitted)
+                        {
+                            @Html.Partial("_SCMLUMDesignDelegateSection", scmlummarketingDelegateSection)
+                        }
+
+                        @if (smsmInchargeSection != null)
+                        {
+                            @Html.Partial("_SMSInchargeSection", smsmInchargeSection)
+                        }
+
+                        @if (smsmInchargeSection != null && smsDelegateSection != null && !smsmInchargeSection.IsSubmitted)
+                        {
+                            @Html.Partial("_SMSDelegateSection", smsDelegateSection)
+                        }
+
+                        @if (qaInchargeSection != null)
+                        {
+                            @Html.Partial("_QAInchargeSection", qaInchargeSection)
+                        }
+                        @if (qaInchargeSection != null && qaDelegateSection != null && !qaInchargeSection.IsSubmitted)
+                        {
+                            @Html.Partial("_QADelegateSection", qaDelegateSection)
+                        }
+
+                        @if (finalSMSInchargeSection != null)
+                        {
+                            @Html.Partial("_FinalSMSInchargeSection", finalSMSInchargeSection)
+                        }
+
+                        @if (finalSMSInchargeSection != null && finalSMSDelegateSection != null && !finalSMSInchargeSection.IsSubmitted)
+                        {
+                            @Html.Partial("_FinalSMSDelegateSection", finalSMSDelegateSection)
+                        }
+
+                        @if (costingInchargeSection != null)
+                        {
+                            @Html.Partial("_CostingInchargeSection", costingInchargeSection)
+                        }
+                        @if (costingInchargeSection != null && costingDelegate1Section != null && !costingInchargeSection.IsSubmitted)
+                        {
+                            @Html.Partial("_CostingDelegate1Section", costingDelegate1Section)
+                        }
+                        @if (costingInchargeSection != null && costingDelegate2Section != null && (!costingInchargeSection.IsSubmitted1 || (costingDelegate1Section != null && !costingDelegate1Section.IsSubmitted1)))
+                        {
+                            @Html.Partial("_CostingDelegate2Section", costingDelegate2Section)
+                        }
+                        @if (tdsInchargeSection != null)
+                        {
+                            @Html.Partial("_TDSInchargeSection", tdsInchargeSection)
+                        }
+                        @if (tdsInchargeSection != null && tdsDelegateSection != null && !tdsInchargeSection.IsSubmitted)
+                        {
+                            @Html.Partial("_TDSDelegateSection", tdsDelegateSection)
+                        }
+                        <div class="clearfix"></div>
+                        @if (lummarketingInchargeSection != null)
+                        {
+                            <div id="applicationstatusbody">
+                                @Html.Partial("_Approvers", lummarketingInchargeSection.ApproversList)
+                            </div>
+                        }
+                        <div class="clearfix"></div>
+                        @{ ApplicationStatusSection appStatus = form.SectionsList.FirstOrDefault(f => f != null && f.SectionName.Equals(SectionNameConstant.APPLICATIONSTATUS)) as ApplicationStatusSection; }
+                        @if (appStatus != null)
+                        {
+                            @Html.Partial("_ApplicationStatus", appStatus)
+                        }
+                        @{ ActivityLogSection activityLog = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.ACTIVITYLOG)) as ActivityLogSection; }
+                        @if (activityLog != null)
+                        {
+                            @Html.Partial("_ActivityLogs", activityLog, new ViewDataDictionary { { "Resources", ResourceName.ICCPForm } })
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-top-wrapper ">
+            <i class="fa fa-chevron-up">
+            </i>
+        </div>
+    </div>
+    <div id="addeditVendor"></div>
+    if (lummarketingInchargeSection != null)
+    {
+        if (lummarketingInchargeSection.Status == "Completed" || lummarketingInchargeSection.Status == "Rejected")
+        {
+            @Html.Partial("_PrintItemCode", Model)
+        }
+    }
+    @section scripts{
+        @Scripts.Render("~/bundles/ICCPPojectScript")
+    }
+}

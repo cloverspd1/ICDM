@@ -1,0 +1,1141 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.ItemCode
+@using BEL.CommonDataContract
+@using BEL.ItemCodeCreationPreProcess.Models.Common
+@using Newtonsoft.Json;
+@model ItemCodeContract
+@{
+    ViewBag.Title = Html.ResourceValue("Page_Title", ResourceName.ICCPForm);
+    ItemCodeContract contract = Model as ItemCodeContract;
+    ItemCodeForm form = contract.Forms.FirstOrDefault() as ItemCodeForm;
+    LUMMktInchargeSection lummarketingInchargeSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.LUMMKTINCHARGESECTION)) as LUMMktInchargeSection;
+    LUMMktDelegateSection lummarketingDelegateSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.LUMMKTDELEGATEESECTION)) as LUMMktDelegateSection;
+    SCMLUMDesignInchargeSection scmlumDesignInginchargeSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.SCMLUMDESIGNINCHARGESECTION)) as SCMLUMDesignInchargeSection;
+    SCMLUMDesignDelegateSection scmlummarketingDelegateSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.SCMLUMDESIGNDELEGATESECTION)) as SCMLUMDesignDelegateSection;
+    SMSInchargeSection smsInchargeSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.SMSINCHARGESECTION)) as SMSInchargeSection;
+    SMSDelegateSection smsDelegateSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.SMSDELEGATESECTION)) as SMSDelegateSection;
+    QAInchargeSection qaInchargeSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.QAINCHARGESECTION)) as QAInchargeSection;
+    QADelegateSection qaDelegateSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.QADELEGATESECTION)) as QADelegateSection;
+    FinalSMSInchargeSection finalSMSInchargeSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.FINALSMSINCHARGESECTION)) as FinalSMSInchargeSection;
+    FinalSMSDelegateSection finalSMSDelegateSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.FINALSMSDELEGATESECTION)) as FinalSMSDelegateSection;
+    CostingInchargeSection costingInchargeSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.COSTINGINCHARGESECTION)) as CostingInchargeSection;
+    CostingDelegate1Section costingDelegate1Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.COSTINGDELEGATE1SECTION)) as CostingDelegate1Section;
+    CostingDelegate2Section costingDelegate2Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.COSTINGDELEGATE2SECTION)) as CostingDelegate2Section;
+    TDSInchargeSection tdsInchargeSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.TDSINCHARGESECTION)) as TDSInchargeSection;
+    TDSDelegateSection tdsDelegateSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(ICCPSectionName.TDSDELEGATESECTION)) as TDSDelegateSection;
+}
+<style>
+    .LabelPadding {
+        padding-top: 6px;
+    }
+
+    .bold {
+        font-weight: bold;
+        padding-top: 6px;
+    }
+
+    .borderRight {
+        border-right: 1px solid black;
+    }
+
+    .borderLeft {
+        border-left: 1px solid black;
+    }
+
+    .largefontsize {
+        font-size: large;
+    }
+
+    .table {
+        margin-bottom: 0px !important;
+    }
+</style>
+
+<!DOCTYPE html>
+<html moznomarginboxes mozdisallowselectionprint>
+<head>
+
+    <title>Print Purchase Order Details</title>
+</head>
+<body>
+    <div class="hidden">
+        <div id="divprint">
+            <div id="printContent" class="col-sm-12">
+                <style type="text/css">
+                    .modal-dialog {
+                        width: 75% !important;
+                    }
+                </style>
+
+                <div id="card1" class="col-sm-12 card" style="border:1px solid black">
+                    <div class="row bordertop">
+                        <div class="col-sm-6" style="vertical-align:middle;padding-top:2px; padding-bottom:2px;padding-left:0px!important">
+                            <img id="logo" src="~/images/bajaj_logo.jpg" />
+                        </div>
+                        <div class="col-sm-6">
+                            <h4><b>Item Code Document Management(ICDM)</b></h4>
+                        </div>
+                    </div>
+                </div>
+                <div id="card10" class="col-sm-12 card" style="border:1px solid black">
+                    <div class="row bordertop borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5">
+                                    @Html.Label("ICDM Request No. :", "ICDM Request No. :", new { @class = "bold" })
+                                </label>
+                                <div class="col-sm-7">
+                                    <b>
+                                        @lummarketingInchargeSection.ICCPNo
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5">
+                                    @Html.Label("Item Code :", "Item Code :", new { @class = "bold" })
+                                </label>
+                                <div class="col-sm-7">
+                                    @if (costingDelegate2Section != null && costingDelegate2Section.ItemCode != null)
+                                    {<b>
+                                        @costingDelegate2Section.ItemCode
+                                    </b>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.Label("Proposed By :", "Proposed By :", new { @class = "bold" })
+                                </label>
+                                <div class="col-sm-7 ">
+                                    <b>
+                                        @(string.IsNullOrEmpty(lummarketingInchargeSection.ProposedByName) ? ViewBag.UserName : lummarketingInchargeSection.ProposedByName)
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.Label("Request Date :", "Request Date :", new { @class = "bold" })
+                                </label>
+                                <div class="col-sm-7 ">
+                                    <b>
+                                        @(lummarketingInchargeSection.RequestDate.HasValue ? lummarketingInchargeSection.RequestDate.Value.ToShortDateString() : DateTime.Now.ToShortDateString())
+                                    </b>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5">
+                                    @Html.LabelFor(m => lummarketingInchargeSection.ItemDescription, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7" style="word-wrap: break-word;">
+                                    @if (lummarketingInchargeSection != null && !string.IsNullOrWhiteSpace(lummarketingInchargeSection.ItemDescription))
+                                    {
+                                        @lummarketingInchargeSection.ItemDescription
+                                    }
+                                    else if (lummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(lummarketingDelegateSection.ItemDescription))
+                                    {
+                                        @lummarketingDelegateSection.ItemDescription
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => lummarketingInchargeSection.ProductGroup, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7" style="word-wrap: break-word;">
+                                    @if (lummarketingInchargeSection != null && !string.IsNullOrWhiteSpace(lummarketingInchargeSection.ProductGroup))
+                                    {
+                                        @lummarketingInchargeSection.ProductGroup
+                                    }
+                                    else if (lummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(lummarketingDelegateSection.ProductGroup))
+                                    {
+                                        @lummarketingDelegateSection.ProductGroup
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="card11" class="col-sm-12 card" style="border:1px solid black">
+                    <div class="row bordertop borderBottom">
+                        <div class="col-sm-6 LabelPadding">
+                            <p><b>For LUM Marketing</b></p>
+                        </div>
+                        <div class="col-sm-6">
+                        </div>
+                    </div>
+
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => lummarketingInchargeSection.LUMMarketingDelegate, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7" style="word-wrap: break-word;">
+                                    @(!string.IsNullOrEmpty(lummarketingInchargeSection.LUMMarketingDelegateName) ? lummarketingInchargeSection.LUMMarketingDelegateName.Replace(",", ", ") : string.Empty)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => lummarketingInchargeSection.CurrentApprover.Comments, ResourceName.Common)
+                                </label>
+                                <div class="col-sm-7" style="word-wrap: break-word;">
+                                    @if (lummarketingInchargeSection != null && lummarketingInchargeSection.CurrentApprover.Comments != null)
+                                    {
+                                        @lummarketingInchargeSection.CurrentApprover.Comments
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+
+                                    @Html.LabelFor(m => lummarketingInchargeSection.ConfirmedOrderFromCustomer, ResourceName.ICCPForm)
+
+                                </label>
+                                <div class="col-sm-7" style="word-wrap: break-word;">
+                                    @if (lummarketingInchargeSection != null && !string.IsNullOrWhiteSpace(lummarketingInchargeSection.ConfirmedOrderFromCustomer))
+                                    {
+                                        @lummarketingInchargeSection.ConfirmedOrderFromCustomer
+                                    }
+                                    else if (lummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(lummarketingDelegateSection.ConfirmedOrderFromCustomer))
+                                    {
+                                        @lummarketingDelegateSection.ConfirmedOrderFromCustomer
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+
+                                    @Html.LabelFor(m => lummarketingInchargeSection.TypeOfPackaging, ResourceName.ICCPForm)
+
+                                </label>
+                                <div class="col-sm-7" style="word-wrap: break-word;">
+                                    @if (lummarketingInchargeSection != null && !string.IsNullOrWhiteSpace(lummarketingInchargeSection.TypeOfPackaging))
+                                    {
+                                        @lummarketingInchargeSection.TypeOfPackaging
+                                    }
+                                    else if (lummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(lummarketingDelegateSection.TypeOfPackaging))
+                                    {
+                                        @lummarketingDelegateSection.TypeOfPackaging
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => lummarketingInchargeSection.ReferenceProduct, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7" style="word-wrap: break-word;">
+                                    @if (lummarketingInchargeSection != null && !string.IsNullOrWhiteSpace(lummarketingInchargeSection.ReferenceProduct))
+                                    {
+                                        @lummarketingInchargeSection.ReferenceProduct
+                                    }
+                                    else if (lummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(lummarketingDelegateSection.ReferenceProduct))
+                                    {
+                                        @lummarketingDelegateSection.ReferenceProduct
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => lummarketingInchargeSection.ExpectedAnnualBusinessVolume, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7 ">
+                                    @if (lummarketingInchargeSection != null && lummarketingInchargeSection.ExpectedAnnualBusinessVolume.HasValue)
+                                    {
+                                        @lummarketingInchargeSection.ExpectedAnnualBusinessVolume.Value
+                                    }
+                                    else if (lummarketingDelegateSection != null && lummarketingDelegateSection.ExpectedAnnualBusinessVolume.HasValue)
+                                    {
+                                        @lummarketingDelegateSection.ExpectedAnnualBusinessVolume.Value
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => lummarketingInchargeSection.ItemToBePhasedOut, ResourceName.ICCPForm)
+
+                                </label>
+                                <div class="col-sm-7 " style="word-wrap: break-word;">
+                                    @if (lummarketingInchargeSection != null && !string.IsNullOrWhiteSpace(lummarketingInchargeSection.ItemToBePhasedOut))
+                                    {
+                                        @lummarketingInchargeSection.ItemToBePhasedOut
+                                    }
+                                    else if (lummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(lummarketingInchargeSection.ItemToBePhasedOut))
+                                    {
+                                        @lummarketingDelegateSection.ItemToBePhasedOut
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => lummarketingInchargeSection.ItemPhasedOutWithEffectFrom, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7">
+                                    @if (lummarketingInchargeSection != null && lummarketingInchargeSection.ItemPhasedOutWithEffectFrom.HasValue)
+                                    {
+                                        @lummarketingInchargeSection.ItemPhasedOutWithEffectFrom.Value.ToShortDateString()
+                                    }
+                                    else if (lummarketingDelegateSection != null && lummarketingDelegateSection.ItemPhasedOutWithEffectFrom.HasValue)
+                                    {
+                                        @lummarketingDelegateSection.ItemPhasedOutWithEffectFrom.Value.ToShortDateString()
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="card2" class="col-sm-12 card" style="border:1px solid black">
+                    <div class="row borderBottom">
+                        <div class="col-sm-6 LabelPadding">
+                            <p>
+                                <b>
+                                    For LUM Design
+                                </b>
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => scmlumDesignInginchargeSection.SCMLUMDesignDelegate, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7" style="word-wrap: break-word;">
+                                    @(!string.IsNullOrEmpty(scmlumDesignInginchargeSection.SCMLUMDesignDelegateName) ? scmlumDesignInginchargeSection.SCMLUMDesignDelegateName.Replace(",", ", ") : string.Empty)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => scmlumDesignInginchargeSection.CurrentApprover.Comments, ResourceName.Common)
+                                </label>
+                                <div class="col-sm-7" style="word-wrap: break-word;">
+                                    @if (scmlumDesignInginchargeSection != null && scmlumDesignInginchargeSection.CurrentApprover != null && scmlumDesignInginchargeSection.CurrentApprover.Comments != null)
+                                    {
+                                        @scmlumDesignInginchargeSection.CurrentApprover.Comments
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => scmlumDesignInginchargeSection.BISRegistrationApplicable, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7">
+                                    @if (scmlumDesignInginchargeSection != null && !string.IsNullOrWhiteSpace(Convert.ToString(scmlumDesignInginchargeSection.BISRegistrationApplicable)))
+                                    {
+                                        @(scmlumDesignInginchargeSection.BISRegistrationApplicable ? "Yes" : "No")
+                                    }
+                                    else if (scmlummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(Convert.ToString(scmlummarketingDelegateSection.BISRegistrationApplicable)))
+                                    {
+                                        @(scmlummarketingDelegateSection.BISRegistrationApplicable ? "Yes" : "No")
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group RNumber">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => scmlumDesignInginchargeSection.RNumber, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7" style="word-wrap: break-word;">
+                                    @if (scmlumDesignInginchargeSection != null && !string.IsNullOrWhiteSpace(scmlumDesignInginchargeSection.RNumber))
+                                    {
+                                        @scmlumDesignInginchargeSection.RNumber
+                                    }
+                                    else if (scmlummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(scmlummarketingDelegateSection.RNumber))
+                                    {
+                                        @scmlummarketingDelegateSection.RNumber
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => scmlumDesignInginchargeSection.UploadArtworkAttachment, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7">
+                                    @if (scmlumDesignInginchargeSection != null && !string.IsNullOrWhiteSpace(scmlumDesignInginchargeSection.UploadArtworkAttachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlumDesignInginchargeSection.UploadArtworkAttachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                    else if (scmlummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(scmlummarketingDelegateSection.UploadArtworkAttachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlummarketingDelegateSection.UploadArtworkAttachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => scmlumDesignInginchargeSection.Vendors, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7 ">
+                                    <div class="form-control noborder">
+                                        @if (scmlumDesignInginchargeSection != null && !string.IsNullOrWhiteSpace(scmlumDesignInginchargeSection.Vendors))
+                                        {
+                                            @scmlumDesignInginchargeSection.Vendors
+                                        }
+                                        else if (scmlummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(scmlummarketingDelegateSection.Vendors))
+                                        {
+                                            @scmlummarketingDelegateSection.Vendors
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => scmlumDesignInginchargeSection.BuyMake, ResourceName.ICCPForm)
+
+                                </label>
+                                <div class="col-sm-7 ">
+                                    @if (scmlumDesignInginchargeSection != null && !string.IsNullOrWhiteSpace(scmlumDesignInginchargeSection.BuyMake))
+                                    {
+                                        @scmlumDesignInginchargeSection.BuyMake
+                                    }
+                                    else if (scmlummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(scmlummarketingDelegateSection.BuyMake))
+                                    {
+                                        @scmlummarketingDelegateSection.BuyMake
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+
+                                    @Html.LabelFor(m => scmlumDesignInginchargeSection.BOMAttachment, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7">
+                                    @if (scmlumDesignInginchargeSection != null && !string.IsNullOrWhiteSpace(scmlumDesignInginchargeSection.BOMAttachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlumDesignInginchargeSection.BOMAttachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                    else if (scmlummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(scmlummarketingDelegateSection.BOMAttachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlummarketingDelegateSection.BOMAttachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+
+                                    @Html.LabelFor(m => scmlumDesignInginchargeSection.ADSAttachment, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7 ">
+                                    @if (scmlumDesignInginchargeSection != null && !string.IsNullOrWhiteSpace(scmlumDesignInginchargeSection.ADSAttachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlumDesignInginchargeSection.ADSAttachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                    else if (scmlummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(scmlummarketingDelegateSection.ADSAttachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlummarketingDelegateSection.ADSAttachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => scmlumDesignInginchargeSection.SpecificationSheetAttachment, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7 ">
+                                    @if (scmlumDesignInginchargeSection != null && !string.IsNullOrWhiteSpace(scmlumDesignInginchargeSection.SpecificationSheetAttachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlumDesignInginchargeSection.SpecificationSheetAttachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                    else if (scmlummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(scmlummarketingDelegateSection.SpecificationSheetAttachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlummarketingDelegateSection.SpecificationSheetAttachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+
+                                    @Html.LabelFor(m => scmlumDesignInginchargeSection.PackagingDataSheetAttachment, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7 ">
+                                    @if (scmlumDesignInginchargeSection != null && !string.IsNullOrWhiteSpace(scmlumDesignInginchargeSection.PackagingDataSheetAttachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlumDesignInginchargeSection.PackagingDataSheetAttachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                    else if (scmlummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(scmlummarketingDelegateSection.PackagingDataSheetAttachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlummarketingDelegateSection.PackagingDataSheetAttachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+
+                                    @Html.LabelFor(m => scmlumDesignInginchargeSection.IESFileAttachment, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7 ">
+                                    @if (scmlumDesignInginchargeSection != null && !string.IsNullOrWhiteSpace(scmlumDesignInginchargeSection.IESFileAttachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlumDesignInginchargeSection.IESFileAttachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                    else if (scmlummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(scmlummarketingDelegateSection.IESFileAttachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlummarketingDelegateSection.IESFileAttachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => scmlumDesignInginchargeSection.LM79Attachment, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7 ">
+                                    @if (scmlumDesignInginchargeSection != null && !string.IsNullOrWhiteSpace(scmlumDesignInginchargeSection.LM79Attachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlumDesignInginchargeSection.LM79Attachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                    else if (scmlummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(scmlummarketingDelegateSection.LM79Attachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlummarketingDelegateSection.LM79Attachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => scmlumDesignInginchargeSection.ProductDrawingAttachment, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7 ">
+                                    @if (scmlumDesignInginchargeSection != null && !string.IsNullOrWhiteSpace(scmlumDesignInginchargeSection.ProductDrawingAttachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlumDesignInginchargeSection.ProductDrawingAttachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                    else if (scmlummarketingDelegateSection != null && !string.IsNullOrWhiteSpace(scmlummarketingDelegateSection.ProductDrawingAttachment))
+                                    {
+                                        foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(scmlummarketingDelegateSection.ProductDrawingAttachment))
+                                        {
+                                            @file.FileName
+                                            <div class="clearfix"></div>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="card3" class="col-sm-12 card" style="border:1px solid black">
+                    <div class="row borderBottom">
+                        <div class="col-sm-6 LabelPadding">
+                            <p>
+                                <b>
+                                    For SMS
+                                </b>
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => smsInchargeSection.SMSDelegate, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7" style="word-wrap: break-word;">
+                                    @(!string.IsNullOrEmpty(smsInchargeSection.SMSDelegateName) ? smsInchargeSection.SMSDelegateName.Replace(",", ", ") : string.Empty)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="col-sm-5 text-left">
+                                    @Html.LabelFor(m => smsInchargeSection.CurrentApprover.Comments, ResourceName.Common)
+                                </div>
+                                <div class="col-sm-7 text-left" style="word-wrap: break-word;">
+                                    @if (smsInchargeSection != null && smsInchargeSection.CurrentApprover != null && smsInchargeSection.CurrentApprover.Comments != null)
+                                    {
+                                        @smsInchargeSection.CurrentApprover.Comments
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="col-sm-5 text-left">
+                                    @Html.LabelFor(m => smsInchargeSection.PilotLotPreparation, ResourceName.ICCPForm)
+                                </div>
+                                <div class="col-sm-7 text-left">
+
+                                    @if (smsInchargeSection != null && !string.IsNullOrWhiteSpace(smsInchargeSection.PilotLotPreparation))
+                                    {
+                                        @smsInchargeSection.PilotLotPreparation
+                                    }
+                                    else if (smsDelegateSection != null && !string.IsNullOrWhiteSpace(smsDelegateSection.PilotLotPreparation))
+                                    {
+                                        @smsDelegateSection.PilotLotPreparation
+                                    }
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-sm-5 text-left">
+                                @Html.LabelFor(m => smsInchargeSection.Quantity, ResourceName.ICCPForm)
+                            </div>
+                            <div class="col-sm-7 text-left">
+                                @if (smsInchargeSection != null && smsInchargeSection.Quantity.HasValue)
+                                {
+                                    @smsInchargeSection.Quantity.Value
+                                }
+                                else if (smsDelegateSection != null && smsDelegateSection.Quantity.HasValue)
+                                {
+                                    @smsDelegateSection.Quantity.Value
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="card4" class="col-sm-12 card" style="border:1px solid black">
+                    <div class="row borderBottom">
+                        <div class="col-sm-6 LabelPadding">
+                            <p>
+                                <b>
+                                    For QA
+                                </b>
+                            <p>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="col-sm-5 text-left">
+                                @Html.Label("Approval Date :", "Approval Date :", new { @class = "bold" })
+                            </div>
+                            <div class="col-sm-7 text-left">
+                                @if (finalSMSInchargeSection != null && finalSMSInchargeSection.CurrentApprover.ApprovalDate.HasValue)
+                                {
+                                    @Html.LabelFor(m => finalSMSInchargeSection.CurrentApprover.ApprovalDate, finalSMSInchargeSection.CurrentApprover.ApprovalDate.Value.ToShortDateString(), new { @class = "bold" })
+
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">
+                                    @Html.LabelFor(m => qaInchargeSection.QADelegate, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-7" style="word-wrap: break-word;">
+                                    @(!string.IsNullOrEmpty(qaInchargeSection.QADelegateName) ? qaInchargeSection.QADelegateName.Replace(",", ", ") : string.Empty)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-sm-5 text-left">
+                                @Html.LabelFor(m => qaInchargeSection.CurrentApprover.Comments, ResourceName.Common)
+                            </div>
+                            <div class="col-sm-7 text-left" style="word-wrap: break-word;">
+                                @if (qaInchargeSection != null && qaInchargeSection.CurrentApprover != null && qaInchargeSection.CurrentApprover.Comments != null)
+                                {
+                                    @qaInchargeSection.CurrentApprover.Comments
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="col-sm-5 text-left">
+                                @Html.LabelFor(m => qaInchargeSection.ReliabilityTestReportAttachment, ResourceName.ICCPForm)
+                            </div>
+                            <div class="col-sm-7 text-left">
+                                @if (qaInchargeSection != null && !string.IsNullOrWhiteSpace(qaInchargeSection.ReliabilityTestReportAttachment))
+                                {
+                                    foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(qaInchargeSection.ReliabilityTestReportAttachment))
+                                    {
+                                        @file.FileName
+                                        <div class="clearfix"></div>
+                                    }
+                                }
+                                else if (qaDelegateSection != null && !string.IsNullOrWhiteSpace(qaDelegateSection.ReliabilityTestReportAttachment))
+                                {
+                                    foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(qaDelegateSection.ReliabilityTestReportAttachment))
+                                    {
+                                        @file.FileName
+                                        <div class="clearfix"></div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-sm-5 text-left">
+                                @Html.LabelFor(m => qaDelegateSection.CurrentApprover.Comments, ResourceName.Common)
+                            </div>
+                            <div class="col-sm-7 text-left" style="word-wrap: break-word;">
+                                @if (qaDelegateSection != null && qaDelegateSection.CurrentApprover != null && qaDelegateSection.CurrentApprover.Comments != null)
+                                {
+                                    @qaDelegateSection.CurrentApprover.Comments
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cardFinalSMS" class="col-sm-12 card" style="border:1px solid black">
+                    <div class="row borderBottom">
+                        <div class="col-sm-6 LabelPadding">
+                            <p><b>For Final SMS</b></p>
+                        </div>
+                        <div class="col-sm-6">
+                            @*<div class="col-sm-5 text-left">
+                                    @Html.Label("Approval Date :", "Approval Date :", new { @class = "bold" })
+                                </div>
+                                <div class="col-sm-7 text-left">
+                                    @if (finalSMSInchargeSection != null && finalSMSInchargeSection.CurrentApprover.ApprovalDate.HasValue)
+                                    {
+                                        @Html.LabelFor(m => finalSMSInchargeSection.CurrentApprover.ApprovalDate, finalSMSInchargeSection.CurrentApprover.ApprovalDate.Value.ToShortDateString(), new { @class = "bold" })
+
+                                    }
+                                </div>*@
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="col-sm-5">
+                                @Html.LabelFor(m => finalSMSInchargeSection.FinalSMSDelegate, ResourceName.ICCPForm)
+                            </div>
+                            <div class="col-sm-7 text-left">
+                                @if (finalSMSInchargeSection != null && finalSMSInchargeSection.FinalSMSDelegateName != null)
+                                {
+                                    @finalSMSInchargeSection.FinalSMSDelegateName
+                                }
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-sm-5">
+                                @Html.LabelFor(m => finalSMSInchargeSection.CurrentApprover.Comments, ResourceName.Common)
+                            </div>
+                            <div class="col-sm-7 text-left">
+                                @if (finalSMSInchargeSection != null && finalSMSInchargeSection.CurrentApprover != null && finalSMSInchargeSection.CurrentApprover.Comments != null)
+                                {
+                                    @finalSMSInchargeSection.CurrentApprover.Comments
+                                }
+                                else if (finalSMSDelegateSection != null && finalSMSDelegateSection.CurrentApprover != null && finalSMSDelegateSection.CurrentApprover.Comments != null)
+                                {
+                                    @finalSMSDelegateSection.CurrentApprover.Comments
+                                }
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="col-sm-5">
+                                @Html.LabelFor(m => finalSMSInchargeSection.RMLeadTime, ResourceName.ICCPForm)
+                            </div>
+                            <div class="col-sm-7 text-left">
+                                @if (finalSMSInchargeSection != null && finalSMSInchargeSection.RMLeadTime != null)
+                                {
+                                    @finalSMSInchargeSection.RMLeadTime
+                                }
+                                else if (finalSMSDelegateSection != null && finalSMSDelegateSection.RMLeadTime != null)
+                                {
+                                    @finalSMSDelegateSection.RMLeadTime
+                                }
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-sm-5">
+                                @Html.LabelFor(m => finalSMSInchargeSection.BMLeadTime, ResourceName.ICCPForm)
+                            </div>
+                            <div class="col-sm-7 text-left">
+                                @if (finalSMSInchargeSection != null && finalSMSInchargeSection.BMLeadTime != null)
+                                {
+                                    @finalSMSInchargeSection.BMLeadTime
+                                }
+                                else if (finalSMSDelegateSection != null && finalSMSDelegateSection.BMLeadTime != null)
+                                {
+                                    @finalSMSDelegateSection.BMLeadTime
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cardCosting" class="col-sm-12 card" style="border:1px solid black">
+                    <div class="row borderBottom">
+                        <div class="col-sm-6 LabelPadding">
+                            <p><b>For Costing</b></p>
+                        </div>
+                        <div class="col-sm-6">
+                            @*<div class="col-sm-5 text-left">
+                                    @Html.Label("Approval Date :", "Approval Date :", new { @class = "bold" })
+                                </div>
+                                <div class="col-sm-7 text-left">
+                                    @if (costingInchargeSection != null && costingInchargeSection.CurrentApprover.ApprovalDate.HasValue)
+                                    {
+                                        @Html.LabelFor(m => costingInchargeSection.CurrentApprover.ApprovalDate, costingInchargeSection.CurrentApprover.ApprovalDate.Value.ToShortDateString(), new { @class = "bold" })
+
+                                    }
+                                </div>*@
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="col-sm-5">
+                                @Html.LabelFor(m => costingInchargeSection.CostingDelegate, ResourceName.ICCPForm)
+                            </div>
+                            <div class="col-sm-7 text-left">
+                                @if (costingInchargeSection != null && costingInchargeSection.CostingDelegateName != null)
+                                {
+                                    @costingInchargeSection.CostingDelegateName
+                                }
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="col-sm-5">
+                                @Html.LabelFor(m => costingInchargeSection.CostPrice, ResourceName.ICCPForm)
+                            </div>
+                            <div class="col-sm-7 text-left">
+
+                                @if (costingInchargeSection != null && costingInchargeSection.CostPrice != null)
+                                {
+                                    @String.Format("{0} {1}", costingInchargeSection.CostPrice, costingInchargeSection.Currency)
+                                }
+                                else if (costingDelegate1Section != null && costingDelegate1Section.CostPrice != null)
+                                {
+                                    @String.Format("{0} {1}", costingDelegate1Section.CostPrice,costingDelegate1Section.Currency)
+
+                                }
+
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-sm-5">
+                                @Html.LabelFor(m => costingInchargeSection.HSNCode, ResourceName.ICCPForm)
+                            </div>
+                            <div class="col-sm-7 text-left">
+
+                                @if (costingInchargeSection != null && costingInchargeSection.HSNCode != null)
+                                {
+                                    @costingInchargeSection.HSNCode
+                                }
+                                else if (costingDelegate1Section != null && costingDelegate1Section.HSNCode != null)
+                                {
+                                    @costingDelegate1Section.HSNCode
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="col-sm-5">
+                                @Html.LabelFor(m => costingInchargeSection.GSTRate, ResourceName.ICCPForm)
+                            </div>
+                            <div class="col-sm-7 text-left">
+
+                                @if (costingInchargeSection != null && costingInchargeSection.GSTRate != null)
+                                {
+                                    @costingInchargeSection.GSTRate
+                                }
+                                else if (costingDelegate1Section != null && costingDelegate1Section.GSTRate != null)
+                                {
+                                    @costingDelegate1Section.GSTRate
+                                }
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-sm-5">
+                                @Html.LabelFor(m => costingInchargeSection.Warranty, ResourceName.ICCPForm)
+                            </div>
+                            <div class="col-sm-7 text-left">
+
+                                @if (costingInchargeSection != null && costingInchargeSection.Warranty != null)
+                                {
+                                    @costingInchargeSection.Warranty
+                                }
+                                else if (costingDelegate1Section != null && costingDelegate1Section.Warranty != null)
+                                {
+                                    @costingDelegate1Section.Warranty
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="col-sm-5">
+                                @Html.LabelFor(m => costingInchargeSection.CostingDelegate2, ResourceName.ICCPForm)
+                            </div>
+                            <div class="col-sm-7 text-left">
+                                @if (costingInchargeSection != null && costingInchargeSection.CostingDelegate2Name != null)
+                                {
+                                    @costingInchargeSection.CostingDelegate2Name
+                                }
+                                else if (costingDelegate1Section != null && costingDelegate1Section.CostingDelegate2Name != null)
+                                {
+                                    @costingDelegate1Section.CostingDelegate2Name
+                                }
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-sm-5">
+                                @Html.LabelFor(m => costingInchargeSection.CurrentApprover.Comments, ResourceName.Common)
+                            </div>
+                            <div class="col-sm-7 text-left">
+                                @if (costingInchargeSection != null && costingInchargeSection.CurrentApprover != null && costingInchargeSection.CurrentApprover.Comments != null)
+                                {
+                                    @costingInchargeSection.CurrentApprover.Comments
+                                }
+                                else if (costingDelegate1Section != null && costingDelegate1Section.CurrentApprover != null && costingDelegate1Section.CurrentApprover.Comments != null)
+                                {
+                                    @costingDelegate1Section.CurrentApprover.Comments
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cardTDS" class="col-sm-12 card" style="border:1px solid black">
+                    <div class="row borderBottom">
+                        <div class="col-sm-6 LabelPadding">
+                            <p><b>For TDS</b></p>
+                        </div>
+                        <div class="col-sm-6">
+                            @*<div class="col-sm-5 text-left">
+                                    @Html.Label("Approval Date :", "Approval Date :", new { @class = "bold" })
+                                </div>
+                                <div class="col-sm-7 text-left">
+                                    @if (tdsInchargeSection != null && tdsInchargeSection.CurrentApprover.ApprovalDate.HasValue)
+                                    {
+                                        @Html.LabelFor(m => tdsInchargeSection.CurrentApprover.ApprovalDate, tdsInchargeSection.CurrentApprover.ApprovalDate.Value.ToShortDateString(), new { @class = "bold" })
+                                    }
+                                </div>*@
+                        </div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="col-sm-5 text-left">
+                                @Html.LabelFor(m => tdsInchargeSection.TDSDelegate, ResourceName.ICCPForm)
+                            </div>
+                            <div class="col-sm-7 text-left">
+                                @if (tdsInchargeSection != null && tdsInchargeSection.TDSDelegateName != null)
+                                {
+                                    @tdsInchargeSection.TDSDelegateName
+                                }
+                            </div>
+                        </div>
+                        <div class="col-sm-6"></div>
+                    </div>
+                    <div class="row borderBottom">
+                        <div class="col-sm-6">
+                            <div class="col-sm-5">
+                                @Html.LabelFor(m => tdsInchargeSection.TDSAttachment, ResourceName.ICCPForm)
+                            </div>
+                            <div class="col-sm-7 text-left">
+                                @if (tdsInchargeSection != null && !string.IsNullOrEmpty(tdsInchargeSection.TDSAttachment))
+                                {
+                                    foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(tdsInchargeSection.TDSAttachment))
+                                    {
+                                        @file.FileName
+                                        <div class="clearfix"></div>
+                                    }
+                                }
+                                else if (tdsDelegateSection != null && !string.IsNullOrEmpty(tdsDelegateSection.TDSAttachment))
+                                {
+                                    foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(tdsDelegateSection.TDSAttachment))
+                                    {
+                                        @file.FileName
+                                        <div class="clearfix"></div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-sm-5 text-left">
+                                @Html.LabelFor(m => tdsInchargeSection.CurrentApprover.Comments, ResourceName.Common)
+                            </div>
+                            <div class="col-sm-7 text-left">
+
+                                @if (tdsInchargeSection != null && tdsInchargeSection.CurrentApprover != null && tdsInchargeSection.CurrentApprover.Comments != null)
+                                {
+                                    @tdsInchargeSection.CurrentApprover.Comments
+                                }
+                                else if (tdsDelegateSection != null && tdsDelegateSection.CurrentApprover != null && tdsDelegateSection.CurrentApprover.Comments != null)
+                                {
+                                    @tdsDelegateSection.CurrentApprover.Comments
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<div class="modal fade" id="printModel" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><i class="fa fa-print"></i> Print Item Code Pre Process Details</h4>
+
+            </div>
+            <div class="modal-body">
+                <p><span class="text-danger text-default-light">@Html.ResourceValue("Text_Print", ResourceName.Common)</span></p>
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered someTable">
+
+                        <thead>
+                            <tr>
+                                <th>Attachment Name</th>
+                                <th>Print</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Item Code Pre Process Details
+                                </td>
+                                <td>
+
+                                    <a onclick="Print(this);" data-action="6" data-sendbackto="" data-sendtorole="" style="cursor:pointer !important">Print</a>&nbsp; | &nbsp;
+                                    <a onclick="PrintPreview(this);" data-action="6" data-sendbackto="" data-sendtorole="" style="cursor:pointer !important">Preview</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>

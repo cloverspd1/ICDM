@@ -1,0 +1,563 @@
+2018-09-12 12:29:18,420 [12] INFO  - WCF - Application_Start_Done, 
+2018-09-12 12:29:18,459 [13] INFO  - WCF - Begin Request http://localhost:62403/?ID=9, 
+2018-09-12 12:29:18,460 [12] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-09-12 12:29:22,865 [13] INFO  - MVC - sp user == , 
+2018-09-12 12:29:24,962 [12] INFO  - MVC - sp user == , 
+2018-09-12 12:29:39,370 [10] ERROR - Id: 6c3118cc-af9f-4b97-8ac1-2e3588b990dd
+2018-09-12 12:29:39,375 [10] ERROR - StatusCode: 200
+2018-09-12 12:29:39,384 [10] ERROR - Controller: 
+2018-09-12 12:29:40,144 [10] ERROR - Action: 
+2018-09-12 12:29:40,168 [10] ERROR - Token request failed.
+Microsoft.IdentityModel.SecurityTokenService.RequestFailedException: Token request failed. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2WebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   at BEL.DataAccessLayer.TokenHelper.GetAppOnlyAccessToken(String targetPrincipalName, String targetHost, String targetRealm) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\TokenHelper.cs:line 306
+   at BEL.DataAccessLayer.BELDataAccessLayer.CreateClientContext(String strURL) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 863
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer..ctor() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 43
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.<>c.<.cctor>b__15_0() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 20
+   at System.Lazy`1.CreateValue()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.get_Instance() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 62
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.get_CurrentUser() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 126
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id, Boolean isRetrieve) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 35
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-09-12 12:29:40,174 [11] ERROR - Id: 7c286810-ceba-4334-84b7-f57ff19209fe
+2018-09-12 12:29:40,214 [11] ERROR - StatusCode: 200
+2018-09-12 12:29:40,225 [11] ERROR - Controller: 
+2018-09-12 12:29:40,233 [11] ERROR - Action: 
+2018-09-12 12:29:40,238 [11] ERROR - Token request failed.
+Microsoft.IdentityModel.SecurityTokenService.RequestFailedException: Token request failed. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2WebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   at BEL.DataAccessLayer.TokenHelper.GetAppOnlyAccessToken(String targetPrincipalName, String targetHost, String targetRealm) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\TokenHelper.cs:line 306
+   at BEL.DataAccessLayer.BELDataAccessLayer.CreateClientContext(String strURL) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 863
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer..ctor() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 43
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.<>c.<.cctor>b__15_0() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 20
+   at System.Lazy`1.CreateValue()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.get_Instance() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 62
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.get_CurrentUser() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 126
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id, Boolean isRetrieve) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 35
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-09-12 12:29:40,286 [10] ERROR - Token request failed.
+Microsoft.IdentityModel.SecurityTokenService.RequestFailedException: Token request failed. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2WebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   at BEL.DataAccessLayer.TokenHelper.GetAppOnlyAccessToken(String targetPrincipalName, String targetHost, String targetRealm) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\TokenHelper.cs:line 306
+   at BEL.DataAccessLayer.BELDataAccessLayer.CreateClientContext(String strURL) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 863
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer..ctor() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 43
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.<>c.<.cctor>b__15_0() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 20
+   at System.Lazy`1.CreateValue()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.get_Instance() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 62
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.get_CurrentUser() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 126
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id, Boolean isRetrieve) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 35
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-09-12 12:29:40,289 [11] ERROR - Token request failed.
+Microsoft.IdentityModel.SecurityTokenService.RequestFailedException: Token request failed. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2WebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   at BEL.DataAccessLayer.TokenHelper.GetAppOnlyAccessToken(String targetPrincipalName, String targetHost, String targetRealm) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\TokenHelper.cs:line 306
+   at BEL.DataAccessLayer.BELDataAccessLayer.CreateClientContext(String strURL) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 863
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer..ctor() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 43
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.<>c.<.cctor>b__15_0() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 20
+   at System.Lazy`1.CreateValue()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.get_Instance() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 62
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.get_CurrentUser() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 126
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id, Boolean isRetrieve) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 35
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-09-12 12:29:40,387 [5] INFO  - WCF - Begin Request http://localhost:62403/Master/Error?msg=Token request failed.&errorId=7c286810-ceba-4334-84b7-f57ff19209fe, 
+2018-09-12 12:29:54,653 [5] INFO  - MVC - sp user == , 
+2018-09-12 12:29:54,653 [13] INFO  - WCF - Begin Request http://localhost:62403/?ID=9, 
+2018-09-12 12:30:08,623 [9] INFO  - WCF - Application_Start_Done, 
+2018-09-12 12:30:08,623 [11] INFO  - WCF - Begin Request http://localhost:62403/?ID=9, 
+2018-09-12 12:30:13,478 [12] INFO  - MVC - sp user == , 
+2018-09-12 12:30:55,201 [6] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-09-12 12:30:55,201 [8] INFO  - WCF - Application_Start_Done, 
+2018-09-12 12:30:58,811 [6] INFO  - MVC - sp user == , 
+2018-09-12 12:31:51,598 [7] INFO  - WCF - Begin Request http://localhost:62403/?ID=9, 
+2018-09-12 12:31:51,598 [8] INFO  - WCF - Application_Start_Done, 
+2018-09-12 12:31:54,500 [7] INFO  - MVC - sp user == , 
+2018-09-12 12:32:01,340 [7] INFO  - MVC -  ViewBag.UserID =, String="26"
+2018-09-12 12:32:01,340 [8] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-09-12 12:32:02,198 [7] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=26, 
+2018-09-12 12:32:02,198 [9] INFO  - WCF - Called Helper GetFormData, 
+2018-09-12 12:32:05,670 [7] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=QA Incharge, 
+2018-09-12 12:32:06,753 [8] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:32:06,766 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 12:32:06,780 [8] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:32:06,754 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 12:32:06,753 [7] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:32:06,762 [9] INFO  - WCF - called Helper.GetFormData, 
+2018-09-12 12:32:06,843 [9] INFO  - WCF - Start Helper.GetAlias, Int32=26
+2018-09-12 12:32:06,834 [7] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:32:06,817 [8] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:32:06,824 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 12:32:08,011 [7] INFO  - WCF - Start Helper.GetAlias, Int32=42
+2018-09-12 12:32:08,024 [7] INFO  - WCF - Start Helper.GetAlias, Int32=63
+2018-09-12 12:32:08,036 [7] INFO  - WCF - Start Helper.GetAlias, Int32=31
+2018-09-12 12:32:08,048 [7] INFO  - WCF - Start Helper.GetAlias, Int32=35
+2018-09-12 12:32:08,011 [8] INFO  - WCF - Start Helper.GetAlias, Int32=61
+2018-09-12 12:32:08,011 [11] INFO  - WCF - Start Helper.GetAlias, Int32=62
+2018-09-12 12:32:08,011 [9] INFO  - WCF - Start Helper.GetAlias, Int32=59
+2018-09-12 12:32:08,086 [9] INFO  - WCF - Start Helper.GetAlias, Int32=33
+2018-09-12 12:32:08,097 [9] INFO  - WCF - Start Helper.GetAlias, Int32=34
+2018-09-12 12:32:08,058 [7] INFO  - WCF - Start Helper.GetAlias, Int32=32
+2018-09-12 12:32:08,065 [8] INFO  - WCF - Start Helper.GetAlias, Int32=30
+2018-09-12 12:32:08,075 [11] INFO  - WCF - Start Helper.GetAlias, Int32=42
+2018-09-12 12:32:08,109 [9] INFO  - WCF - Start Helper.GetAlias, Int32=36
+2018-09-12 12:32:08,640 [9] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:32:08,652 [11] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:32:08,667 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 12:32:08,667 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 12:32:09,793 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 12:32:09,806 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 12:32:09,806 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 12:32:10,337 [9] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:32:10,337 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 12:32:10,337 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 12:32:10,540 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 12:32:10,540 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 12:32:11,495 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 12:32:11,495 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 12:32:11,967 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 12:32:11,967 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 12:32:12,182 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 12:32:12,182 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 12:32:12,947 [8] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-09-12 12:32:13,087 [8] INFO  - WCF - User resolved : , String="dcrdcnuser2@bajajelectricals.com"
+2018-09-12 12:32:13,312 [7] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-09-12 12:32:13,356 [9] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-09-12 12:32:13,356 [8] INFO  - WCF - Helper.GetAllButtons, 
+2018-09-12 12:32:16,076 [7] INFO  - WCF - Helper.GetButtons for role 'QA Incharge', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='Submitted', other params={"CurrentFromLevel":"4"}, 
+2018-09-12 12:32:50,895 [12] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/VerifyDownloadFileForm Data: ["url","applicationName"], 
+2018-09-12 12:33:26,845 [8] INFO  - WCF - Application_Start_Done, 
+2018-09-12 12:33:26,893 [9] INFO  - WCF - Begin Request http://localhost:62403/?ID=9, 
+2018-09-12 12:33:30,309 [6] INFO  - MVC - sp user == , 
+2018-09-12 12:33:41,392 [6] INFO  - MVC -  ViewBag.UserID =, String="26"
+2018-09-12 12:33:41,465 [6] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-09-12 12:33:42,120 [8] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=26, 
+2018-09-12 12:33:42,120 [9] INFO  - WCF - Called Helper GetFormData, 
+2018-09-12 12:33:44,216 [9] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=QA Incharge, 
+2018-09-12 12:33:44,787 [9] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 12:33:44,812 [9] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 12:33:44,830 [9] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:33:44,852 [9] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:33:44,874 [9] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 12:33:44,904 [9] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:33:44,788 [8] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:33:44,787 [11] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:33:44,811 [6] INFO  - WCF - called Helper.GetFormData, 
+2018-09-12 12:33:44,919 [9] INFO  - WCF - Start Helper.GetAlias, Int32=26
+2018-09-12 12:33:45,712 [8] INFO  - WCF - Start Helper.GetAlias, Int32=33
+2018-09-12 12:33:45,712 [6] INFO  - WCF - Start Helper.GetAlias, Int32=36
+2018-09-12 12:33:45,712 [11] INFO  - WCF - Start Helper.GetAlias, Int32=34
+2018-09-12 12:33:45,758 [11] INFO  - WCF - Start Helper.GetAlias, Int32=59
+2018-09-12 12:33:45,777 [11] INFO  - WCF - Start Helper.GetAlias, Int32=62
+2018-09-12 12:33:45,794 [11] INFO  - WCF - Start Helper.GetAlias, Int32=61
+2018-09-12 12:33:45,738 [6] INFO  - WCF - Start Helper.GetAlias, Int32=42
+2018-09-12 12:33:45,729 [9] INFO  - WCF - Start Helper.GetAlias, Int32=63
+2018-09-12 12:33:45,827 [9] INFO  - WCF - Start Helper.GetAlias, Int32=32
+2018-09-12 12:33:45,841 [9] INFO  - WCF - Start Helper.GetAlias, Int32=30
+2018-09-12 12:33:45,851 [9] INFO  - WCF - Start Helper.GetAlias, Int32=42
+2018-09-12 12:33:45,807 [11] INFO  - WCF - Start Helper.GetAlias, Int32=31
+2018-09-12 12:33:45,816 [6] INFO  - WCF - Start Helper.GetAlias, Int32=35
+2018-09-12 12:33:46,478 [6] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:33:46,514 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 12:33:46,514 [6] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:33:46,515 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 12:33:47,810 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 12:33:47,823 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 12:33:47,828 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 12:33:48,360 [11] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 12:33:48,371 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 12:33:48,371 [6] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 12:33:48,825 [6] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 12:33:48,825 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 12:33:49,883 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 12:33:49,883 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 12:33:50,664 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 12:33:50,664 [6] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 12:33:50,899 [6] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 12:33:50,899 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 12:33:51,508 [6] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-09-12 12:33:51,805 [6] INFO  - WCF - User resolved : , String="dcrdcnuser2@bajajelectricals.com"
+2018-09-12 12:33:52,092 [6] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-09-12 12:33:52,092 [8] INFO  - WCF - Helper.GetAllButtons, 
+2018-09-12 12:33:52,092 [9] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-09-12 12:33:57,965 [9] INFO  - WCF - Helper.GetButtons for role 'QA Incharge', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='Submitted', other params={"CurrentFromLevel":"4"}, 
+2018-09-12 12:34:40,956 [8] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/VerifyDownloadFileForm Data: ["url","applicationName"], 
+2018-09-12 12:34:53,946 [7] INFO  - WCF - Begin Request http://localhost:62403/Master/DownloadFileForm Data: ["url","applicationName","currentLocation"], 
+2018-09-12 15:04:34,978 [7] INFO  - WCF - Application_Start_Done, 
+2018-09-12 15:04:35,003 [7] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-09-12 15:04:38,257 [7] INFO  - MVC - sp user == , 
+2018-09-12 15:04:47,034 [7] INFO  - MVC -  ViewBag.UserID =, String="26"
+2018-09-12 15:04:47,034 [8] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-09-12 15:04:47,621 [7] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-09-12 15:04:47,621 [9] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-09-12 15:04:47,621 [8] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=26, 
+2018-09-12 15:04:47,621 [11] INFO  - WCF - Called Helper GetFormData, 
+2018-09-12 15:04:49,685 [7] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-09-12 15:04:49,703 [8] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-09-12 15:05:10,186 [9] INFO  - WCF - called Helper.GetFormData, 
+2018-09-12 15:05:11,839 [7] INFO  - WCF - Start Helper.GetAlias, Int32=36
+2018-09-12 15:05:11,853 [9] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-09-12 15:05:11,862 [9] INFO  - WCF - Start Helper.GetAlias, Int32=59
+2018-09-12 15:05:11,870 [9] INFO  - WCF - Start Helper.GetAlias, Int32=62
+2018-09-12 15:05:11,853 [11] INFO  - WCF - Start Helper.GetAlias, Int32=63
+2018-09-12 15:05:11,875 [9] INFO  - WCF - Start Helper.GetAlias, Int32=61
+2018-09-12 15:05:11,853 [8] INFO  - WCF - Start Helper.GetAlias, Int32=42
+2018-09-12 15:05:11,901 [8] INFO  - WCF - Start Helper.GetAlias, Int32=32
+2018-09-12 15:05:11,906 [8] INFO  - WCF - Start Helper.GetAlias, Int32=30
+2018-09-12 15:05:11,911 [8] INFO  - WCF - Start Helper.GetAlias, Int32=42
+2018-09-12 15:05:11,920 [8] INFO  - WCF - Start Helper.GetAlias, Int32=33
+2018-09-12 15:05:11,926 [8] INFO  - WCF - Start Helper.GetAlias, Int32=34
+2018-09-12 15:05:11,888 [11] INFO  - WCF - Start Helper.GetAlias, Int32=31
+2018-09-12 15:05:11,893 [9] INFO  - WCF - Start Helper.GetAlias, Int32=35
+2018-09-12 15:05:14,181 [8] INFO  - WCF - Helper.GetAllButtons, 
+2018-09-12 15:05:14,181 [9] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-09-12 15:05:22,097 [8] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 
+2018-09-12 15:05:34,452 [5] INFO  - WCF - Begin Request http://localhost:62403/Master/NotAuthorize, 
+2018-09-12 15:05:45,530 [5] INFO  - WCF - Begin Request http://localhost:62403/?ID=9, 
+2018-09-12 15:05:45,544 [8] INFO  - WCF - Called Helper GetFormData, 
+2018-09-12 15:05:45,545 [5] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-09-12 15:05:45,544 [11] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=26, 
+2018-09-12 15:05:45,544 [7] INFO  - MVC -  ViewBag.UserID =, String="26"
+2018-09-12 15:05:49,014 [11] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=QA Incharge, 
+2018-09-12 15:05:50,089 [11] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:05:50,105 [8] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:05:50,114 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 15:05:50,121 [8] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:05:50,126 [8] INFO  - WCF - Start Helper.GetAlias, Int32=26
+2018-09-12 15:05:50,136 [8] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:05:50,144 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 15:05:50,105 [5] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 15:05:50,105 [11] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:05:50,105 [7] INFO  - WCF - called Helper.GetFormData, 
+2018-09-12 15:05:50,575 [11] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:05:50,588 [5] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:05:50,603 [7] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 15:05:50,603 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 15:05:51,715 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 15:05:51,715 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 15:05:51,715 [7] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 15:05:52,040 [7] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 15:05:52,040 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 15:05:52,040 [11] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:05:52,296 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 15:05:52,296 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 15:05:52,515 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 15:05:52,515 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 15:05:52,716 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 15:05:52,716 [7] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 15:05:52,929 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 15:05:52,929 [7] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 15:05:53,805 [8] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-09-12 15:05:53,965 [8] INFO  - WCF - User resolved : , String="dcrdcnuser2@bajajelectricals.com"
+2018-09-12 15:05:54,139 [8] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-09-12 15:05:54,151 [11] INFO  - WCF - Helper.GetButtons for role 'QA Incharge', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='Submitted', other params={"CurrentFromLevel":"4"}, 
+2018-09-12 15:11:08,934 [8] INFO  - WCF - Application_Start_Done, 
+2018-09-12 15:11:08,934 [6] INFO  - WCF - Begin Request http://localhost:62403/?ID=9, 
+2018-09-12 15:11:12,199 [6] INFO  - MVC - sp user == , 
+2018-09-12 15:11:20,827 [8] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-09-12 15:11:20,827 [6] INFO  - MVC -  ViewBag.UserID =, String="26"
+2018-09-12 15:11:21,495 [9] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=26, 
+2018-09-12 15:11:21,495 [6] INFO  - WCF - Called Helper GetFormData, 
+2018-09-12 15:11:24,040 [9] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=QA Incharge, 
+2018-09-12 15:11:24,511 [9] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:11:24,523 [9] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:11:24,533 [9] INFO  - WCF - called Helper.GetFormData, 
+2018-09-12 15:11:24,539 [9] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 15:11:24,545 [9] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:11:24,550 [9] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:11:24,557 [9] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 15:11:24,512 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 15:11:24,511 [6] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:11:24,512 [11] INFO  - WCF - Start Helper.GetAlias, Int32=26
+2018-09-12 15:11:25,821 [9] INFO  - WCF - Start Helper.GetAlias, Int32=62
+2018-09-12 15:11:25,836 [9] INFO  - WCF - Start Helper.GetAlias, Int32=61
+2018-09-12 15:11:25,843 [9] INFO  - WCF - Start Helper.GetAlias, Int32=31
+2018-09-12 15:11:25,848 [9] INFO  - WCF - Start Helper.GetAlias, Int32=35
+2018-09-12 15:11:25,821 [11] INFO  - WCF - Start Helper.GetAlias, Int32=59
+2018-09-12 15:11:25,873 [11] INFO  - WCF - Start Helper.GetAlias, Int32=32
+2018-09-12 15:11:25,881 [11] INFO  - WCF - Start Helper.GetAlias, Int32=30
+2018-09-12 15:11:25,821 [8] INFO  - WCF - Start Helper.GetAlias, Int32=42
+2018-09-12 15:11:25,822 [6] INFO  - WCF - Start Helper.GetAlias, Int32=63
+2018-09-12 15:11:25,858 [9] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-09-12 15:11:25,898 [8] INFO  - WCF - Start Helper.GetAlias, Int32=33
+2018-09-12 15:11:25,913 [9] INFO  - WCF - Start Helper.GetAlias, Int32=34
+2018-09-12 15:11:25,924 [8] INFO  - WCF - Start Helper.GetAlias, Int32=36
+2018-09-12 15:11:25,890 [11] INFO  - WCF - Start Helper.GetAlias, Int32=42
+2018-09-12 15:11:26,747 [8] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:11:26,767 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 15:11:26,767 [8] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:11:26,767 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 15:11:27,526 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 15:11:27,526 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-12 15:11:27,526 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 15:11:28,011 [8] INFO  - WCF - Start Helper.GetAlias, Int32=6
+2018-09-12 15:11:28,025 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 15:11:28,025 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 15:11:28,232 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 15:11:28,232 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 15:11:29,045 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 15:11:29,045 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 15:11:29,480 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 15:11:29,480 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 15:11:29,748 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-12 15:11:29,748 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-12 15:11:30,529 [8] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-09-12 15:11:30,680 [11] INFO  - WCF - User resolved : , String="dcrdcnuser2@bajajelectricals.com"
+2018-09-12 15:11:30,875 [6] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-09-12 15:11:30,892 [8] INFO  - WCF - Helper.GetAllButtons, 
+2018-09-12 15:11:30,892 [9] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-09-12 15:11:36,728 [8] INFO  - WCF - Helper.GetButtons for role 'QA Incharge', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='Submitted', other params={"CurrentFromLevel":"4"}, 
+2018-09-12 15:17:12,762 [21] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-09-12 15:17:12,762 [17] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-09-12 15:22:13,765 [26] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-09-12 15:22:13,765 [34] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-09-12 15:27:13,761 [39] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-09-12 15:27:13,775 [45] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-09-12 15:32:13,778 [43] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-09-12 15:32:13,778 [53] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 

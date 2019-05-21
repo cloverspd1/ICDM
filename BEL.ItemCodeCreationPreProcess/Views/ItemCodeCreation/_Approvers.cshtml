@@ -1,0 +1,85 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.ItemCode
+@using BEL.ItemCodeCreationPreProcess.Models.Master
+@using BEL.ItemCodeCreationPreProcess.Models.Common
+@using BEL.CommonDataContract;
+
+@model List<ApplicationStatus>
+@{List<ApplicationStatus> approvers = Model.OrderBy(p => Convert.ToInt32(p.Levels)).ToList();}
+<div class="card">
+    <div class="card-head" data-toggle="collapse" data-target="#deptusersec">
+        <b>
+            @Html.ResourceValue("Section_Title_ResponsibleDepartment", ResourceName.Common)
+        </b>
+        <div class="btn collapse-btn collapsed" ><i class="fa fa-chevron-down"></i></div>
+    </div>
+    <div id="deptusersec" class="card-body">
+        <p>
+            <span class="text-danger text-default-light">
+                @Html.ResourceValue("Text_DepartmentComment", ResourceName.Common)
+            </span>
+        </p>
+        <div class="panel-body grid-view">
+            <div class="table-responsive-tourreport">
+                <table class="table table-hover table-bordered someTable">
+                    <thead>
+                        <tr>
+                            <th width="25%">@Html.ResourceValue("Grid_Title_Departments", ResourceName.Common_ApplicationStatus)</th>
+                            <th width="25%">@Html.ResourceValue("Grid_Title_Person", ResourceName.Common_ApplicationStatus)</th>
+                            <th width="25%">@Html.ResourceValue("Grid_Title_Departments", ResourceName.Common_ApplicationStatus)</th>
+                            <th width="25%">@Html.ResourceValue("Grid_Title_Person", ResourceName.Common_ApplicationStatus)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            for (int i = 0; i < Model.Count; i += 2)
+                            {
+                                <tr>
+                                    <td style="font-weight:bold"> @Model[i].Role.Replace("Approver", "Approver "):</td>
+                                    <td class="approver">
+
+                                        <span>
+                                            @*@Model[i].ApproverName*@
+                                            @(!string.IsNullOrEmpty(Model[i].ApproverName) ? Model[i].ApproverName.Replace(",", ", ") : "NA")
+                                        </span>
+
+                                        @Html.HiddenFor(m => Model[i].Role, new { @id = "ApproversList[" + i + "].Role", @Name = "ApproversList[" + i + "].Role" })
+                                        @Html.HiddenFor(m => Model[i].Division, new { @id = "ApproversList[" + i + "].Division", @Name = "ApproversList[" + i + "].Division" })
+                                        @Html.HiddenFor(m => Model[i].Approver, new { @id = "ApproversList[" + i + "].Approver", @Name = "ApproversList[" + i + "].Approver", @class = "hiddenuser", data_division = @Model[i].Division })
+                                        @Html.HiddenFor(m => Model[i].Approver, new { @id = "ApproversList[" + i + "].ApproverName", @Name = "ApproversList[" + i + "].ApproverName", @class = "hiddenusername", data_division = @Model[i].Division })
+                                    </td>
+
+                                    @if (i + 1 < Model.Count)
+                                    {
+                                        <td style="font-weight:bold"> @Model[i + 1].Role.Replace("Approver", "Approver ") :</td>
+                                        <td class="approver">
+                                            <span>
+                                                @(!string.IsNullOrEmpty(Model[i + 1].ApproverName) ? Model[i + 1].ApproverName.Replace(",", ", ") : "NA")
+                                            </span>
+                                            
+                                            @Html.HiddenFor(m => Model[i + 1].Role, new { @id = "ApproversList[" + (i + 1) + "].Role", @Name = "ApproversList[" + (i + 1) + "].Role" })
+                                            @Html.HiddenFor(m => Model[i + 1].Division, new { @id = "ApproversList[" + (i + 1) + "].Division", @Name = "ApproversList[" + (i + 1) + "].Division" })
+                                            @Html.HiddenFor(m => Model[i + 1].Approver, new { @id = "ApproversList[" + (i + 1) + "].Approver", @Name = "ApproversList[" + (i + 1) + "].Approver", @class = "hiddenuser", data_division = @Model[(i + 1)].Division })
+                                            @Html.HiddenFor(m => Model[i + 1].Role, new { @id = "ApproversList[" + (i + 1) + "].ApproverName", @Name = "ApproversList[" + (i + 1) + "].ApproverName", @class = "hiddenusername", data_division = @Model[(i + 1)].Division })
+                                        </td>
+                                    }
+                                </tr>
+
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="4" class="text-center text-danger">
+                                    @Html.ResourceValue("Grid_Text_NoData", ResourceName.Common)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

@@ -1,0 +1,241 @@
+2018-07-30 17:41:44,436 [5] INFO  - WCF - Application_Start_Done, 
+2018-07-30 17:41:44,574 [5] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-07-30 18:39:35,166 [7] INFO  - WCF - Application_Start_Done, 
+2018-07-30 18:39:35,258 [7] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-07-30 18:40:20,011 [8] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-07-30 18:40:20,012 [6] INFO  - WCF - Application_Start_Done, 
+2018-07-30 18:41:32,096 [7] ERROR - Id: f7644dba-fdf9-452e-8f9f-b5eae1a9432c
+2018-07-30 18:41:32,102 [7] ERROR - StatusCode: 200
+2018-07-30 18:41:32,107 [7] ERROR - Controller: 
+2018-07-30 18:41:32,111 [7] ERROR - Action: 
+2018-07-30 18:41:32,116 [7] ERROR - Token request failed.
+Microsoft.IdentityModel.SecurityTokenService.RequestFailedException: Token request failed. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2WebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   at BEL.DataAccessLayer.TokenHelper.GetAppOnlyAccessToken(String targetPrincipalName, String targetHost, String targetRealm) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\TokenHelper.cs:line 303
+   at BEL.DataAccessLayer.BELDataAccessLayer.CreateClientContext(String strURL) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 837
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer..ctor() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 53
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer.<>c.<.cctor>b__9_0() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 22
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer.get_Instance() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 34
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationBaseController.GetItemCodeCreationDetails(Dictionary`2 objDict) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationBaseController.cs:line 22
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 39
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-07-30 18:41:32,433 [7] ERROR - Token request failed.
+Microsoft.IdentityModel.SecurityTokenService.RequestFailedException: Token request failed. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2WebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   at BEL.DataAccessLayer.TokenHelper.GetAppOnlyAccessToken(String targetPrincipalName, String targetHost, String targetRealm) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\TokenHelper.cs:line 303
+   at BEL.DataAccessLayer.BELDataAccessLayer.CreateClientContext(String strURL) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 837
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer..ctor() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 53
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer.<>c.<.cctor>b__9_0() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 22
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer.get_Instance() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 34
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationBaseController.GetItemCodeCreationDetails(Dictionary`2 objDict) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationBaseController.cs:line 22
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 39
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-07-30 18:41:32,478 [6] ERROR - The controller for path '/Master/Error' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/Master/Error' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-07-30 18:41:32,545 [8] INFO  - WCF - Begin Request http://localhost:62403/Master/Error?msg=Token request failed.&errorId=f7644dba-fdf9-452e-8f9f-b5eae1a9432c, 
+2018-07-30 18:41:58,733 [7] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-07-30 18:41:58,733 [9] INFO  - WCF - Application_Start_Done, 
+2018-07-30 18:42:50,261 [8] ERROR - Id: 748c2774-a75c-4fc4-be80-2f1289bddd78
+2018-07-30 18:42:50,268 [8] ERROR - StatusCode: 200
+2018-07-30 18:42:50,275 [8] ERROR - Controller: 
+2018-07-30 18:42:50,281 [8] ERROR - Action: 
+2018-07-30 18:42:50,287 [8] ERROR - Token request failed.
+Microsoft.IdentityModel.SecurityTokenService.RequestFailedException: Token request failed. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2WebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   at BEL.DataAccessLayer.TokenHelper.GetAppOnlyAccessToken(String targetPrincipalName, String targetHost, String targetRealm) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\TokenHelper.cs:line 303
+   at BEL.DataAccessLayer.BELDataAccessLayer.CreateClientContext(String strURL) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 837
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer..ctor() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 53
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer.<>c.<.cctor>b__9_0() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 22
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer.get_Instance() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 34
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationBaseController.GetItemCodeCreationDetails(Dictionary`2 objDict) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationBaseController.cs:line 22
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 39
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-07-30 18:42:50,329 [8] ERROR - Token request failed.
+Microsoft.IdentityModel.SecurityTokenService.RequestFailedException: Token request failed. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2WebRequest.GetResponse()
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.S2S.Protocols.OAuth2.OAuth2S2SClient.Issue(String securityTokenServiceUrl, OAuth2AccessTokenRequest oauth2Request)
+   at BEL.DataAccessLayer.TokenHelper.GetAppOnlyAccessToken(String targetPrincipalName, String targetHost, String targetRealm) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\TokenHelper.cs:line 303
+   at BEL.DataAccessLayer.BELDataAccessLayer.CreateClientContext(String strURL) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 837
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer..ctor() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 53
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer.<>c.<.cctor>b__9_0() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 22
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer.get_Instance() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 34
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationBaseController.GetItemCodeCreationDetails(Dictionary`2 objDict) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationBaseController.cs:line 22
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 39
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-07-30 18:47:18,963 [8] INFO  - WCF - Application_Start_Done, 
+2018-07-30 18:47:18,992 [8] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-07-30 18:48:40,713 [7] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-07-30 18:48:40,713 [8] INFO  - WCF - Application_Start_Done, 
+2018-07-30 18:49:06,838 [8] INFO  - WCF - Called Helper GetFormData, 
+2018-07-30 18:49:06,838 [9] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=23, 
+2018-07-30 18:49:06,838 [7] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-07-30 18:49:06,852 [11] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-07-30 18:49:10,408 [8] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-07-30 18:49:10,408 [7] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-07-30 18:49:24,649 [9] INFO  - WCF - called Helper.GetFormData, 

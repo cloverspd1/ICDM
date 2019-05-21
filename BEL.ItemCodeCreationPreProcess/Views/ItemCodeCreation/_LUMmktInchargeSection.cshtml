@@ -1,0 +1,349 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.ItemCode
+@using BEL.CommonDataContract
+@using BEL.ItemCodeCreationPreProcess.Models.Master
+@using BEL.ItemCodeCreationPreProcess.Models.Common
+@model LUMMktInchargeSection
+@{
+    ApproverMaster approverusrelist = Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.APPROVERMASTER)) as ApproverMaster;
+    List<ApproverMasterListItem> lumMarketingDelegateUserList = approverusrelist.Items.Where(x => (x as ApproverMasterListItem).Role == ICCPRoles.LUMMARKETINGDELEGATE).ToList().ConvertAll(p => (ApproverMasterListItem)p);
+    lumMarketingDelegateUserList = Helper.SplitUser(lumMarketingDelegateUserList);
+    string sectionActiveCss = Model.IsActive ? string.Empty : "disabled";
+    string isRetriveCase = !string.IsNullOrEmpty(Request.QueryString["IsRetrieve"]) ? "Style=background-color:#F2B7B7" : string.Empty;
+}
+<div id="divLUMMarketingInchrageSection">
+
+    @using (Ajax.BeginForm("SaveLUMMarketingInchrageSection", "ItemCodeCreation", new AjaxOptions
+    {
+        HttpMethod = "POST",
+        LoadingElementId = "loading",
+        OnFailure = "OnFailure",
+        OnSuccess = "OnSuccess",
+        OnBegin = "BeginClient"
+    }, new { enctype = "multipart/form-data", @class = sectionActiveCss }))
+    {
+
+        @Html.HiddenFor(m => m.ListDetails[0].ItemId)
+        @Html.HiddenFor(m => m.ListDetails[0].ListName)
+        @Html.HiddenFor(m => m.SectionName)
+        @Html.HiddenFor(m => m.ActionStatus)
+        @Html.HiddenFor(m => m.Status)
+        @Html.HiddenFor(m => m.WorkflowStatus)
+        @Html.HiddenFor(m => m.IsICCPRequestRetrieved)
+        @Html.Partial("_ApproversList", Model.ApproversList)
+        @Html.AntiForgeryToken()
+        <input type="hidden" id="hdnIsLUMMarketingInchargeSectionActive" value="@sectionActiveCss">
+
+        <div class="card">
+            <div class="card-head" data-toggle="collapse" data-target="#sectionLUMMktIncharge">
+                <b> @Html.ResourceValue("Section_Title_LUMmktInchargeSection", ResourceName.ICCPForm)</b>
+                <div class="btn collapse-btn collapsed"><i class="fa fa-chevron-down"></i></div>
+            </div>
+            <div class="card-body" id="sectionLUMMktIncharge" @isRetriveCase>
+                <div class="form-horizontal">
+                    <p><span class="text-danger text-default-light">@Html.ResourceValue("Text_Mandatory", ResourceName.Common)</span></p>
+                    <p><span class="text-danger text-default-light">Note: (Max.up to 2MB per file and you can upload maximum 10 files.)</span></p>
+                    @if (!string.IsNullOrEmpty(Model.OldICCPNo))
+                    {
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        @Html.LabelFor(m => m.OldICCPNo, ResourceName.ICCPForm)
+                                    </label>
+                                    <div class="col-md-8 ">
+                                        <div class="form-control noborder">
+                                            @Html.DisplayFor(m => m.OldICCPNo, ResourceName.ICCPForm)
+                                            @Html.HiddenFor(m => m.OldICCPNo)
+                                            @Html.HiddenFor(m => m.OldICCPId)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        @Html.LabelFor(m => m.OldICCPCreatedDate, ResourceName.ICCPForm)
+                                    </label>
+                                    <div class="col-md-8 ">
+                                        <div class="form-control noborder">
+                                            @(Model.OldICCPCreatedDate.HasValue ? Model.OldICCPCreatedDate.Value.ToShortDateString() : string.Empty)
+                                            @Html.HiddenFor(m => m.OldICCPCreatedDate)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        @Html.LabelFor(m => m.OldICCPRejectedDate, ResourceName.ICCPForm)
+                                    </label>
+                                    <div class="col-md-8 ">
+                                        <div class="form-control noborder">
+                                            @(Model.OldICCPRejectedDate.HasValue ? Model.OldICCPRejectedDate.Value.ToShortDateString() : string.Empty)
+                                            @Html.HiddenFor(m => m.OldICCPRejectedDate)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+
+                            </div>
+                        </div>
+                    }
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            @if (!string.IsNullOrEmpty(Model.ICCPNo) && Model.ICCPNo != "View")
+                            {
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        @Html.LabelFor(m => m.ICCPNo, ResourceName.ICCPForm)
+                                    </label>
+                                    <div class="col-md-8 ">
+                                        <div class="form-control noborder">
+                                            <span class="text-danger" id="ReferenceNo">
+                                                <b>
+                                                    @Html.DisplayFor(m => m.ICCPNo)
+                                                    @Html.HiddenFor(m => m.ICCPNo)
+                                                </b>
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @Html.LabelFor(m => m.RequestDate, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-md-8 ">
+                                    <div class="form-control noborder">
+                                        @(Model.RequestDate.HasValue ? Model.RequestDate.Value.ToShortDateString() : "")
+                                        @Html.Hidden("RequestDate", Model.RequestDate.HasValue ? Model.RequestDate.Value.ToShortDateString() : "")
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @Html.LabelFor(m => m.ProposedBy, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-md-8 ">
+                                    <div class="form-control noborder">
+                                        @(string.IsNullOrEmpty(Model.ProposedByName) ? ViewBag.UserName : Model.ProposedByName)
+                                        @Html.HiddenFor(m => m.ProposedBy, string.IsNullOrEmpty(Model.ProposedBy) ? (string)ViewBag.UserID : Model.ProposedBy)
+                                        @Html.HiddenFor(m => m.ProposedByName, string.IsNullOrEmpty(Model.ProposedByName) ? (string)ViewBag.UserName : Model.ProposedByName)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @Html.LabelFor(m => m.Status, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-md-8 ">
+                                    <div class="form-control noborder">
+                                        <span class="text-danger" id="Status">
+                                            <b>
+                                                @(string.IsNullOrEmpty(Model.WorkflowStatus) ? Html.ResourceValue("Text_New", ResourceName.Common) : Model.WorkflowStatus)
+                                            </b>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @*<span class="text-danger text-default-light">*</span>*@
+                                    @Html.LabelFor(m => m.LUMMarketingDelegate, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-8">
+                                    <div class="form-control noborder text-left">
+
+                                        @{string isddlhide = Model.IsActive ? string.Empty : " hide";}
+                                        <div class=@isddlhide>
+                                            @Html.ListBox("LUMMarketingDelegateUser", new MultiSelectList(lumMarketingDelegateUserList, "UserID", "UserName"), new { @id = "LUMMarketingDelegateUser", @Name = "LUMMarketingDelegateUser", @class = "form-control", @data_selected = Model.LUMMarketingDelegate })
+                                            @Html.ValidationMessageFor(m => m.LUMMarketingDelegate, ResourceName.ICCPForm)
+                                            @Html.ValidationMessage("LUMMarketingDelegateUser", Html.ResourceValue("Error_LUMMarketingDelegate", ResourceName.ICCPForm))
+                                        </div>
+                                        @Html.HiddenFor(m => m.LUMMarketingDelegate)
+                                        @Html.HiddenFor(m => m.LUMMarketingDelegateName)
+
+                                        @(!Model.IsActive && !string.IsNullOrEmpty(Model.LUMMarketingDelegateName) ? Model.LUMMarketingDelegateName.Replace(",", ", ") : string.Empty)
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @*<span class="text-danger text-default-light">*</span>*@
+                                    @Html.LabelFor(m => m.CurrentApprover.Comments, ResourceName.Common)
+                                </label>
+                                <div class="col-md-8">
+                                    <div class="form-control noborder">
+                                        @*@Html.TextAreaFor(m => m.CurrentApprover.Comments, new { maxLength = 1000, @class = "form-control requiredOnDelegate", @data_val = "true", @data_val_required = "Please Enter Comments", data_toggle = "tooltip", title = "Max 1000 characters" })*@
+                                        @Html.TextAreaFor(m => m.CurrentApprover.Comments, new { maxLength = 1000, @class = "form-control", @data_val = "false", @data_val_required = "Please Enter Comments", data_toggle = "tooltip", title = "Max 1000 characters" })
+                                        @Html.HiddenFor(x => x.CurrentApprover.Approver)
+                                        @Html.HiddenFor(x => x.CurrentApprover.Role)
+                                        @Html.HiddenFor(x => x.CurrentApprover.AssignDate)
+                                        @Html.ValidationMessageFor(m => m.CurrentApprover.Comments, ResourceName.Common)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        @*<div id="applicationstatusbody">
+                @Html.Partial("_Approvers", Model.ApproversList)
+            </div>
+            <div class="clearfix"></div>*@
+
+        if (Model.IsSubmitted)
+        {
+            <div class="card">
+                <div class="card-head" data-toggle="collapse" data-target="#sectionLUMmmarketingDelegate">
+                    <b>
+                        @Html.ResourceValue("Section_Title_LUMmktDelegateSection", ResourceName.ICCPForm)
+                    </b>
+                    <div class="btn collapse-btn collapsed"><i class="fa fa-chevron-down"></i></div>
+                </div>
+                <div class="card-body" id="sectionLUMmmarketingDelegate" @isRetriveCase>
+                    <div class="form-horizontal">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        <span class="text-danger text-default-light">*</span>
+                                        @Html.LabelFor(m => m.ItemDescription, ResourceName.ICCPForm)
+
+                                    </label>
+                                    <div class="col-md-8 ">
+                                        @Html.TextAreaFor(m => m.ItemDescription, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+                                        @Html.ValidationMessageFor(m => m.ItemDescription, ResourceName.ICCPForm)
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        <span class="text-danger text-default-light">*</span>
+                                        @Html.LabelFor(m => m.ProductGroup, ResourceName.ICCPForm)
+
+                                    </label>
+                                    <div class="col-md-8 ">
+                                        @Html.DropDownListFor(m => m.ProductGroup, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.PRODUCTGROUPMASTER)) as ProductGroupMaster).Items, "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.ProductGroup })
+                                        @Html.ValidationMessageFor(m => m.ProductGroup, ResourceName.ICCPForm)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        <span class="text-danger text-default-light">*</span>
+                                        @Html.LabelFor(m => m.ConfirmedOrderFromCustomer, ResourceName.ICCPForm)
+
+                                    </label>
+                                    <div class="col-md-8 ">
+                                        @Html.DropDownListFor(m => m.ConfirmedOrderFromCustomer, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.CONFIRMEDORDERMASTER)) as ConfirmedOrderMaster).Items, "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.ConfirmedOrderFromCustomer })
+                                        @Html.ValidationMessageFor(m => m.ConfirmedOrderFromCustomer, ResourceName.ICCPForm)
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        <span class="text-danger text-default-light">*</span>
+                                        @Html.LabelFor(m => m.TypeOfPackaging, ResourceName.ICCPForm)
+
+                                    </label>
+                                    <div class="col-md-8 ">
+                                        @Html.DropDownListFor(m => m.TypeOfPackaging, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.TYPEOFPACKAGINGMASTER)) as TypeOfPackagingMaster).Items, "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.TypeOfPackaging })
+                                        @Html.ValidationMessageFor(m => m.TypeOfPackaging, ResourceName.ICCPForm)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        @Html.LabelFor(m => m.ReferenceProduct, ResourceName.ICCPForm)
+
+                                    </label>
+                                    <div class="col-md-8 ">
+                                        @Html.TextBoxFor(m => m.ReferenceProduct, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        @Html.LabelFor(m => m.ExpectedAnnualBusinessVolume, ResourceName.ICCPForm)
+                                    </label>
+                                    <div class="col-md-8 ">
+                                        @Html.TextBoxFor(m => m.ExpectedAnnualBusinessVolume, new { maxlength = 15, @class = "form-control numberonly", data_toggle = "tooltip", title = "Max 15 characters" })
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        @Html.LabelFor(m => m.ItemToBePhasedOut, ResourceName.ICCPForm)
+
+                                    </label>
+                                    <div class="col-md-8 ">
+                                        @Html.TextBoxFor(m => m.ItemToBePhasedOut, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        @Html.LabelFor(m => m.ItemPhasedOutWithEffectFrom, ResourceName.ICCPForm)
+                                    </label>
+                                    <div class="col-md-8">
+                                        <div class="input-group date datepicker pastDisabled">
+                                            @Html.TextBoxFor(m => m.ItemPhasedOutWithEffectFrom, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+                                            <span class="input-group-addon">
+                                                <span class="fa fa-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        }
+    }
+</div>

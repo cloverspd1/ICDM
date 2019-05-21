@@ -1,0 +1,116 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.Master
+
+@model ChangeApproverMaster
+
+
+<div class="modal fade" id="replacementapproverModel" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">
+                    @if (Model.ID > 0)
+                    {
+                        <span>
+                            @Html.ResourceValue("Popup_Title_Editapproverreplacement", ResourceName.ChangeApproverForm)
+                        </span>
+                    }
+                    else
+                    {
+                        <span>
+                            @Html.ResourceValue("Popup_Title_Addapproverreplacement", ResourceName.ChangeApproverForm)
+                        </span>
+                    }
+                </h4>
+            </div>
+            @using (Ajax.BeginForm("SaveApproverReplacement", "ICDMApprover", new AjaxOptions
+            {
+                HttpMethod = "POST",
+                LoadingElementId = "loading",
+                OnFailure = "OnFailure",
+                OnSuccess = "OnApproverReplacementSuccess",
+                OnBegin = "BeginClient"
+            }, new { enctype = "multipart/form-data", id = "frmSaveApproverReplacement" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.ID)
+                <div class="modal-body form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                               
+                                <label class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.RoleName, ResourceName.ChangeApproverForm)
+                                </label>
+                                <div class="col-md-8">
+                                    <div class="noborder">
+                                        @Html.DropDownListFor(m => m.RoleName, new SelectList(Model.RoleNameList, "Value", "Value"), "Select", new { @id = "RoleNames", @data_val = "true", @data_val_required = "Please Enter Vendor Name.", @name = "RoleNames", @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.RoleName, ResourceName.ChangeApproverForm)
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                             
+                                <label class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.PendingWithWhom, ResourceName.ChangeApproverForm)
+
+                                </label>
+                                <div class="col-md-8">
+                                    <div class="noborder">
+                                        @Html.DropDownListFor(m => m.PendingWithWhom, new SelectList(Model.PendingWithWhomUserList, "Value", "Name"), "Select", new { @id = "PendingWithWhoms", @name = "PendingWithWhoms", @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.PendingWithWhom, ResourceName.ChangeApproverForm)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.ReplaceByWhom, ResourceName.ChangeApproverForm)
+                                </label>
+                                <div class="col-md-8 ">
+                                    <div class="noborder">
+                                        @Html.DropDownListFor(m => m.ReplaceByWhom, new SelectList(Model.ReplaceByWhomUserList, "Value", "Name"), "Select", new { @id = "ReplaceByWhoms", @name = "ReplaceByWhoms", @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.ReplaceByWhom, ResourceName.ChangeApproverForm)
+                                        <label class="field-validation-error hidden" id="lblSameUserError">Selected User is same as Approver.Please select other user.</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="OnApproverReplacementModelSubmit(this.form.id)">@Html.ResourceValue("Button_Text_Save", ResourceName.Common)</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        @Html.ResourceValue("Button_Text_Close", ResourceName.Common)
+                    </button>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#replacementapproverModel").modal().on('shown.bs.modal', function () {
+            $.validator.unobtrusive.parsePopup("#replacementapproverModel");
+            BindValidation();
+        });
+        $('select#RoleNames').off("change").on('change', function () {         
+            var roleName = $("select#RoleNames option:selected").val();
+            onRoleNameChange(roleName);
+        });
+    });
+</script>
+

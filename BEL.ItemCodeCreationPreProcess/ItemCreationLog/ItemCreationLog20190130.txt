@@ -1,0 +1,414 @@
+2019-01-30 16:13:22,819 [11] INFO  - WCF - Application_Start_Done, 
+2019-01-30 16:13:22,820 [10] INFO  - WCF - Begin Request http://localhost:62403/, 
+2019-01-30 16:13:32,221 [10] INFO  - MVC - sp user == , 
+2019-01-30 16:15:25,071 [8] ERROR - Id: 476b3a9d-33ce-41b9-8e03-a157df8c2fbd
+2019-01-30 16:15:25,082 [8] ERROR - StatusCode: 200
+2019-01-30 16:15:25,101 [8] ERROR - Controller: 
+2019-01-30 16:15:25,115 [8] ERROR - Action: 
+2019-01-30 16:15:25,135 [8] ERROR - The operation has timed out
+System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.DoPost(String url, String contentType, String body, Func`2 webExceptionHandler)
+   at Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetUserRealm(String login)
+   at Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetServiceToken(String username, String password, String serviceTarget, String servicePolicy)
+   at Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetAuthenticationCookie(Uri url, String username, SecureString password, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   at Microsoft.SharePoint.Client.SharePointOnlineCredentials.GetAuthenticationCookie(Uri url, Boolean refresh, Boolean alwaysThrowOnFailure)
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.SetupRequestCredential(ClientRuntimeContext context, HttpWebRequest request)
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.GetRequestStream()
+   at Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   at Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at BEL.DataAccessLayer.BELDataAccessLayer.CreateWeb(ClientContext context) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 958
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer..ctor() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 47
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.<>c.<.cctor>b__15_0() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 20
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.get_Instance() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 62
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.get_CurrentUser() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 126
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id, Boolean isRetrieve) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 38
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2019-01-30 16:15:25,297 [8] ERROR - The operation has timed out
+System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.DoPost(String url, String contentType, String body, Func`2 webExceptionHandler)
+   at Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetUserRealm(String login)
+   at Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetServiceToken(String username, String password, String serviceTarget, String servicePolicy)
+   at Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetAuthenticationCookie(Uri url, String username, SecureString password, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   at Microsoft.SharePoint.Client.SharePointOnlineCredentials.GetAuthenticationCookie(Uri url, Boolean refresh, Boolean alwaysThrowOnFailure)
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.SetupRequestCredential(ClientRuntimeContext context, HttpWebRequest request)
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.GetRequestStream()
+   at Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   at Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at BEL.DataAccessLayer.BELDataAccessLayer.CreateWeb(ClientContext context) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 958
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer..ctor() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 47
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.<>c.<.cctor>b__15_0() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 20
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.get_Instance() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 62
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.get_CurrentUser() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 126
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id, Boolean isRetrieve) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 38
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2019-01-30 16:15:25,800 [20] INFO  - WCF - Begin Request http://localhost:62403/Master/Error?msg=The operation has timed out&errorId=476b3a9d-33ce-41b9-8e03-a157df8c2fbd, 
+2019-01-30 16:15:43,098 [20] INFO  - WCF - Begin Ajax Request http://localhost:62403/__browserLink/requestData/09f2a4cbc5ae43309abedcdee8020e40?version=2, 
+2019-01-30 16:15:47,326 [8] INFO  - WCF - Begin Request http://localhost:62403/, 
+2019-01-30 16:15:49,292 [11] INFO  - MVC - sp user == , 
+2019-01-30 16:15:54,596 [12] ERROR - Id: c7c04ab3-2943-4ba1-9f37-764d4a3660f1
+2019-01-30 16:15:54,655 [12] ERROR - StatusCode: 200
+2019-01-30 16:15:54,694 [12] ERROR - Controller: 
+2019-01-30 16:15:54,719 [12] ERROR - Action: 
+2019-01-30 16:15:54,738 [12] ERROR - The operation has timed out
+System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.DoPost(String url, String contentType, String body, Func`2 webExceptionHandler)
+   at Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetUserRealm(String login)
+   at Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetServiceToken(String username, String password, String serviceTarget, String servicePolicy)
+   at Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetAuthenticationCookie(Uri url, String username, SecureString password, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   at Microsoft.SharePoint.Client.SharePointOnlineCredentials.GetAuthenticationCookie(Uri url, Boolean refresh, Boolean alwaysThrowOnFailure)
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.SetupRequestCredential(ClientRuntimeContext context, HttpWebRequest request)
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.GetRequestStream()
+   at Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   at Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at BEL.DataAccessLayer.BELDataAccessLayer.CreateWeb(ClientContext context) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 958
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer..ctor() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 47
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.<>c.<.cctor>b__15_0() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 20
+   at System.Lazy`1.CreateValue()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Lazy`1.get_Value()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.get_Instance() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 62
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.get_CurrentUser() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 126
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id, Boolean isRetrieve) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 38
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2019-01-30 16:15:54,755 [12] ERROR - The operation has timed out
+System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.DoPost(String url, String contentType, String body, Func`2 webExceptionHandler)
+   at Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetUserRealm(String login)
+   at Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetServiceToken(String username, String password, String serviceTarget, String servicePolicy)
+   at Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetAuthenticationCookie(Uri url, String username, SecureString password, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   at Microsoft.SharePoint.Client.SharePointOnlineCredentials.GetAuthenticationCookie(Uri url, Boolean refresh, Boolean alwaysThrowOnFailure)
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.SetupRequestCredential(ClientRuntimeContext context, HttpWebRequest request)
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.GetRequestStream()
+   at Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   at Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at BEL.DataAccessLayer.BELDataAccessLayer.CreateWeb(ClientContext context) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 958
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer..ctor() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 47
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.<>c.<.cctor>b__15_0() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 20
+   at System.Lazy`1.CreateValue()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Lazy`1.get_Value()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.get_Instance() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 62
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.get_CurrentUser() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 126
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id, Boolean isRetrieve) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 38
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2019-01-30 16:15:54,879 [11] INFO  - WCF - Begin Request http://localhost:62403/Master/Error?msg=The operation has timed out&errorId=c7c04ab3-2943-4ba1-9f37-764d4a3660f1, 
+2019-01-30 16:15:56,373 [8] INFO  - WCF - Begin Ajax Request http://localhost:62403/__browserLink/requestData/ce4538275a124e50a72851f72257a95b?version=2, 
+2019-01-30 16:17:04,110 [18] INFO  - WCF - Begin Request http://localhost:62403/, 
+2019-01-30 16:17:06,806 [12] INFO  - MVC - ViewBag.UserID =, String="9"
+2019-01-30 16:24:44,900 [8] ERROR - Id: dc353b32-3366-400d-b734-cd21e6424a9f
+2019-01-30 16:24:44,921 [8] ERROR - StatusCode: 200
+2019-01-30 16:24:44,941 [8] ERROR - Controller: 
+2019-01-30 16:24:44,960 [8] ERROR - Action: 
+2019-01-30 16:24:44,975 [8] ERROR - The operation has timed out
+System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at BEL.DataAccessLayer.BELDataAccessLayer.CreateWeb(ClientContext context) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 958
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer..ctor() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 58
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer.<>c.<.cctor>b__25_0() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 23
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer.get_Instance() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 35
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationBaseController.GetItemCodeCreationDetails(Dictionary`2 objDict) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationBaseController.cs:line 25
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id, Boolean isRetrieve) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 47
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2019-01-30 16:24:44,998 [8] ERROR - The operation has timed out
+System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at BEL.DataAccessLayer.BELDataAccessLayer.CreateWeb(ClientContext context) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 958
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer..ctor() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 58
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer.<>c.<.cctor>b__25_0() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 23
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.ItemCodeCreationBusinessLayer.get_Instance() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\ItemCodeCreationBusinessLayer.cs:line 35
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationBaseController.GetItemCodeCreationDetails(Dictionary`2 objDict) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationBaseController.cs:line 25
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id, Boolean isRetrieve) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 47
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2019-01-30 16:24:45,131 [13] INFO  - WCF - Begin Request http://localhost:62403/Master/Error?msg=The operation has timed out&errorId=dc353b32-3366-400d-b734-cd21e6424a9f, 
+2019-01-30 16:24:47,097 [29] INFO  - WCF - Begin Ajax Request http://localhost:62403/__browserLink/requestData/80c0c8c0b8f545bd8dd9d68734091641?version=2, 
+2019-01-30 16:27:23,041 [7] INFO  - WCF - Application_Start_Done, 
+2019-01-30 16:27:23,041 [5] INFO  - WCF - Begin Request http://localhost:62403/, 
+2019-01-30 16:27:37,192 [5] INFO  - MVC - sp user == , 
+2019-01-30 16:28:20,632 [6] ERROR - Id: d2fc32e1-9d9d-45fe-9124-c19ecb702d3f
+2019-01-30 16:28:20,650 [6] ERROR - StatusCode: 200
+2019-01-30 16:28:20,666 [6] ERROR - Controller: 
+2019-01-30 16:28:20,681 [6] ERROR - Action: 
+2019-01-30 16:28:20,693 [6] ERROR - User cannot be found.
+Microsoft.SharePoint.Client.ServerException: User cannot be found.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.GetUserDetail(Int32 id) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 200
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.get_CurrentUser() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 126
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id, Boolean isRetrieve) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 38
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2019-01-30 16:28:20,764 [6] ERROR - User cannot be found.
+Microsoft.SharePoint.Client.ServerException: User cannot be found.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.GetUserDetail(Int32 id) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 200
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.get_CurrentUser() in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 126
+   at BEL.ItemCodeCreationPreProcess.Controllers.ItemCodeCreation.ItemCodeCreationController.Index(Int32 id, Boolean isRetrieve) in E:\Synoverge-New\Synoverge\30-January-ICDM\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\ItemCodeCreation\ItemCodeCreationController.cs:line 38
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2019-01-30 16:28:20,880 [12] INFO  - WCF - Begin Request http://localhost:62403/Master/Error?msg=User cannot be found.&errorId=d2fc32e1-9d9d-45fe-9124-c19ecb702d3f, 
+2019-01-30 16:28:30,333 [5] INFO  - WCF - Begin Ajax Request http://localhost:62403/__browserLink/requestData/37b631cd91c34e45a06d672003e28063?version=2, 
+2019-01-30 16:33:30,327 [15] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2019-01-30 16:33:30,356 [12] INFO  - MVC - System Name: L0873.bel.com, 
+2019-01-30 16:38:31,327 [20] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2019-01-30 16:38:31,342 [15] INFO  - MVC - System Name: L0873.bel.com, 
+2019-01-30 16:43:32,332 [20] INFO  - MVC - System Name: L0873.bel.com, 
+2019-01-30 16:43:32,332 [24] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2019-01-30 16:48:33,340 [28] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2019-01-30 16:48:33,340 [26] INFO  - MVC - System Name: L0873.bel.com, 
+2019-01-30 16:53:34,344 [30] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2019-01-30 16:53:34,344 [34] INFO  - MVC - System Name: L0873.bel.com, 
+2019-01-30 16:58:35,341 [35] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2019-01-30 16:58:35,356 [41] INFO  - MVC - System Name: L0873.bel.com, 
+2019-01-30 17:03:36,351 [46] INFO  - MVC - System Name: L0873.bel.com, 
+2019-01-30 17:03:36,351 [44] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2019-01-30 17:08:37,354 [45] INFO  - MVC - System Name: L0873.bel.com, 
+2019-01-30 17:08:37,354 [50] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2019-01-30 17:13:38,360 [51] INFO  - MVC - System Name: L0873.bel.com, 
+2019-01-30 17:13:38,360 [50] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 

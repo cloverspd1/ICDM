@@ -1,0 +1,320 @@
+2018-08-09 11:52:00,071 [9] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-08-09 11:52:00,071 [11] INFO  - WCF - Application_Start_Done, 
+2018-08-09 11:52:04,712 [9] INFO  - MVC - sp user == , 
+2018-08-09 11:52:07,453 [9] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-08-09 11:52:07,453 [11] INFO  - MVC -  ViewBag.UserID =, String="27"
+2018-08-09 11:52:07,845 [9] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-09 11:52:07,845 [12] INFO  - WCF - Called Helper GetFormData, 
+2018-08-09 11:52:07,872 [9] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-08-09 11:52:07,846 [11] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=27, 
+2018-08-09 11:52:12,446 [12] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/BIReport, 
+2018-08-09 11:52:13,654 [11] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-08-09 11:52:13,742 [11] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-09 11:52:30,353 [12] INFO  - WCF - called Helper.GetFormData, 
+2018-08-09 11:52:31,031 [9] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-09 11:52:31,036 [14] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-09 11:52:31,042 [14] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-09 11:52:31,049 [14] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-08-09 11:52:31,055 [14] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-09 11:52:31,060 [14] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-09 11:52:31,031 [11] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-09 11:52:31,032 [12] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-09 11:52:31,074 [12] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-09 11:52:31,078 [12] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-09 11:52:31,083 [12] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-09 11:52:31,064 [14] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-08-09 11:52:31,069 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-09 11:52:31,156 [11] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-09 11:52:31,161 [11] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-09 11:52:31,165 [11] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-09 11:52:31,170 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-09 11:52:31,147 [12] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-08-09 11:52:31,151 [14] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-09 11:52:31,177 [11] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-09 11:52:31,250 [12] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-09 11:52:31,254 [14] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-09 11:52:33,138 [12] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-08-09 11:52:33,138 [11] INFO  - WCF - Helper.GetAllButtons, 
+2018-08-09 11:52:37,778 [11] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 
+2018-08-09 16:21:17,108 [7] INFO  - WCF - Application_Start_Done, 
+2018-08-09 16:21:17,122 [8] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-08-09 16:21:26,242 [6] INFO  - MVC - sp user == , 
+2018-08-09 16:21:34,445 [6] INFO  - MVC -  ViewBag.UserID =, String="9"
+2018-08-09 16:21:34,445 [8] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-08-09 16:21:35,636 [8] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-09 16:21:35,642 [8] INFO  - WCF - Called Helper GetFormData, 
+2018-08-09 16:21:35,636 [12] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-08-09 16:21:35,636 [6] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-08-09 16:21:36,996 [12] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-08-09 16:21:37,008 [6] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-09 16:21:55,698 [12] INFO  - WCF - called Helper.GetFormData, 
+2018-08-09 16:21:56,047 [12] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-09 16:21:56,047 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-09 16:21:56,056 [8] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-08-09 16:21:56,047 [6] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-08-09 16:21:56,067 [6] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-09 16:21:56,072 [6] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-09 16:21:56,078 [6] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-09 16:21:56,083 [6] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-09 16:21:56,061 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-09 16:21:56,093 [8] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-09 16:21:56,098 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-09 16:21:56,088 [6] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-08-09 16:21:56,108 [6] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-09 16:21:56,114 [6] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-09 16:21:56,119 [6] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-09 16:21:56,123 [6] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-09 16:21:56,129 [6] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-09 16:21:56,103 [8] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-09 16:21:56,139 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-09 16:21:56,145 [8] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-09 16:21:56,151 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-09 16:21:56,134 [6] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-09 16:21:57,795 [6] INFO  - WCF - Helper.GetAllButtons, 
+2018-08-09 16:21:57,795 [8] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-08-09 16:22:02,649 [6] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 
+2018-08-10 12:51:01,499 [5] INFO  - WCF - Application_Start_Done, 
+2018-08-10 12:51:01,637 [8] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/BIReport, 
+2018-08-10 12:51:01,730 [5] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-08-10 12:51:08,826 [5] INFO  - MVC - sp user == , 
+2018-08-10 12:51:15,597 [7] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-08-10 12:51:15,618 [5] INFO  - MVC -  ViewBag.UserID =, String="27"
+2018-08-10 12:51:16,245 [8] INFO  - WCF - Called Helper GetFormData, 
+2018-08-10 12:51:16,245 [7] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-10 12:51:16,278 [6] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-08-10 12:51:16,245 [5] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=27, 
+2018-08-10 12:51:18,274 [8] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-08-10 12:51:18,482 [5] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-10 12:51:21,571 [6] INFO  - WCF - called Helper.GetFormData, 
+2018-08-10 12:51:25,488 [5] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-10 12:51:25,488 [7] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-10 12:51:25,488 [6] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-10 12:51:25,625 [6] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-10 12:51:25,630 [6] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-08-10 12:51:25,635 [6] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-08-10 12:51:25,640 [6] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-10 12:51:25,614 [5] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-10 12:51:25,619 [7] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-10 12:51:25,657 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-10 12:51:25,663 [7] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-10 12:51:25,668 [7] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-08-10 12:51:25,673 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-10 12:51:25,646 [6] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-10 12:51:25,652 [5] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-10 12:51:25,688 [5] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-10 12:51:25,693 [5] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-10 12:51:25,698 [5] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-10 12:51:25,705 [5] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-10 12:51:25,683 [6] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-10 12:51:25,679 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-10 12:51:28,197 [7] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-08-10 12:51:28,197 [5] INFO  - WCF - Helper.GetAllButtons, 
+2018-08-10 12:51:36,580 [6] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 
+2018-08-10 12:53:58,641 [17] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 12:53:58,653 [16] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 12:58:59,636 [26] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 12:58:59,713 [28] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 13:04:00,621 [37] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 13:04:00,621 [33] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 13:09:01,641 [44] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 13:09:01,641 [46] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 13:14:02,624 [57] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 13:14:02,624 [58] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 13:19:03,628 [60] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 13:19:03,630 [69] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 13:24:04,618 [77] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 13:24:04,618 [75] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 13:29:05,617 [79] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 13:29:05,637 [78] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 13:34:06,619 [75] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 13:34:06,619 [71] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 13:39:07,620 [61] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 13:39:07,620 [63] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 13:44:08,624 [53] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 13:44:08,624 [52] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 13:49:09,637 [46] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 13:49:09,637 [42] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 13:54:10,620 [35] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 13:54:10,620 [33] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 13:59:11,620 [28] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 13:59:11,634 [30] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 14:04:12,620 [22] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 14:04:12,634 [20] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 14:09:13,619 [16] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 14:09:13,619 [14] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 14:14:14,630 [88] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 14:14:14,630 [89] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 14:19:15,626 [87] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 14:19:15,626 [92] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 14:24:16,625 [16] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 14:24:16,625 [15] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 14:29:17,620 [21] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 14:29:17,634 [22] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 14:34:18,630 [27] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 14:34:18,630 [25] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 14:39:19,623 [29] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 14:39:19,623 [30] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 14:44:20,625 [36] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 14:44:20,625 [35] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 14:49:21,626 [41] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 14:49:21,626 [37] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 14:54:22,630 [42] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 14:54:22,630 [40] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 14:59:23,621 [45] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 14:59:23,621 [46] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 15:04:24,620 [51] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 15:04:24,620 [49] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 15:09:25,620 [57] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 15:09:25,620 [56] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 15:14:26,619 [56] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 15:14:26,619 [64] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 15:19:27,629 [66] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 15:19:27,629 [67] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 15:24:28,626 [69] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 15:24:28,626 [75] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 15:29:29,620 [71] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 15:29:29,620 [70] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 15:34:30,620 [74] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 15:34:30,620 [78] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 15:39:31,619 [81] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 15:39:31,619 [86] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 15:44:32,630 [82] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 15:44:32,630 [85] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 15:49:33,626 [78] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 15:49:33,626 [81] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 15:54:34,630 [76] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 15:54:34,630 [73] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 15:59:35,626 [71] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 15:59:35,626 [75] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 16:04:36,628 [66] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 16:04:36,628 [75] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 16:09:37,626 [64] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 16:09:37,626 [62] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 16:14:38,636 [61] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 16:14:38,636 [60] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 16:19:39,622 [55] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 16:19:39,634 [56] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 16:24:40,637 [54] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 16:24:40,652 [51] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 16:29:41,651 [50] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 16:29:41,651 [47] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 16:34:42,629 [43] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 16:34:42,629 [44] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 16:39:43,620 [44] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-10 16:39:43,620 [41] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-10 17:07:06,145 [8] INFO  - WCF - Begin Request http://localhost:62403/powerbireport/bireport, 
+2018-08-10 17:07:06,146 [6] INFO  - WCF - Application_Start_Done, 
+2018-08-10 17:09:26,636 [7] ERROR - Id: 76ff42db-ea62-4bfc-b488-2504d4d9d74d
+2018-08-10 17:09:26,834 [7] ERROR - StatusCode: 302
+2018-08-10 17:09:27,034 [7] ERROR - Controller: 
+2018-08-10 17:09:27,213 [7] ERROR - Action: 
+2018-08-10 17:09:27,378 [7] ERROR - Cannot redirect after HTTP headers have been sent.
+System.Web.HttpException (0x80004005): Cannot redirect after HTTP headers have been sent.
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponseWrapper.Redirect(String url)
+   at BEL.ItemCodeCreationPreProcess.Controllers.PowerBIReport.PowerBIReportController.GetAuthorizationCode() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\PowerBIReport\PowerBIReportController.cs:line 197
+   at BEL.ItemCodeCreationPreProcess.Controllers.PowerBIReport.PowerBIReportController.BIReport() in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\PowerBIReport\PowerBIReportController.cs:line 44
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.<>c__DisplayClass1.<WrapVoidAction>b__0(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-10 17:09:28,528 [7] ERROR - Cannot redirect after HTTP headers have been sent.
+System.Web.HttpException (0x80004005): Cannot redirect after HTTP headers have been sent.
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponseWrapper.Redirect(String url)
+   at BEL.ItemCodeCreationPreProcess.MvcExceptionHandler.OnException(ExceptionContext filterContext) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Filters\MvcExceptionHandler.cs:line 33
+   at System.Web.Mvc.ControllerActionInvoker.InvokeExceptionFilters(ControllerContext controllerContext, IList`1 filters, Exception exception)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-10 17:09:49,089 [7] INFO  - WCF - Begin Request http://localhost:62403/powerbireport/bireport, 
+2018-08-10 17:12:04,836 [5] INFO  - WCF - Begin Request http://localhost:62403/powerbireport/bireport, 
+2018-08-10 17:19:34,292 [9] INFO  - WCF - Application_Start_Done, 
+2018-08-10 17:19:34,292 [7] INFO  - WCF - Begin Request http://localhost:62403/powerbireport/bireport, 
+2018-08-10 17:26:10,990 [8] INFO  - WCF - Application_Start_Done, 
+2018-08-10 17:26:10,990 [7] INFO  - WCF - Begin Request http://localhost:62403/powerbireport/bireport, 
+2018-08-10 17:56:33,265 [29] INFO  - WCF - Begin Request http://localhost:62403/powerbireport/bireport, 
+2018-08-10 18:05:03,352 [12] INFO  - WCF - Begin Request http://localhost:62403/powerbireport/bireport, 
+2018-08-10 18:05:35,789 [8] INFO  - WCF - Application_Start_Done, 
+2018-08-10 18:05:35,789 [6] INFO  - WCF - Begin Request http://localhost:62403/powerbireport/bireport, 
+2018-08-10 18:06:47,682 [8] INFO  - WCF - Begin Request http://localhost:62403/powerbireport/bireport, 
+2018-08-10 18:06:47,682 [6] INFO  - WCF - Application_Start_Done, 
+2018-08-10 18:06:48,790 [7] ERROR - Session state has created a session id, but cannot save it because the response was already flushed by the application.
+System.Web.HttpException (0x80004005): Session state has created a session id, but cannot save it because the response was already flushed by the application.
+   at System.Web.SessionState.SessionIDManager.SaveSessionID(HttpContext context, String id, Boolean& redirected, Boolean& cookieAdded)
+   at System.Web.SessionState.SessionStateModule.CreateSessionId()
+   at System.Web.SessionState.SessionStateModule.DelayedGetSessionId()
+   at System.Web.SessionState.SessionStateModule.ReleaseStateGetSessionID()
+   at System.Web.SessionState.SessionStateModule.OnReleaseState(Object source, EventArgs eventArgs)
+   at System.Web.SessionState.SessionStateModule.OnEndRequest(Object source, EventArgs eventArgs)
+   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-10 18:09:43,525 [7] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFEqnuFt6vBW51n1ICjAK09HSyLbBRnILHKZ4TSksC2lOfrF0YQKxwZhwaoYkpqSnqgPgqpA1eU6YYjtv9zKhg7Z9tcsFU02RY-318LSp0NzL6nhuMxjF-G5vRBp_mEorQZPgPPa1YHNEOK_o4XZLFM1_P7QvjnKsBGvmhzLTTQaWnCn5Vpd-dSAqpGyImDnxaaMbh4JmEIu7EvAC82Qo477-bCr9DLvRkBTDZ5PfuIbG-IzZu1Du-cPcP9t56j1iYCtl4ZDF-tMf2UJwKDydNamxZ0A99Zhfq0Z7rMPZPOqAOSsqW_XgV8Y-IEMmoedAhkoYQGMK0oIcQTFD5Gd4puFid2mdzEZPfvRUqIyDp96-_wOtHp_INnp_Q3Rmu3aCq9c8hEi09mIAf18oFDPWK3At0lvJX4uowskZH31GuuWpaxkmJg29inSVOvw9FFx1yIgDH5vm0zDEt-_sqwGJjg-quTMxmvWUxUttIqHxYSro_JpktLoaRp4IGuyTmRochfXuDEv8eoSrkA0osJEVFAdDrI0JSKoE9vXlq5fpMyZX0xZPPcVWCS2PcKBs3jQfk-yEFIiEZroEY55NwXwTqFz_qS_wFvAQoUY7jRl8expeM0cekBob-CqqZncPYH_vDlIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-10 18:09:54,360 [10] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFE7rAR0TnqIIgLxWtO8n2lif5YcXIS0EezCCGXIasVWIlnBV_sM_Mm7_KtRg7qKJR_8R2fFPm30vsPwhgi8v6tB8XsLQPD-IPIjOEawV8xgEDmURbEvIYB-ch1GeSuKeWIwC0pVzVEHqii0rj4NAQmOP6Scp6m-mEkm-ggO41GaAhgLy2Rzay5y54WEibng5cZ9gCorgUu0eMDk8Z2p7aFqDqKabExqNgcXECgMUwgFt-QEEEVN2oW_B9z_wgmYivmcWLGf4_pAuNgF5cLzl-RBImBzgnHSxNLAQuOtY8Vb7kja6T4d1GzqGzYrrSULqU2XTP9zr_isU7c0tjLjAivEREz4T21x9NU5mVqjGkTFYrzuUMA_FyM4JWXtPI4nISHt-dx4mO2YbIcsJD0LRb2EJsIXOIdjXIuVWhEmF6v5b4Up8e0mAX5sYr0a2LTFlrrl4ZmCRydt5_Uw_Mtkut7Pqs1nP0yHk0k4-pI0YG8KGmvx4ri1ToKd5AuRtIl2up2TQDX9IT6WQia5EM0Y1miNc7LsOjsQFipRXa-g4MmY4duCkJ2Jo55sYgABSHTwEFuAlZ8YeBf30ed-ZdunM_nl2vccAbNja1FrEAOytCRUEbB0BK0DfNpb-3-QQEV_ieyIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-10 18:10:03,549 [10] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFE19s0p0BS7x24nc2vCBfoQaUtVdncBheFkSciVeMhEmPUOufhpy3XoFQFB-5MQ5txMSDr8M0uRgWphKO1kf4lJ_wFr3tR4RakkQ-JTt0RX3iFZC3QahWG7_v5bzrv3JWG4od050EBTveLLZGT3I2h0wgHqs7HX96PI8UGjZUPWbBI3wzGzfiWLYxdhiVkhSUnRsnKh0UIPwfjinweU-aiuOPY3XhXk7236L0DtIjKIoIO0XPtq5AznDMMdFkX1-FXmBDUz2_jhtq08eZxQHl_bEFkAWsaUxts34OKrtcnSo-rD33cBcEjJj_Yq5U_KFbYJzTNcjgmi5TiFQp2j-0NxaLbqMXP5zO3_94L5rLYo-qViPIwwqUk4AnBzzZQyf3I673k36WeSIySmNyq2M7Hb9hCZmWvE2cMgl4RueEhNBXSl284C7nncmLYa6nC7fdPRC7BbwWDKGaR0iho_51EtDnav1dl5TAsc-uF1XRTmvyGZ9KV1hKXGlhUAwWkwevWxYIs1caMRoryOODr1nxIf4NeGur_mbuHabqvg0NqKxoyDr8C_HCjIT7ZwDW4plbxCl6YEOA4kdLNCasaVGKF7mbeKRICm07R3_bJCkF4a75imfEhlCmpyR1EB17ODMfNIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-10 18:13:14,626 [18] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/BIReport, 
+2018-08-10 18:13:16,539 [16] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFE9jzVHKiheyi9p7ZO1iga9STFdYw9TkXHXUlKsctnUukHwfIDwOuaRbDNq11eRWoinowLl5_Zh0ZzpXGj2jBeDlW1nnLS1tEh4dCEnZ9dyPHibkArTOpp_8P6omsXCsHeSRJsU5-5nL6LFxgwtpeNycYCE1TKlFmrjiUiX2Va_EEgFxamSskfffw28UPOxVt0jepAr12-MO3An_uu615S-7ekKZIoAx4uApXfLvh1ZIZ7Yr7enT8vd0vwEIIqXo4L9OZ-z3kQWtyiXx0naGr2vSOf_dJlIJMojauLvZvS4WDdkAVoPGkMcIN9IMwNDDnML7Q6r0jyY-UxG4hMjZR0SpRVtBltC_27cjy3RYdcNenQ8qjaH8khZytYDnEBxANcONOj18xqKnAw3jUpv8YbI5xoEqYiDYwVE1pQyshOc4wR4uuzk5TD8Scfy9kqg9wY3FMC1qPSEtVnT7zgjW1Z0eZ6Ky0mHjrRitBR5yjXKwcSiRU1-O6dsRNi2-3svx_3ZmZvvIBFf8RK9nghuI9ApF_uMZsmCySt2EG1CJlAUr6kgw5JnTbnRrZVAkvZ5LMgseYTFu86N70UOm6NCQZS0x9w6RP5_OFdlJlBuerGi9tKPZkycuRFFVbsiAjgK5iTIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-10 18:14:11,116 [18] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFE9jzVHKiheyi9p7ZO1iga9STFdYw9TkXHXUlKsctnUukHwfIDwOuaRbDNq11eRWoinowLl5_Zh0ZzpXGj2jBeDlW1nnLS1tEh4dCEnZ9dyPHibkArTOpp_8P6omsXCsHeSRJsU5-5nL6LFxgwtpeNycYCE1TKlFmrjiUiX2Va_EEgFxamSskfffw28UPOxVt0jepAr12-MO3An_uu615S-7ekKZIoAx4uApXfLvh1ZIZ7Yr7enT8vd0vwEIIqXo4L9OZ-z3kQWtyiXx0naGr2vSOf_dJlIJMojauLvZvS4WDdkAVoPGkMcIN9IMwNDDnML7Q6r0jyY-UxG4hMjZR0SpRVtBltC_27cjy3RYdcNenQ8qjaH8khZytYDnEBxANcONOj18xqKnAw3jUpv8YbI5xoEqYiDYwVE1pQyshOc4wR4uuzk5TD8Scfy9kqg9wY3FMC1qPSEtVnT7zgjW1Z0eZ6Ky0mHjrRitBR5yjXKwcSiRU1-O6dsRNi2-3svx_3ZmZvvIBFf8RK9nghuI9ApF_uMZsmCySt2EG1CJlAUr6kgw5JnTbnRrZVAkvZ5LMgseYTFu86N70UOm6NCQZS0x9w6RP5_OFdlJlBuerGi9tKPZkycuRFFVbsiAjgK5iTIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-10 18:16:29,874 [28] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport, 
+2018-08-10 18:18:17,048 [30] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFE9jzVHKiheyi9p7ZO1iga9STFdYw9TkXHXUlKsctnUukHwfIDwOuaRbDNq11eRWoinowLl5_Zh0ZzpXGj2jBeDlW1nnLS1tEh4dCEnZ9dyPHibkArTOpp_8P6omsXCsHeSRJsU5-5nL6LFxgwtpeNycYCE1TKlFmrjiUiX2Va_EEgFxamSskfffw28UPOxVt0jepAr12-MO3An_uu615S-7ekKZIoAx4uApXfLvh1ZIZ7Yr7enT8vd0vwEIIqXo4L9OZ-z3kQWtyiXx0naGr2vSOf_dJlIJMojauLvZvS4WDdkAVoPGkMcIN9IMwNDDnML7Q6r0jyY-UxG4hMjZR0SpRVtBltC_27cjy3RYdcNenQ8qjaH8khZytYDnEBxANcONOj18xqKnAw3jUpv8YbI5xoEqYiDYwVE1pQyshOc4wR4uuzk5TD8Scfy9kqg9wY3FMC1qPSEtVnT7zgjW1Z0eZ6Ky0mHjrRitBR5yjXKwcSiRU1-O6dsRNi2-3svx_3ZmZvvIBFf8RK9nghuI9ApF_uMZsmCySt2EG1CJlAUr6kgw5JnTbnRrZVAkvZ5LMgseYTFu86N70UOm6NCQZS0x9w6RP5_OFdlJlBuerGi9tKPZkycuRFFVbsiAjgK5iTIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-10 18:19:05,366 [29] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/BIReport, 
+2018-08-10 18:19:08,795 [18] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFEkq0Kc5CwBPr5p61BI9X6th3IYoISumzsTFbb9zxIQoeI09rIVvduo3MXUtgDgsAmO4aKWjaMKjyXiMHMyLSOIohavRlXx9WS99b8hJP6XRixaEjs3ycysAKuXm_vWPz8OhUlaMNdqPbvfxEKAI8qS6cSFrX9BadqvE3IAq2ef8vS_ayCXBwd-TIk6a19hODzUmCOK6ES-k659HcCuGjLmkgzUUE2U6ZTThaJEdsQbBCe5par2zlvi_yX0LWS_o-FpmQcnOOW2wjDfCcThqdx1-342YsoKQzpMGCnHtF3r08l-_655hQAf-wq0RIJTycVl-0GYSOivi_BtSXKOBJORzrKmAwc6pGZyq5x1KdvteIIob52tGOBU_6TWHqvlLYDI_9KZJsKmKBf00sit9kZXhwsP34DlFPkF0wL77hXNGUL3tl3lKWrkQVhDGAbO-Sk7l4NpQjBWnIFQlOsXR_230Y_XeEx_FnSDB51kSYk_8TK-XUrC9FJe4aXkQKBHB9Tf94NqnRd3pGc9C8GA7jZ1bkqG4dZ1BP8O5kGD90rtHCyb74iboLKafjaDhgsn89VWeFY_TIHvIDtU0aRuG2iVPutPvON4tlWNSzjjVq3nz8LuSS0b6GN9QqnP50reGVaIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-10 18:19:22,832 [29] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFEkq0Kc5CwBPr5p61BI9X6th3IYoISumzsTFbb9zxIQoeI09rIVvduo3MXUtgDgsAmO4aKWjaMKjyXiMHMyLSOIohavRlXx9WS99b8hJP6XRixaEjs3ycysAKuXm_vWPz8OhUlaMNdqPbvfxEKAI8qS6cSFrX9BadqvE3IAq2ef8vS_ayCXBwd-TIk6a19hODzUmCOK6ES-k659HcCuGjLmkgzUUE2U6ZTThaJEdsQbBCe5par2zlvi_yX0LWS_o-FpmQcnOOW2wjDfCcThqdx1-342YsoKQzpMGCnHtF3r08l-_655hQAf-wq0RIJTycVl-0GYSOivi_BtSXKOBJORzrKmAwc6pGZyq5x1KdvteIIob52tGOBU_6TWHqvlLYDI_9KZJsKmKBf00sit9kZXhwsP34DlFPkF0wL77hXNGUL3tl3lKWrkQVhDGAbO-Sk7l4NpQjBWnIFQlOsXR_230Y_XeEx_FnSDB51kSYk_8TK-XUrC9FJe4aXkQKBHB9Tf94NqnRd3pGc9C8GA7jZ1bkqG4dZ1BP8O5kGD90rtHCyb74iboLKafjaDhgsn89VWeFY_TIHvIDtU0aRuG2iVPutPvON4tlWNSzjjVq3nz8LuSS0b6GN9QqnP50reGVaIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-10 18:20:24,898 [18] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/BIReport, 
+2018-08-10 18:20:26,947 [17] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFEk0JKHu0Flv5oGrcUQpZw7YWzk3V8wIUEFS2pBWSb-xlWcqS77u-7wDP1ZOcdJGxaBZ-jen-WVH2DHBafrl5Y90fLQnjHQ6oYfB09PwsWYThYKajD-YgyQEDs38ZMGwxdvqOuCvoo7MWxub06kmYWTmKLQfqXQ78efJqGIarmxHMgfmZLp49jP7avYvZtY3tQatL0rH718p9u1Bmug1rUjbwyXC2fu2syWaS7uQOhqOZ2rkJcGnLdnCMshJ6GNvUhsMDWXFR1v4RDNB-nQKYU-0W6sy9u0e42zj5ZmQlAy5cumLcBbH3LQnDXlRIpqBZFjSJDyzeHPe8BGvITGR3o_WnpSogVAhRt7FdVhDL0O5GzNr7k4CLP1qFrM6FCozD7dI2rpkUDoBmXLN6TeFGy1R_m4BCnH4_HjRCGmz88FkCrb-6P_wrn7LUFv5WoPhvdh0Bwrjjp8ePsyt026Os5pYm8_gGl9_GUPlRjQ-PWaWH_YcHo9tcT2BuWBPnuTPp7HuxTMwkc8Euifzw6oH8AGd7t04phI2Pz8To_HySFQ2NNUcT5lQ4x5iAlxCHh6Gik5tjIXZsWX7oWZkUgNXInoyGH7eBPcQvroNIESR4VMQArhsv3L4cgZG_AwuMZvfGpIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-10 18:23:13,715 [48] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/BIReport, 
+2018-08-10 18:23:16,673 [18] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFE0dQDs1rCb90Lcpq3Fdr1-zri0B941dvmh29wkskU_B40Z1VBohdKbvB9zuMNF23v3theRd-tCaZrtUpiU4IJ7l0WZ7JBWPKQZZPZUxmCayz1CGIRu6Dfytlr7QF1fpiHRisvyaqo3Ot0SBJNvp4hqapSBMR_4yEo5sRN8W0br6GZaJZuatYKeyHFFnZVGvVe4rvMl73Zkb0RKMxzQW-_T3j2ABTCqpqqo87IMmC-Sj09GsNGLn18bf0mPHuICgC82f92QnQNnNLPsmMQwVbSgz3iiIBRf_rMTVDvGA8PYnuIJ5zc52ANL4iuiAgyHoPOdJmOsQG1jaWCdKYLLmZ8NVnFb8xxAgF31EY4VmzD4WWxRZJ_4i2bPe_5zRxqWSezKj28QkBXp8g0RpkAxkAm5caASiVJm611knvSTAjjKKfrOgNE6bI4vBq-fi6wGYS2IdwsLP4LxAcMJIK2PNviZcMpjTpT6ms54vO-mF9auJgEz7aTTirP9VN4Em_ELNqQ6_WEFrg2EGR_FSojkfTF8UoHLLz6m4ZsKmBc_biehN0bjLAF-uXCkrorz3httwGIcxr9cv_oztL1m99QR5BnlJpxgT4etsLsJlrkOlttu0HX7LZXqiyEPxwelfzPsBB0IAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-10 18:23:49,372 [6] INFO  - WCF - Application_Start_Done, 
+2018-08-10 18:23:49,373 [8] INFO  - WCF - Begin Request http://localhost:62403/powerbireport/bireport, 
+2018-08-10 18:23:51,169 [6] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFEUxnZPWosCXw8mDqYanPZSOP22FEsf-y3wuwYkRLp_vju4TAjOfO00fLARl4TiUewOy01bxSn1ExmJ1TFLcPi_NYbShct1fwYkBznd95FMIS2gJIbWrTQYBf6fiOjtqpjkguMWOj9rFruSHmoOFMNlM8talW9P-YPeq9xv72DEsA4fpJGx8SjZdFHK1LIfcSyc0GGc2PQdONDlFn0dnH-Fx-RY04bkzaUpP29uHY7PPHMudRxKm44F_YAlR22byk6je_pB5yO93RYFQmwy4S9v_FqsIC2ggwUENKwDxEmxBx7iQB2aEmWnHCmGgawLe-UhYH0WDO7JXKGjIN-fZ1-Cg0vK_myObl_fkpG9z81oeP8VyBp4UOkUKYRLiXTAIo17uxnXz_wHae4DmaaHKwli5tRmEiRmdTizUHv_XNiT7zzQLkUOPVBNBnlKuStZbPhLIe-43tlzqSaNt55zqUV0jaf9B4JKp0S5hFPELYXGrbHlkixQBaF9HqGcPiwD_r96DvOajAJbsnDzWEacSJh4DPUVt07_2IxW2TiYLF-v5mwySbq-5fka3mhnlF9F6m0P38R9El79viYeewS0QpxTjGfFo7tl35FlMUWNImNe9uE7hW2FL-4as9_TFZyQVCoIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-10 18:24:46,348 [6] INFO  - WCF - Begin Request http://localhost:62403/powerbireport/bireport, 
+2018-08-10 18:24:49,487 [6] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFEmHVKZt_KDdOw531BigJwbc_eb6E1-D--oqwiylABthAQ-f-GPUeck18a5b_soj5L4frdInbnueZPO9t2tXselAFLdtHo2pxUtJYN33TLCawxf1ZGZny30t-bRtZltOkepTZnFQP3Yh5OaynHaN3ppPZHJt4fC34Dit16aIASgyfYKEFFetebY3SP9u0hEdvYbj3u4jBMY0t0IrSviiclD90X-Ae4qXa1BsgSKHcc0dh1Qp6fMTJEfxFNkZqjxdzdjTcYGQn-JpEF255dYKYCcfrYlSQ8YQ8SWpTcun1-yf1FpDcz2r_EtgSxkVL1_VNbTaajCuweqVMmjnvFcDsqPue1h8dZiuHcG19B6QXjJl1H7cz3drGuNJsuVGen7W5oqpYP_B_AnynzCBZ2K2tglIiNZcCFSxzhz-kubwU1VGQ8w2osVVFOgQwvAhg_VTlJxKIjh9q6n7ZeaSEs0jHDEuHugc_3tGaeAcx1l0Hj8-nG1nOmD09WcesY7eG6k3f5OcM93pAhdQ3MKT9whrc8MbPVxrn69tbhVFmaAc9475uRAm0MHQtLJscoFFEosEOgkCUGONfn9lWVEf-1kpykjwYfLecqYJuYTDrnsHqKG6pqHpbpb_tyJj5yJWoDwS97IAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-10 18:28:22,872 [17] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/BIReport, 
+2018-08-10 18:28:24,333 [6] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFEbx7GppX-Wh6iH4j_3HQPpklqMhw0gYMEQHFMztNfLuqbrF_w-pMaUoviP1H1dNNLzhoAaKcLFqysZf9Ro2-6mDftBqcor_jeEOqTTCxgFgkrChv20BdxpKfLxHVuWfz_P81MAPLnuDDelcTBe0XV-_pXuTjtv65pF8rxoncy-WKxxHAjD3WUNDTEdXnfn0UzNYAKuniYpW4FmHI-A8JBEmB08B9JRu8DxQSxqXCEcx9ZBvLqV4iyFFZgf2vykEG_hdCMjY0FRkjXaOdxyAez7oDlB6UOAYrexLUqaZNzKryFsLNjRAQJ1SFr-LyEoUIKYkLuAbzDAaKVTqjcepnEuUqilkSyiV73IB77m2KUWF4xBfwQqASo1Xs_X454qPHgxtaL-hdRnqL5eUu-ZQ-VhgNIxtf6jRQhFxREX5eBaTXhR_kcdD-hH976IIs1T8x00WDQsJvvEmmq3sW0_1erXxQUL5wbjcailz0yqRvisuEm_4EkqXCclaytKhSBxaPN-tyn5JS1l5yfa9CZju_DshLR7dtJWlpuTRxvXKXyl_VElvtB9MGpGWVMrP5a8QtOBuYv_UpofWxSrqvElcAQn3-EPMZgwCe3_LeU3414l4u9EahERYkkS2Sn3IaP0SlAIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-10 18:31:09,932 [19] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFEbx7GppX-Wh6iH4j_3HQPpklqMhw0gYMEQHFMztNfLuqbrF_w-pMaUoviP1H1dNNLzhoAaKcLFqysZf9Ro2-6mDftBqcor_jeEOqTTCxgFgkrChv20BdxpKfLxHVuWfz_P81MAPLnuDDelcTBe0XV-_pXuTjtv65pF8rxoncy-WKxxHAjD3WUNDTEdXnfn0UzNYAKuniYpW4FmHI-A8JBEmB08B9JRu8DxQSxqXCEcx9ZBvLqV4iyFFZgf2vykEG_hdCMjY0FRkjXaOdxyAez7oDlB6UOAYrexLUqaZNzKryFsLNjRAQJ1SFr-LyEoUIKYkLuAbzDAaKVTqjcepnEuUqilkSyiV73IB77m2KUWF4xBfwQqASo1Xs_X454qPHgxtaL-hdRnqL5eUu-ZQ-VhgNIxtf6jRQhFxREX5eBaTXhR_kcdD-hH976IIs1T8x00WDQsJvvEmmq3sW0_1erXxQUL5wbjcailz0yqRvisuEm_4EkqXCclaytKhSBxaPN-tyn5JS1l5yfa9CZju_DshLR7dtJWlpuTRxvXKXyl_VElvtB9MGpGWVMrP5a8QtOBuYv_UpofWxSrqvElcAQn3-EPMZgwCe3_LeU3414l4u9EahERYkkS2Sn3IaP0SlAIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-10 18:35:05,222 [6] INFO  - WCF - Application_Start_Done, 
+2018-08-10 18:35:05,222 [8] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFEbx7GppX-Wh6iH4j_3HQPpklqMhw0gYMEQHFMztNfLuqbrF_w-pMaUoviP1H1dNNLzhoAaKcLFqysZf9Ro2-6mDftBqcor_jeEOqTTCxgFgkrChv20BdxpKfLxHVuWfz_P81MAPLnuDDelcTBe0XV-_pXuTjtv65pF8rxoncy-WKxxHAjD3WUNDTEdXnfn0UzNYAKuniYpW4FmHI-A8JBEmB08B9JRu8DxQSxqXCEcx9ZBvLqV4iyFFZgf2vykEG_hdCMjY0FRkjXaOdxyAez7oDlB6UOAYrexLUqaZNzKryFsLNjRAQJ1SFr-LyEoUIKYkLuAbzDAaKVTqjcepnEuUqilkSyiV73IB77m2KUWF4xBfwQqASo1Xs_X454qPHgxtaL-hdRnqL5eUu-ZQ-VhgNIxtf6jRQhFxREX5eBaTXhR_kcdD-hH976IIs1T8x00WDQsJvvEmmq3sW0_1erXxQUL5wbjcailz0yqRvisuEm_4EkqXCclaytKhSBxaPN-tyn5JS1l5yfa9CZju_DshLR7dtJWlpuTRxvXKXyl_VElvtB9MGpGWVMrP5a8QtOBuYv_UpofWxSrqvElcAQn3-EPMZgwCe3_LeU3414l4u9EahERYkkS2Sn3IaP0SlAIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 
+2018-08-10 18:35:32,873 [7] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/BIReport, 
+2018-08-10 18:35:33,957 [6] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport?code=AQABAAIAAADXzZ3ifr-GRbDT45zNSEFEMpgO2k6F-nx1L4QUxzRHX9gWLqReaErbGyP-EJM64rGZewEibWuF1Xho60gXjdtFvRf17BHGqX_sJerDjxHDKaU5ZY_-JYWk057ERnr6OcJteev5DOT0gsIp2L173_KMf67s-ZL3KmTKQAK0Hziu3N8D1EVO1nyyjtlxGxMthLGTL6utFTNYiSeyoCi0ILz8JDPOX_GmFSkn8bVDI7gKd8ZpIDqo5BCOLFyzI6HlIPJBTIC_phqVyQVyMhMvDl0XYBJ3bsF1hLAGMva8t8ATIHyE9I3O7ic_sSZ9iIfTiDHVdTHz3qZfSpxew_T9PbI1-mOF1MFlNyrMLqIn1hMREtjaQ9IOmKyQPiPnlLo8HPNsncx4aBnmdRnKnQXG3GF2t7DuWXcXgx6Be5YGN-1weDWHPEvSoLcP0N5JmveZGjzWrHjgJo9cBAZLZ1_gelnoVIFZyYVzChvkNv57LR-GOqE24MOoCSCKf1u7g5YdrOUSrlo5mr76B-llkj4IjUUUP_bb4JlfCBwVfIuA3Q6br0a_tL7L99XKYWMURDJpp4oopM2zwsekOuHIP-01HUbt75pOUpFm0pmyKgN1Hkwsm6d2ABVt9N57Pb7oEh-gbwfEG8SplHCsV88-InzGSYkPIAA&session_state=5bba76d9-8e52-46ed-a191-9a9978532e37, 

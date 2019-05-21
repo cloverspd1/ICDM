@@ -1,0 +1,84 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.ItemCode
+
+@model CostingDelegate2Section
+@{
+    string sectionActiveCss = Model.IsActive ? string.Empty : "disabled";
+}
+<div class="form-horizontal">
+    @using (Ajax.BeginForm("SaveCostingDelegate2Section", "ItemCodeCreation", new AjaxOptions
+    {
+        HttpMethod = "POST",
+        LoadingElementId = "loading",
+        OnFailure = "OnFailure",
+        OnSuccess = "OnSuccess",
+        OnBegin = "BeginClient"
+    }, new { enctype = "multipart/form-data", @class = sectionActiveCss }))
+    {
+        @Html.HiddenFor(m => m.ListDetails[0].ItemId)
+        @Html.HiddenFor(m => m.ListDetails[0].ListName)
+        @Html.HiddenFor(m => m.SectionName)
+        @Html.HiddenFor(m => m.ActionStatus)
+        @Html.HiddenFor(m => m.SendBackTo)
+        @Html.HiddenFor(m => m.Status)
+        @Html.HiddenFor(m => m.WorkflowStatus)
+        @Html.Partial("_ApproversList", Model.ApproversList)
+        @Html.AntiForgeryToken()
+
+        <div class="card @sectionActiveCss">
+            <div class="card-head" data-toggle="collapse" data-target="#sectionCostingDelegate2">
+                <b>
+                    @Html.ResourceValue("Section_Title_CostingDelegate2Section", ResourceName.ICCPForm)
+                </b>
+                <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+            </div>
+            <div class="card-body" id="sectionCostingDelegate2">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.ItemCode, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-md-8">
+                                    @Html.TextBoxFor(m => m.ItemCode, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+                                    @Html.ValidationMessageFor(m => m.ItemCode, ResourceName.ICCPForm)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @Html.LabelFor(m => m.ItemDescription, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-md-8">
+                                    @Html.TextAreaFor(m => m.ItemDescription, new { @class = "form-control", @disabled = "disabled", data_toggle = "tooltip" })
+                                    @Html.HiddenFor(m => m.ItemDescription)
+                                </div>
+                            </div>
+                        </div>
+                        @*<div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        <span class="text-danger text-default-light">*</span>
+                                        @Html.ResourceValue("Label_Comments", ResourceName.Common)
+                                    </label>
+                                    <div class="col-md-8 ">
+                                        <div class="form-control noborder">
+                                            @Html.TextAreaFor(m => m.CurrentApprover.Comments, new { maxLength = 1000, @class = "form-control", @data_val = "true", @data_val_required = "Please Enter Comments", data_toggle = "tooltip", title = "Max 1000 characters" })
+                                            @Html.HiddenFor(x => x.CurrentApprover.Approver)
+                                            @Html.HiddenFor(x => x.CurrentApprover.Role)
+                                            @Html.HiddenFor(x => x.CurrentApprover.AssignDate)
+                                            @Html.ValidationMessageFor(m => m.CurrentApprover.Comments, ResourceName.Common)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    }
+</div>

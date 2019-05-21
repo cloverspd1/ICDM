@@ -1,0 +1,161 @@
+2018-11-16 10:17:34,876 [10] INFO  - WCF - Application_Start_Done, 
+2018-11-16 10:17:35,026 [11] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-11-16 10:21:00,921 [12] INFO  - MVC - sp user == , 
+2018-11-16 10:21:22,464 [5] INFO  - WCF - Application_Start_Done, 
+2018-11-16 10:21:22,465 [7] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-11-16 10:21:51,711 [5] INFO  - MVC - sp user == , 
+2018-11-16 10:22:07,276 [7] INFO  - MVC - ViewBag.UserName = , String="SharePoint Notifications"
+2018-11-16 10:22:07,276 [5] INFO  - MVC - ViewBag.UserID =, String="40"
+2018-11-16 10:22:08,678 [7] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=40, 
+2018-11-16 10:22:08,713 [11] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-11-16 10:22:08,678 [5] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-11-16 10:22:08,678 [10] INFO  - WCF - Called Helper GetFormData, 
+2018-11-16 10:22:11,062 [5] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-11-16 10:22:11,116 [7] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-11-16 10:22:25,446 [5] INFO  - WCF - called Helper.GetFormData, 
+2018-11-16 10:22:26,405 [5] INFO  - WCF - Start Helper.GetAlias, Int32=39
+2018-11-16 10:22:26,416 [7] INFO  - WCF - Start Helper.GetAlias, Int32=59
+2018-11-16 10:22:26,421 [7] INFO  - WCF - Start Helper.GetAlias, Int32=34
+2018-11-16 10:22:26,430 [7] INFO  - WCF - Start Helper.GetAlias, Int32=60
+2018-11-16 10:22:26,435 [7] INFO  - WCF - Start Helper.GetAlias, Int32=58
+2018-11-16 10:22:26,440 [7] INFO  - WCF - Start Helper.GetAlias, Int32=49
+2018-11-16 10:22:26,416 [11] INFO  - WCF - Start Helper.GetAlias, Int32=34
+2018-11-16 10:22:26,416 [10] INFO  - WCF - Start Helper.GetAlias, Int32=46
+2018-11-16 10:22:26,445 [7] INFO  - WCF - Start Helper.GetAlias, Int32=51
+2018-11-16 10:22:26,460 [7] INFO  - WCF - Start Helper.GetAlias, Int32=47
+2018-11-16 10:22:26,465 [7] INFO  - WCF - Start Helper.GetAlias, Int32=55
+2018-11-16 10:22:26,471 [7] INFO  - WCF - Start Helper.GetAlias, Int32=57
+2018-11-16 10:22:26,476 [7] INFO  - WCF - Start Helper.GetAlias, Int32=56
+2018-11-16 10:22:26,450 [11] INFO  - WCF - Start Helper.GetAlias, Int32=48
+2018-11-16 10:22:26,455 [10] INFO  - WCF - Start Helper.GetAlias, Int32=50
+2018-11-16 10:22:26,490 [10] INFO  - WCF - Start Helper.GetAlias, Int32=52
+2018-11-16 10:22:26,481 [7] INFO  - WCF - Start Helper.GetAlias, Int32=54
+2018-11-16 10:22:26,485 [11] INFO  - WCF - Start Helper.GetAlias, Int32=53
+2018-11-16 10:22:26,531 [7] INFO  - WCF - Start Helper.GetAlias, Int32=46
+2018-11-16 10:22:26,541 [7] INFO  - WCF - Start Helper.GetAlias, Int32=44
+2018-11-16 10:22:26,526 [10] INFO  - WCF - Start Helper.GetAlias, Int32=41
+2018-11-16 10:22:26,552 [10] INFO  - WCF - Start Helper.GetAlias, Int32=42
+2018-11-16 10:22:26,546 [7] INFO  - WCF - Start Helper.GetAlias, Int32=43
+2018-11-16 10:22:26,536 [11] INFO  - WCF - Start Helper.GetAlias, Int32=45
+2018-11-16 10:22:26,556 [10] INFO  - WCF - Start Helper.GetAlias, Int32=40
+2018-11-16 10:22:28,546 [11] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-11-16 10:22:28,546 [10] INFO  - WCF - Helper.GetAllButtons, 
+2018-11-16 10:22:38,027 [11] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 
+2018-11-16 10:22:42,809 [10] INFO  - WCF - Begin Request http://localhost:62403/?ID=14, 
+2018-11-16 10:22:44,500 [5] INFO  - MVC - sp user == , 
+2018-11-16 10:22:52,247 [10] INFO  - WCF - Called Helper GetFormData, 
+2018-11-16 10:22:52,247 [6] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=40, 
+2018-11-16 10:22:52,247 [5] INFO  - MVC - ViewBag.UserName = , String="SharePoint Notifications"
+2018-11-16 10:22:52,251 [11] INFO  - MVC - ViewBag.UserID =, String="40"
+2018-11-16 10:22:54,311 [10] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=LUM Design Incharge, 
+2018-11-16 10:22:54,827 [5] INFO  - WCF - Start Helper.GetAlias, Int32=39
+2018-11-16 10:22:54,843 [5] INFO  - WCF - Start Helper.GetAlias, Int32=47
+2018-11-16 10:22:54,852 [10] INFO  - WCF - Start Helper.GetAlias, Int32=47
+2018-11-16 10:22:54,873 [10] INFO  - WCF - Start Helper.GetAlias, Int32=39
+2018-11-16 10:22:54,852 [11] INFO  - WCF - Start Helper.GetAlias, Int32=52
+2018-11-16 10:22:54,890 [11] INFO  - WCF - Start Helper.GetAlias, Int32=46
+2018-11-16 10:22:54,895 [11] INFO  - WCF - Start Helper.GetAlias, Int32=58
+2018-11-16 10:22:54,843 [6] INFO  - WCF - Start Helper.GetAlias, Int32=40
+2018-11-16 10:22:54,872 [5] INFO  - WCF - called Helper.GetFormData, 
+2018-11-16 10:22:55,137 [5] INFO  - WCF - Start Helper.GetAlias, Int32=39
+2018-11-16 10:22:55,213 [6] INFO  - WCF - Start Helper.GetAlias, Int32=39
+2018-11-16 10:22:55,229 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="Sastry DVRS"
+2018-11-16 10:22:55,229 [6] INFO  - WCF - Helper.GetNameFromPersonField, Int32=40
+2018-11-16 10:22:55,619 [6] INFO  - WCF - Helper.GetNameFromPersonField, Int32=40
+2018-11-16 10:22:55,619 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=40
+2018-11-16 10:22:55,619 [5] INFO  - WCF - Helper.GetNameFromPersonField, String="Sastry DVRS"
+2018-11-16 10:22:55,635 [6] INFO  - WCF - Helper.GetNameFromPersonField, String="Sastry DVRS"
+2018-11-16 10:22:55,653 [5] INFO  - WCF - Helper.GetNameFromPersonField, Int32=40
+2018-11-16 10:22:55,653 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="Sastry DVRS"
+2018-11-16 10:22:55,666 [6] INFO  - WCF - Helper.GetNameFromPersonField, Int32=40
+2018-11-16 10:22:55,682 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="Sastry DVRS"
+2018-11-16 10:22:55,682 [5] INFO  - WCF - Helper.GetNameFromPersonField, Int32=40
+2018-11-16 10:22:55,682 [6] INFO  - WCF - Helper.GetNameFromPersonField, String="Sastry DVRS"
+2018-11-16 10:22:55,696 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=40
+2018-11-16 10:22:55,696 [5] INFO  - WCF - Helper.GetNameFromPersonField, String="Sastry DVRS"
+2018-11-16 10:22:56,526 [5] INFO  - WCF - User resolved : , String="yatin.joshi@bajajelectricals.com"
+2018-11-16 10:22:56,560 [6] INFO  - WCF - Helper.GetButtons for role 'LUM Design Incharge', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='Submitted', other params={"CurrentFromLevel":"2"}, 
+2018-11-16 10:28:19,778 [27] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-11-16 10:28:19,790 [24] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-16 10:33:19,821 [41] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-11-16 10:33:19,963 [41] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-16 10:37:08,908 [7] INFO  - WCF - Application_Start_Done, 
+2018-11-16 10:37:08,918 [8] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-11-16 10:37:57,607 [7] INFO  - MVC - sp user == , 
+2018-11-16 10:38:02,547 [7] INFO  - MVC - ViewBag.UserID =, String="9"
+2018-11-16 10:38:02,547 [8] INFO  - MVC - ViewBag.UserName = , String="SharePoint Notifications"
+2018-11-16 10:38:20,108 [9] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-11-16 10:38:20,108 [8] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-11-16 10:38:20,109 [7] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-11-16 10:38:20,108 [11] INFO  - WCF - Called Helper GetFormData, 
+2018-11-16 10:38:25,978 [7] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-11-16 10:38:25,994 [8] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-11-16 10:38:42,558 [11] INFO  - WCF - called Helper.GetFormData, 
+2018-11-16 10:38:44,177 [11] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-11-16 10:38:44,202 [11] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-11-16 10:38:44,210 [11] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-11-16 10:38:44,219 [11] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-11-16 10:38:44,229 [11] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-11-16 10:38:44,235 [11] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-11-16 10:38:44,177 [9] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-11-16 10:38:44,178 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-11-16 10:38:44,245 [9] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-11-16 10:38:44,253 [9] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-11-16 10:38:44,258 [9] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-11-16 10:38:44,263 [9] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-11-16 10:38:44,240 [11] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-11-16 10:38:44,272 [11] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-11-16 10:38:44,249 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-11-16 10:38:44,282 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-11-16 10:38:44,267 [9] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-11-16 10:38:44,277 [11] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-11-16 10:38:57,790 [11] INFO  - WCF - Helper.GetAllButtons, 
+2018-11-16 10:38:57,790 [9] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-11-16 10:39:07,670 [9] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 
+2018-11-16 10:44:39,778 [19] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-11-16 10:44:39,778 [21] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-16 10:49:40,780 [28] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-16 10:49:40,780 [32] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-11-16 10:57:18,822 [8] INFO  - WCF - Application_Start_Done, 
+2018-11-16 10:57:18,822 [6] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-11-16 10:57:23,964 [6] INFO  - MVC - sp user == , 
+2018-11-16 10:57:26,994 [9] INFO  - MVC - ViewBag.UserID =, String="9"
+2018-11-16 10:57:26,995 [6] INFO  - MVC - ViewBag.UserName = , String="SharePoint Notifications"
+2018-11-16 10:57:35,746 [8] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-11-16 10:57:35,746 [6] INFO  - WCF - Called Helper GetFormData, 
+2018-11-16 10:57:35,746 [9] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-11-16 10:57:35,776 [8] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-11-16 10:57:38,354 [6] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-11-16 10:57:38,376 [11] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-11-16 10:58:00,469 [6] INFO  - WCF - called Helper.GetFormData, 
+2018-11-16 10:58:49,457 [9] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-11-16 10:58:49,457 [8] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-11-16 10:58:49,488 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-11-16 10:58:49,496 [8] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-11-16 10:58:49,504 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-11-16 10:58:49,512 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-11-16 10:58:49,458 [12] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-11-16 10:58:49,478 [9] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-11-16 10:58:49,529 [9] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-11-16 10:58:49,533 [9] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-11-16 10:58:49,538 [9] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-11-16 10:58:49,514 [14] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-11-16 10:58:49,517 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-11-16 10:58:49,523 [12] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-11-16 10:58:49,560 [12] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-11-16 10:58:49,549 [14] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-11-16 10:58:49,543 [9] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-11-16 10:58:49,554 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-11-16 11:00:16,153 [8] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-11-16 11:00:20,308 [9] INFO  - WCF - Helper.GetAllButtons, 
+2018-11-16 11:00:20,308 [16] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-11-16 11:00:20,308 [8] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-16 11:00:27,704 [8] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 
+2018-11-16 11:05:20,774 [9] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-11-16 11:05:20,774 [17] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-16 11:05:40,765 [17] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-11-16 11:05:40,777 [9] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-16 11:10:21,777 [21] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-16 11:10:21,777 [27] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-11-16 11:10:41,760 [19] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-11-16 11:10:41,760 [21] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 

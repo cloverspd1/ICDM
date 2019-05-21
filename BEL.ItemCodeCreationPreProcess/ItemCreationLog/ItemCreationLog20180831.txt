@@ -1,0 +1,75 @@
+2018-08-20 15:07:22,485 [9] INFO  - WCF - Application_Start_Done, 
+2018-08-20 15:07:22,541 [8] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-08-20 15:07:41,360 [13] INFO  - MVC - sp user == , 
+2018-08-20 15:07:54,531 [7] INFO  - MVC -   ViewBag.UserName = , String="SharePoint Notifications"
+2018-08-20 15:07:54,531 [8] INFO  - MVC -  ViewBag.UserID =, String="21"
+2018-08-20 15:07:56,371 [9] INFO  - WCF - Called Helper GetFormData, 
+2018-08-20 15:07:56,371 [8] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-08-20 15:07:56,381 [7] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-20 15:07:56,371 [13] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=21, 
+2018-08-20 15:07:59,165 [7] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-08-20 15:07:59,165 [8] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-20 15:08:13,574 [13] INFO  - WCF - called Helper.GetFormData, 
+2018-08-20 15:08:14,306 [13] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-20 15:08:14,321 [9] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-20 15:08:14,321 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-20 15:08:14,321 [13] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-20 15:08:14,326 [9] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-20 15:08:14,381 [9] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-08-20 15:08:14,386 [9] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-20 15:08:14,377 [13] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-20 15:08:14,397 [13] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-08-20 15:08:14,372 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-20 15:08:14,410 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-20 15:08:14,415 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-20 15:08:14,420 [7] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-20 15:08:14,392 [9] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-20 15:08:14,430 [9] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-08-20 15:08:14,404 [13] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-20 15:08:14,442 [13] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-20 15:08:14,448 [13] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-20 15:08:14,425 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-20 15:08:14,458 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-20 15:08:14,437 [9] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-20 15:08:14,453 [13] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-20 15:08:16,875 [9] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-08-20 15:08:16,875 [7] INFO  - WCF - Helper.GetAllButtons, 
+2018-08-20 15:08:22,633 [8] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 
+2018-08-20 15:08:23,137 [5] INFO  - WCF - Begin Request http://localhost:62403/Master/NotAuthorize, 
+2018-08-20 15:08:59,180 [7] INFO  - WCF - Begin Request http://localhost:62403/?ID=142, 
+2018-08-20 15:08:59,243 [9] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=21, 
+2018-08-20 15:08:59,253 [9] INFO  - MVC -  ViewBag.UserID =, String="21"
+2018-08-20 15:08:59,244 [13] INFO  - MVC -   ViewBag.UserName = , String="SharePoint Notifications"
+2018-08-20 15:08:59,243 [7] INFO  - WCF - Called Helper GetFormData, 
+2018-08-20 15:09:01,633 [9] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=LUM Marketing Delegate, 
+2018-08-20 15:09:02,359 [5] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-20 15:09:02,373 [13] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-20 15:09:02,373 [9] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-20 15:09:02,387 [5] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-20 15:09:02,399 [9] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-20 15:09:02,399 [7] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-20 15:09:02,419 [13] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-20 15:09:02,419 [5] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-20 15:09:02,430 [7] INFO  - WCF - called Helper.GetFormData, 
+2018-08-20 15:09:02,430 [13] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-20 15:09:02,431 [5] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-20 15:09:02,588 [5] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-20 15:09:02,664 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-20 15:09:02,664 [5] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-20 15:09:02,664 [7] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-20 15:09:02,697 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-20 15:09:02,697 [12] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-20 15:09:03,167 [7] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-20 15:09:03,167 [5] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-20 15:09:03,184 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-20 15:09:03,184 [12] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-20 15:09:03,199 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-20 15:09:03,199 [5] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-20 15:09:03,215 [7] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-20 15:09:03,215 [12] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-20 15:09:03,227 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-20 15:09:03,227 [5] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-20 15:09:03,243 [7] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-20 15:09:03,243 [12] INFO  - WCF - Helper.GetNameFromPersonField, Int32=21
+2018-08-20 15:09:04,233 [5] INFO  - WCF - Helper.GetButtons for role 'LUM Marketing Delegate', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='Submitted', other params={"CurrentFromLevel":"1"}, 
+2018-08-20 15:09:04,233 [7] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"

@@ -1,0 +1,89 @@
+﻿@model BEL.ItemCodeCreationPreProcess.Models.Role.RoleActivities
+@{
+    Layout = null;
+}
+<div class="row padding-right-10">
+    <div class="col-md-12">
+        <div class="pull-right">
+            <button type="button" class="btn btn-primary" id="btnSave">Save Role Screen Matrix</button>
+        </div>
+    </div>
+</div>
+
+@if (Model != null)
+{
+    <div class="container margin-top-5">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div id="accordion_search_bar_container">
+                <input type="search"
+                       id="accordion_search_bar"
+                       placeholder="Search Menu" />
+
+            </div>
+            <div class="panel-group wrap" id="bs-collapse" role="tablist" aria-multiselectable="true">
+                @{var menuName = string.Empty;
+                }
+                <div id="divSelectAllOption">
+                    <div class="panelheaderpadding pull-left">
+                        <label class="control-label">@Html.CheckBox("AllAuthorized", Model.IsAllMenuAuthorized, new { id = "chkAllParentMenu", @class = "parentChks" })</label>
+                    </div>
+                    <div>
+                        <h5 class="panel-title">
+                            <a class="bold">
+                                Select All Menu
+                            </a>
+                        </h5>
+                    </div>
+                </div>
+                <div id="divNoOptionFound" style="display:none">
+                    <h5 class="panel-title">
+                        <a class="bold" style="color:red">
+                            No Record Found
+                        </a>
+                    </h5>
+                </div>
+                @foreach (var item in Model.RoleActivityData.Distinct().ToList())
+                {
+                    if (menuName != item.ParentMenuName && !string.IsNullOrWhiteSpace(item.ParentMenuName))
+                    {
+                        <div class="panel" id="@item.ParentMenuName.Replace(" ","").Trim()" roleactivityid="@item.ID">
+                            <div class="panel-heading">
+                                <div class="panelheaderpadding pull-left">
+                                    <label class="checkbox-inline">@Html.CheckBox("Authorized", item.IsAuthorized, new { id = "chkParentMenu", @save = "save", @class = "parentChk", @data = item.ParentMenuName, @parentMenuName = item.ParentMenuName, @roleActivityId = item.ID })</label>
+                                </div>
+                                <div>
+                                    <h5 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#bs-collapse" href="#Collapse_@item.ParentMenuName.Replace(" ","").Trim()">
+                                            @item.ParentMenuName
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div id="Collapse_@item.ParentMenuName.Replace(" ","").Trim()" class="panel-collapse collapse">
+                                @foreach (var roleItem in Model.RoleActivityData.Where(m => m.ParentMenuName == item.ParentMenuName))
+                                {
+                                    if (!string.IsNullOrWhiteSpace(roleItem.ChildMenuName))
+                                    {
+                                        <div class="panel-body padding-left-20" roleactivityid="@item.ID">
+                                            <span>@Html.CheckBox("chkAuthorized" + roleItem.ID, roleItem.IsAuthorized, new { id = "Authorized" + roleItem.ID, name = "chkAuthorized" + @roleItem.ID, @data = item.ParentMenuName + "C", @save = "save", @roleActivityId = roleItem.ID, @parentMenuName = roleItem.ParentMenuName, @childMenuName = roleItem.ChildMenuName, @class = "childCheck" })</span>
+                                            @roleItem.ChildMenuName
+
+                                        </div>
+
+                                    }
+                                }
+                            </div>
+                        </div>
+                        menuName = item.ParentMenuName;
+                        Model.RoleActivityData.RemoveAll(m => m.ParentMenuName == item.ParentMenuName);
+            <!-- end of panel -->
+                    }
+                }
+
+
+            </div>
+            <!-- end of #bs-collapse  -->
+        </div>
+    </div>
+        <!-- end of container -->
+                    }

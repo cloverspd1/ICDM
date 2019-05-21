@@ -1,0 +1,142 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.ItemCode
+@using BEL.CommonDataContract
+@using BEL.ItemCodeCreationPreProcess.Models.Master
+@using BEL.ItemCodeCreationPreProcess.Models.Common
+@model TDSInchargeSection
+@{
+    ApproverMaster approverusrelist = Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.APPROVERMASTER)) as ApproverMaster;
+    List<ApproverMasterListItem> tdsDelegateUserList = approverusrelist.Items.Where(x => (x as ApproverMasterListItem).Role == ICCPRoles.TDSDELEGATE).ToList().ConvertAll(p => (ApproverMasterListItem)p);
+    tdsDelegateUserList = Helper.SplitUser(tdsDelegateUserList);
+    string sectionActiveCss = Model.IsActive ? string.Empty : "disabled";
+}
+<div id="divSMSInchrageSection">
+
+    @using (Ajax.BeginForm("SaveTDSInchrageSection", "ItemCodeCreation", new AjaxOptions
+    {
+        HttpMethod = "POST",
+        LoadingElementId = "loading",
+        OnFailure = "OnFailure",
+        OnSuccess = "OnSuccess",
+        OnBegin = "BeginClient"
+    }, new { enctype = "multipart/form-data", @class = sectionActiveCss }))
+    {
+        @Html.HiddenFor(m => m.ListDetails[0].ItemId)
+        @Html.HiddenFor(m => m.ListDetails[0].ListName)
+        @Html.HiddenFor(m => m.SectionName)
+        @Html.HiddenFor(m => m.ActionStatus)
+        @Html.HiddenFor(m => m.Status)
+        @Html.HiddenFor(m => m.WorkflowStatus)
+        @Html.HiddenFor(m => m.SendBackTo)
+        @Html.Partial("_ApproversList", Model.ApproversList)
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" id="hdnIsTDSInchargeSectionActive" value="@sectionActiveCss">
+        <div class="card @sectionActiveCss">
+            <div class="card-head" data-toggle="collapse" data-target="#sectionTDSIncharge">
+                <b>
+                    @Html.ResourceValue("Section_Title_TDSInchargeSection", ResourceName.ICCPForm)
+                </b>
+                <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+            </div>
+            <div class="card-body" id="sectionTDSIncharge">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @*<span class="text-danger text-default-light">*</span>*@
+                                    @Html.LabelFor(m => m.TDSDelegate, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-8">
+                                    <div class="form-control noborder text-left">
+
+                                        @{string isddlhide = Model.IsActive ? string.Empty : " hide";}
+                                        <div class=@isddlhide>
+                                            @Html.ListBox("TDSDelegateUser", new MultiSelectList(tdsDelegateUserList, "UserID", "UserName"), new { @id = "TDSDelegateUser", @Name = "TDSDelegateUser", @class = "form-control", @data_selected = Model.TDSDelegate })
+                                            @Html.ValidationMessageFor(m => m.TDSDelegate, ResourceName.ICCPForm)
+                                            @Html.ValidationMessage("TDSDelegateUser", Html.ResourceValue("Error_TDSDelegate", ResourceName.ICCPForm))
+                                        </div>
+                                        @Html.HiddenFor(m => m.TDSDelegate)
+                                        @Html.HiddenFor(m => m.TDSDelegateName)
+
+                                        @(!Model.IsActive && !string.IsNullOrEmpty(Model.TDSDelegateName) ? Model.TDSDelegateName.Replace(",", ", ") : string.Empty)
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @*<span class="text-danger text-default-light">*</span>*@
+                                    @Html.LabelFor(m => m.CurrentApprover.Comments, ResourceName.Common)
+                                </label>
+                                <div class="col-md-8 ">
+                                    <div class="form-control noborder">
+                                        @*@Html.TextAreaFor(m => m.CurrentApprover.Comments, new { maxLength = 1000, @class = "form-control requiredOnDelegate", @data_val = "true", @data_val_required = "Please Enter Comments", data_toggle = "tooltip", title = "Max 1000 characters" })*@
+                                        @Html.TextAreaFor(m => m.CurrentApprover.Comments, new { maxLength = 1000, @class = "form-control", @data_val = "false", @data_val_required = "Please Enter Comments", data_toggle = "tooltip", title = "Max 1000 characters" })
+                                        @Html.HiddenFor(x => x.CurrentApprover.Approver)
+                                        @Html.HiddenFor(x => x.CurrentApprover.Role)
+                                        @Html.HiddenFor(x => x.CurrentApprover.AssignDate)
+                                        @Html.ValidationMessageFor(m => m.CurrentApprover.Comments, ResourceName.Common)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+                                            if (Model.IsSubmitted)
+                                            {
+                                                <div class="card @sectionActiveCss">
+                                                    <div class="card-head" data-toggle="collapse" data-target="#sectionTDSDelegate">
+                                                        <b>
+                                                            @Html.ResourceValue("Section_Title_TDSDelegateSection", ResourceName.ICCPForm)
+                                                        </b>
+                                                        <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+                                                    </div>
+                                                    <div class="card-body" id="sectionTDSDelegate">
+                                                        <div class="form-horizontal">
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            <span class="text-danger text-default-light">*</span>
+                                                                            @Html.LabelFor(m => m.TDSAttachment, ResourceName.ICCPForm)
+                                                                        </label>
+                                                                        <div class="col-md-8 ">
+                                                                            @if (sectionActiveCss == "disabled" && string.IsNullOrWhiteSpace(Model.TDSAttachment))
+                                                                            {
+                                                                                <div class="form-control noborder">
+                                                                                    <span class="text-blue">
+                                                                                        File not uploaded
+                                                                                    </span>
+                                                                                </div>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                @*<span class="text-danger text-default-light">
+                                                                                        Note: (Max.up to 2MB per file and you can upload maximum 10 files.)
+                                                                                    </span>*@
+                                                                                <div id="divTDSAttachment" data-appname="@SiteURLs.ITEMCODECREATIONSITEURL">
+                                                                                </div>
+                                                                                @Html.TextBoxFor(m => m.TDSAttachment, new { @class = "notvisible form-control" })
+                                                                                @Html.ValidationMessageFor(m => m.TDSAttachment, ResourceName.ICCPForm)
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                }
+                                            }
+</div>

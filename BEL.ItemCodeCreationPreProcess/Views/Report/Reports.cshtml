@@ -1,0 +1,116 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.Reports
+@using System.Configuration
+@model Report
+@{
+    ViewBag.Title = Html.ResourceValue("Page_Title", ResourceName.Report);
+    int dayslimit = Convert.ToInt32(ConfigurationManager.AppSettings["DaysLimit"]);
+}
+<style>
+    ul.multiselect-container {
+        max-height: 150px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+</style>
+<div class="form-horizontal">
+    @Html.Hidden("hdnDaysLimit", dayslimit)
+    <div id="divICDMReport" class="card">
+        <div class="card-body in">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <span class="text-danger text-default-light">*</span>
+                        <label class="col-md-4 control-label">
+                            @Html.LabelFor(m => m.FromDate, ResourceName.Report)
+                        </label>
+                        <div class="col-md-8">
+                            <div class="noborder">
+                                <div class="input-group date datepicker" id="FromDatePicker">
+                                    @Html.TextBoxFor(m => m.FromDate, "{0:dd-MM-yyyy}", new { @class = "form-control", @id = "FromDate", @data_val = "true", @data_val_required = "Please select From Date." })
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                                <label class="text-red hidden" id="lblFromDateError">Please select From Date.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <span class="text-danger text-default-light">*</span>
+                        <label class="col-md-4 control-label">
+                            @Html.LabelFor(m => m.ToDate, ResourceName.Report)
+
+                        </label>
+                        <div class="col-md-8 ">
+                            <div class="noborder">
+                                <div class="input-group date datepicker" id="ToDatePicker">
+                                    @Html.TextBoxFor(m => m.ToDate, "{0:dd-MM-yyyy}", new { @class = "form-control", @id = "ToDate", @data_val = "true", @data_val_required = "Please select m Date." })
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                                <label class="text-red hidden" id="lblToDateError">Please select To Date.</label>
+                                <label class="text-red hidden" id="lblToDateRangeError">To Date is lesser than From Date.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">
+                            @Html.LabelFor(m => m.Status, ResourceName.Report)
+                        </label>
+                        <div class="col-md-8 ">
+                            <div class="noborder">
+                                @Html.ListBoxFor(m => m.Status, Model.StatusList.ToSelectList(null, "Value", "Name"), new { @id = "Status", @name = "Status", @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">
+                            @Html.LabelFor(m => m.PendingWith, ResourceName.Report)
+                        </label>
+                        <div class="col-md-8 ">
+                            <div class="noborder">
+                                @Html.ListBoxFor(m => m.PendingWith, Model.RoleList.ToSelectList(null, "Value", "Name"), new { @id = "PendingWith", @name = "PendingWith", @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <div class="col-md-12 text-right">
+                            <label class="control-label">
+                                <a href="javascript:void(0)" id="btnSearch" class="btn btn-primary">
+                                    <i class="fa fa-search"></i>&nbsp; @Html.ResourceValue("Label_Search", ResourceName.Report)
+                                </a>
+                            </label>
+                            <label class="control-label">
+                                <a href="javascript:void(0);" id="btnICDMExportToExcel" class="btn btn-primary">@Html.ResourceValue("Label_ExportToExcel", ResourceName.Report)</a>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="tblReport">
+                            @Html.Partial("_ReportList", Model.ReportList)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+        @section scripts{
+            @Scripts.Render("~/bundles/Reports")
+        }

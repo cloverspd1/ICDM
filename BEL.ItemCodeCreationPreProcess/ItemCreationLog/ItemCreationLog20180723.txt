@@ -1,0 +1,18 @@
+2018-07-23 18:46:47,253 [7] INFO  - WCF - Application_Start_Done, 
+2018-07-23 18:46:47,301 [9] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-07-23 18:46:47,451 [6] ERROR - The controller for path '/' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-07-23 18:50:47,568 [6] INFO  - WCF - Application_Start_Done, 
+2018-07-23 18:50:47,582 [7] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-07-23 18:50:52,516 [7] INFO  - WCF - Begin Ajax Request http://localhost:62403/__browserLink/requestData/6a98233670f24aa1b6babacdb9579800?version=2, 
+2018-07-23 18:53:13,251 [6] INFO  - WCF - Application_Start_Done, 
+2018-07-23 18:53:13,256 [8] INFO  - WCF - Begin Request http://localhost:62403/, 

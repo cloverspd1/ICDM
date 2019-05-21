@@ -1,0 +1,94 @@
+2018-08-14 11:54:00,511 [9] INFO  - WCF - Application_Start_Done, 
+2018-08-14 11:54:00,525 [8] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-08-14 11:54:00,578 [8] INFO  - WCF - Begin Request http://localhost:62403/PowerBIReport/EmbedReport, 
+2018-08-14 11:54:02,325 [8] INFO  - MVC - sp user == , 
+2018-08-14 11:54:05,309 [9] INFO  - MVC -  ViewBag.UserID =, String="27"
+2018-08-14 11:54:05,310 [8] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-08-14 11:54:06,197 [14] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-14 11:54:06,197 [6] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-08-14 11:54:06,286 [8] INFO  - WCF - Called Helper GetFormData, 
+2018-08-14 11:54:06,281 [9] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=27, 
+2018-08-14 11:54:07,465 [9] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-08-14 11:54:08,360 [6] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-14 11:54:11,463 [6] INFO  - WCF - called Helper.GetFormData, 
+2018-08-14 11:54:12,166 [9] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-14 11:54:12,166 [8] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-14 11:54:12,168 [6] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-14 11:54:12,166 [14] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-14 11:54:12,617 [14] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-14 11:54:12,581 [9] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-14 11:54:12,597 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-14 11:54:12,610 [6] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-14 11:54:13,291 [14] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-14 11:54:13,313 [14] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-08-14 11:54:13,319 [14] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-14 11:54:13,326 [14] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-14 11:54:13,302 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-14 11:54:13,295 [9] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-14 11:54:13,339 [9] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-08-14 11:54:13,308 [6] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-08-14 11:54:13,348 [6] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-08-14 11:54:13,353 [6] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-14 11:54:13,357 [6] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-08-14 11:54:13,330 [14] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-08-14 11:54:13,335 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-08-14 11:54:13,343 [9] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-08-14 11:54:15,144 [9] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-08-14 11:54:15,144 [6] INFO  - WCF - Helper.GetAllButtons, 
+2018-08-14 11:54:20,986 [9] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 
+2018-08-14 13:53:32,807 [6] INFO  - WCF - Application_Start_Done, 
+2018-08-14 13:53:33,009 [8] INFO  - WCF - Begin Request http://localhost:62403/RoleActivity/Index, 
+2018-08-14 13:53:48,943 [11] INFO  - WCF - Begin Request http://localhost:62403/bundles/jquery?v=wXF4_1OIzxBaL7Seopm-UiQxgWhH1r7jjWCaqiOfv5Q1, 
+2018-08-14 13:53:48,960 [11] INFO  - WCF - Begin Request http://localhost:62403/Content/css?v=28l0yXwRKc3BOngIcEow-lUZSDyNAfDZKOi3KOlJBhA1, 
+2018-08-14 13:53:49,143 [5] INFO  - WCF - Begin Request http://localhost:62403/bundles/bootstrap?v=kAAziC8m6FaN3OnWqbuOnB7oZS_5Dr8jYwolwHGawKI1, 
+2018-08-14 13:53:49,146 [8] INFO  - WCF - Begin Request http://localhost:62403/bundles/jqueryval?v=Sxd-Cuhv-kgFsiR2lVHOgqfdNAV1JPXFOaQ0kGZHmvU1, 
+2018-08-14 13:53:49,186 [11] INFO  - WCF - Begin Request http://localhost:62403/bundles/spcontext?v=wXXmQAFH_6_A1mmx5SaI2oqSi1O8pcaSzawscYPbxJo1?v=2.0_990, 
+2018-08-14 13:53:49,244 [7] INFO  - WCF - Begin Request http://localhost:62403/bundles/RoleActivityScript?v=WjVPlpV9lfNhTBaegaJUKvUdsJKaeIMiiyEm-MEPSa41, 
+2018-08-14 13:54:16,601 [8] INFO  - WCF - Application_Start_Done, 
+2018-08-14 13:54:16,634 [9] INFO  - WCF - Begin Ajax Request http://localhost:62403/RoleActivity/GetRoleActivityByRoleId?roleName=Costing+Delegate2&_=1534235029722, 
+2018-08-14 13:57:41,216 [6] INFO  - WCF - Application_Start_Done, 
+2018-08-14 13:57:41,228 [8] INFO  - WCF - Begin Request http://localhost:62403/RoleActivity/Index, 
+2018-08-14 13:57:47,383 [6] INFO  - WCF - Begin Request http://localhost:62403/bundles/spcontext?v=wXXmQAFH_6_A1mmx5SaI2oqSi1O8pcaSzawscYPbxJo1?v=2.0_813, 
+2018-08-14 13:57:50,289 [7] INFO  - WCF - Begin Ajax Request http://localhost:62403/RoleActivity/GetRoleActivityByRoleId?roleName=Costing+Delegate1&_=1534235267328, 
+2018-08-14 14:02:29,867 [7] INFO  - WCF - Begin Request http://localhost:62403/RoleActivity/Index, 
+2018-08-14 14:02:30,742 [15] INFO  - WCF - Begin Request http://localhost:62403/bundles/spcontext?v=wXXmQAFH_6_A1mmx5SaI2oqSi1O8pcaSzawscYPbxJo1?v=2.0_380, 
+2018-08-14 14:02:33,919 [8] INFO  - WCF - Begin Ajax Request http://localhost:62403/RoleActivity/GetRoleActivityByRoleId?roleName=Costing+Delegate1&_=1534235550663, 
+2018-08-14 14:03:12,617 [8] INFO  - WCF - Begin Request http://localhost:62403/RoleActivity/Index, 
+2018-08-14 14:03:12,951 [15] INFO  - WCF - Begin Request http://localhost:62403/bundles/spcontext?v=wXXmQAFH_6_A1mmx5SaI2oqSi1O8pcaSzawscYPbxJo1?v=2.0_801, 
+2018-08-14 14:03:21,449 [8] INFO  - WCF - Begin Ajax Request http://localhost:62403/RoleActivity/GetRoleActivityByRoleId?roleName=Costing+Delegate1&_=1534235592881, 
+2018-08-14 14:08:13,048 [23] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 14:08:13,094 [15] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 14:13:13,129 [28] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 14:13:13,129 [27] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 14:18:13,152 [34] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 14:18:13,152 [38] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 14:23:13,161 [39] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 14:23:13,161 [45] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 14:28:13,192 [47] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 14:28:13,192 [49] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 14:33:13,216 [56] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 14:33:13,216 [49] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 14:38:13,228 [63] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 14:38:13,228 [64] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 14:43:13,254 [69] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 14:43:13,254 [66] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 14:48:13,282 [72] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 14:48:13,282 [70] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 14:53:13,313 [73] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 14:53:13,313 [76] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 14:58:13,338 [79] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 14:58:13,338 [80] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 15:03:13,364 [84] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 15:03:13,364 [81] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 15:08:13,390 [67] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 15:08:13,390 [81] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 15:13:13,416 [65] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 15:13:13,416 [83] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 15:18:13,444 [57] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 15:18:13,444 [62] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 15:23:13,470 [53] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 15:23:13,470 [54] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 17:37:00,294 [53] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 17:37:00,294 [50] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-08-14 17:42:00,320 [55] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-08-14 17:42:00,320 [45] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 

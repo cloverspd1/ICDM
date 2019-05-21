@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{D0E2262A-D308-4D3E-A8E8-DD80FB3DC663}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{5C7E269E-9B84-4E9B-9F64-D176EDC13D4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Contract", "Data Contract", "{9177E3C9-3AE9-4B57-BF3D-A68FAFF7A819}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharepointApp", "SharepointApp", "{27A24866-135E-4B02-8E2D-13AF51F502AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C64AC08C-BB20-4AE1-9915-A26482729AA4}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jobs", "Jobs", "{80414E29-9AEA-409A-9031-32F5C48EC5FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEL.ItemCodeCreationPreProcess", "BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess.csproj", "{3FFE7E5B-8022-4368-AC1C-8C7E493B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEL.CommonDataContract", "BEL.CommonDataContract\BEL.CommonDataContract.csproj", "{53E46F1F-92EE-40CE-BCB5-033BBEDF5F48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEL.DataAccessLayer", "BEL.DataAccessLayer\BEL.DataAccessLayer.csproj", "{18B10ED0-ADD4-46F7-8161-07A04C365E00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICCPDev", "ICCPDev\ICCPDev.csproj", "{4E3D1E60-2445-4627-962E-AD0A041C0F15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeApproverJob", "ChangeApproverJob\ChangeApproverJob.csproj", "{DF49EC15-DDB1-418B-843E-9B32E56D1CE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FFE7E5B-8022-4368-AC1C-8C7E493B71E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FFE7E5B-8022-4368-AC1C-8C7E493B71E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FFE7E5B-8022-4368-AC1C-8C7E493B71E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FFE7E5B-8022-4368-AC1C-8C7E493B71E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53E46F1F-92EE-40CE-BCB5-033BBEDF5F48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53E46F1F-92EE-40CE-BCB5-033BBEDF5F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53E46F1F-92EE-40CE-BCB5-033BBEDF5F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53E46F1F-92EE-40CE-BCB5-033BBEDF5F48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18B10ED0-ADD4-46F7-8161-07A04C365E00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B10ED0-ADD4-46F7-8161-07A04C365E00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B10ED0-ADD4-46F7-8161-07A04C365E00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B10ED0-ADD4-46F7-8161-07A04C365E00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E3D1E60-2445-4627-962E-AD0A041C0F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E3D1E60-2445-4627-962E-AD0A041C0F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E3D1E60-2445-4627-962E-AD0A041C0F15}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4E3D1E60-2445-4627-962E-AD0A041C0F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E3D1E60-2445-4627-962E-AD0A041C0F15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E3D1E60-2445-4627-962E-AD0A041C0F15}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DF49EC15-DDB1-418B-843E-9B32E56D1CE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF49EC15-DDB1-418B-843E-9B32E56D1CE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF49EC15-DDB1-418B-843E-9B32E56D1CE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF49EC15-DDB1-418B-843E-9B32E56D1CE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3FFE7E5B-8022-4368-AC1C-8C7E493B71E8} = {D0E2262A-D308-4D3E-A8E8-DD80FB3DC663}
+		{53E46F1F-92EE-40CE-BCB5-033BBEDF5F48} = {9177E3C9-3AE9-4B57-BF3D-A68FAFF7A819}
+		{18B10ED0-ADD4-46F7-8161-07A04C365E00} = {5C7E269E-9B84-4E9B-9F64-D176EDC13D4B}
+		{4E3D1E60-2445-4627-962E-AD0A041C0F15} = {27A24866-135E-4B02-8E2D-13AF51F502AE}
+		{DF49EC15-DDB1-418B-843E-9B32E56D1CE8} = {80414E29-9AEA-409A-9031-32F5C48EC5FF}
+	EndGlobalSection
+EndGlobal

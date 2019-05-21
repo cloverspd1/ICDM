@@ -1,0 +1,175 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.ItemCode
+@using BEL.CommonDataContract
+@using BEL.ItemCodeCreationPreProcess.Models.Master
+@using BEL.ItemCodeCreationPreProcess.Models.Common
+@model QAInchargeSection
+@{
+    ApproverMaster approverusrelist = Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.APPROVERMASTER)) as ApproverMaster;
+    List<ApproverMasterListItem> qaDelegateUserList = approverusrelist.Items.Where(x => (x as ApproverMasterListItem).Role == ICCPRoles.QADELEGATE).ToList().ConvertAll(p => (ApproverMasterListItem)p);
+    qaDelegateUserList = Helper.SplitUser(qaDelegateUserList);
+    string sectionActiveCss = Model.IsActive ? string.Empty : "disabled";
+}
+<div id="divQAInchrageSection">
+
+    @using (Ajax.BeginForm("SaveQAInchrageSection", "ItemCodeCreation", new AjaxOptions
+    {
+        HttpMethod = "POST",
+        LoadingElementId = "loading",
+        OnFailure = "OnFailure",
+        OnSuccess = "OnSuccess",
+        OnBegin = "BeginClient"
+    }, new { enctype = "multipart/form-data", @class = sectionActiveCss }))
+    {
+
+        @Html.HiddenFor(m => m.ListDetails[0].ItemId)
+        @Html.HiddenFor(m => m.ListDetails[0].ListName)
+        @Html.HiddenFor(m => m.SectionName)
+        @Html.HiddenFor(m => m.ActionStatus)
+        @Html.HiddenFor(m => m.Status)
+        @Html.HiddenFor(m => m.WorkflowStatus)
+        @Html.HiddenFor(m => m.SendBackTo)
+        @Html.HiddenFor(m => m.ReworkCount)
+        @Html.HiddenFor(m => m.OldICCPRejectedDate)
+        @Html.Partial("_ApproversList", Model.ApproversList)
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" id="hdnIsQAInchargeSectionActive" value="@sectionActiveCss">
+
+
+        <div class="card @sectionActiveCss">
+            <div class="card-head" data-toggle="collapse" data-target="#sectionQAIncharge">
+                <b>
+                    @Html.ResourceValue("Section_Title_QAInchargeSection", ResourceName.ICCPForm)
+                </b>
+                <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+            </div>
+            <div class="card-body" id="sectionQAIncharge">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @*<span class="text-danger text-default-light">*</span>*@
+                                    @Html.LabelFor(m => m.QADelegate, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-8">
+                                    <div class="form-control noborder text-left">
+
+                                        @{string isddlhide = Model.IsActive ? string.Empty : " hide";}
+                                        <div class=@isddlhide>
+                                            @Html.ListBox("QADelegateUser", new MultiSelectList(qaDelegateUserList, "UserID", "UserName"), new { @id = "QADelegateUser", @Name = "QADelegateUser", @class = "form-control", @data_selected = Model.QADelegate })
+                                            @Html.ValidationMessageFor(m => m.QADelegate, ResourceName.ICCPForm)
+                                            @Html.ValidationMessage("QADelegateUser", Html.ResourceValue("Error_QADelegate", ResourceName.ICCPForm))
+                                        </div>
+                                        @Html.HiddenFor(m => m.QADelegate)
+                                        @Html.HiddenFor(m => m.QADelegateName)
+
+                                        @(!Model.IsActive && !string.IsNullOrEmpty(Model.QADelegateName) ? Model.QADelegateName.Replace(",", ", ") : string.Empty)
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @*<span class="text-danger text-default-light">*</span>*@
+                                    @Html.LabelFor(m => m.CurrentApprover.Comments, ResourceName.Common)
+
+                                </label>
+                                <div class="col-md-8 ">
+                                    <div class="form-control noborder">
+                                        @Html.TextAreaFor(m => m.CurrentApprover.Comments, new { maxLength = 1000, @class = "form-control requiredOnReject requiredOnSendBack", @data_val = "true", @data_val_required = "Please Enter Comments", data_toggle = "tooltip", title = "Max 1000 characters" })
+                                        @Html.HiddenFor(x => x.CurrentApprover.Approver)
+                                        @Html.HiddenFor(x => x.CurrentApprover.Role)
+                                        @Html.HiddenFor(x => x.CurrentApprover.AssignDate)
+                                        @Html.ValidationMessageFor(m => m.CurrentApprover.Comments, ResourceName.Common)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+                                            if (Model.IsSubmitted)
+                                            {
+                                                <div class="card @sectionActiveCss">
+                                                    <div class="card-head" data-toggle="collapse" data-target="#sectionQADelegate">
+                                                        <b>
+                                                            @Html.ResourceValue("Section_Title_QADelegateSection", ResourceName.ICCPForm)
+                                                        </b>
+                                                        <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+                                                    </div>
+                                                    <div class="card-body" id="sectionQADelegate">
+                                                        <div class="form-horizontal">
+                                                            <div class="row">
+                                                                @*  <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            <span class="text-danger text-default-light">*</span>
+                                                                            @Html.LabelFor(m => m.IsJointInspectionDone, ResourceName.ICCPForm)
+                                                                            @Html.LabelFor(m => m.JointInspectionAttachment, ResourceName.ICCPForm)
+                                                                        </label>
+                                                                        <div class="col-md-8 ">
+                                                                            <div class="form-control noborder">
+                                                                                @Html.RadioButtonFor(m => m.IsJointInspectionDone, "True", new { @Id = "JointInspectionDoneYes" })
+                                                                                <label for="JointInspectionDoneYes">Yes</label>
+                                                                                @Html.RadioButtonFor(m => m.IsJointInspectionDone, "False", new { @Id = "JointInspectionDoneNo" })
+                                                                                <label for="JointInspectionDoneNo">No</label>
+                                                                                @Html.ValidationMessageFor(m => m.IsJointInspectionDone, ResourceName.ICCPForm)
+                                                                            </div>
+                                                                        </div>
+                                                                      @Html.HiddenFor(m => m.IsJointInspectionDone)
+                                                                                                    <div class="col-md-8">
+                                                                                                        <span class="text-danger text-default-light">
+                                                                                                            Note: (Max.up to 2MB per file and you can upload maximum 10 files.)
+                                                                                                        </span>
+                                                                                                        <div id="divJointInspectionAttachment" data-appname="@SiteURLs.ITEMCODECREATIONSITEURL">
+                                                                                                        </div>
+                                                                                                        @Html.TextBoxFor(m => m.JointInspectionAttachment, new { @class = "notvisible form-control" })
+                                                                                                        @Html.ValidationMessageFor(m => m.JointInspectionAttachment, ResourceName.ICCPForm)
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>*@
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            <span class="text-danger text-default-light">*</span>
+                                                                            @Html.LabelFor(m => m.ReliabilityTestReportAttachment, ResourceName.ICCPForm)
+                                                                        </label>
+                                                                        <div class="col-md-8 ">
+                                                                            @if (sectionActiveCss == "disabled" && string.IsNullOrWhiteSpace(Model.ReliabilityTestReportAttachment))
+                                                                            {
+                                                                                <div class="form-control noborder">
+                                                                                    <span class="text-blue">
+                                                                                        File not uploaded
+                                                                                    </span>
+                                                                                </div>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                @*<span class="text-danger text-default-light">
+                                                                                        Note: (Max.up to 2MB per file and you can upload maximum 10 files.)
+                                                                                    </span>*@
+                                                                                <div id="divReliabilityTestReportAttachment" data-appname="@SiteURLs.ITEMCODECREATIONSITEURL">
+                                                                                </div>
+                                                                                @Html.TextBoxFor(m => m.ReliabilityTestReportAttachment, new { @class = "notvisible form-control" })
+                                                                                @Html.ValidationMessageFor(m => m.ReliabilityTestReportAttachment, ResourceName.ICCPForm)
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-sm-6"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                }
+                                            }
+</div>

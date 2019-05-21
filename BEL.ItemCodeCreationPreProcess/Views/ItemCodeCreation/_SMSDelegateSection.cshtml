@@ -1,0 +1,98 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.ItemCode
+@using BEL.CommonDataContract
+@using BEL.ItemCodeCreationPreProcess.Models.Common
+@using BEL.ItemCodeCreationPreProcess.Models.Master
+@model SMSDelegateSection
+@{
+    string sectionActiveCss = Model.IsActive ? string.Empty : "disabled";
+
+}
+<div class="form-horizontal">
+    @using (Ajax.BeginForm("SaveSMSDelegateSection", "ItemCodeCreation", new AjaxOptions
+    {
+        HttpMethod = "POST",
+        LoadingElementId = "loading",
+        OnFailure = "OnFailure",
+        OnSuccess = "OnSuccess",
+        OnBegin = "BeginClient"
+    }, new { enctype = "multipart/form-data", @class = sectionActiveCss }))
+    {
+        @Html.HiddenFor(m => m.ListDetails[0].ItemId)
+        @Html.HiddenFor(m => m.ListDetails[0].ListName)
+        @Html.HiddenFor(m => m.SectionName)
+        @Html.HiddenFor(m => m.ActionStatus)
+        @Html.HiddenFor(m => m.SendBackTo)
+        @Html.HiddenFor(m => m.Status)
+        @Html.HiddenFor(m => m.WorkflowStatus)
+        @Html.Partial("_ApproversList", Model.ApproversList)
+        @Html.AntiForgeryToken()
+        <div class="card @sectionActiveCss">
+            <div class="card-head" data-toggle="collapse" data-target="#sectionSMSDelegate">
+                <b>
+                    @Html.ResourceValue("Section_Title_SMSDelegateSection", ResourceName.ICCPForm)
+                </b>
+                <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+            </div>
+            <div class="card-body" id="sectionSMSDelegate">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.PilotLotPreparation, ResourceName.ICCPForm)
+
+                                </label>
+                                <div class="col-md-8 ">
+                                    <div class="form-control noborder text-left">
+                                        @*@Html.ListBox("ItemPilotLotPreparation", new MultiSelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.PILOTLOTPREPARATIONMASTER)) as PilotLotPreparationMaster).Items, "Value", "Title"), new { @required = "required", @id = "ItemPilotLotPreparation", @data_val = "true", @data_val_required = "Please select Pilot Lot Preparation.", @name = "ItemPilotLotPreparation", @class = "form-control multiselectrequired", @data_selected = Model.PilotLotPreparation })
+                                        @Html.ValidationMessageFor(m => m.PilotLotPreparation, ResourceName.ICCPForm)
+                                        @Html.ValidationMessage("ItemPilotLotPreparation", Html.ResourceValue("Error_PilotLotPreparation", ResourceName.ICCPForm))
+                                        @Html.HiddenFor(m => m.PilotLotPreparation)*@
+                                        @Html.DropDownListFor(m => m.PilotLotPreparation, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.PILOTLOTPREPARATIONMASTER)) as PilotLotPreparationMaster).Items, "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.PilotLotPreparation })
+                                        @Html.ValidationMessageFor(m => m.PilotLotPreparation, ResourceName.ICCPForm)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group quantity">
+                                <label class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.Quantity, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-md-8 ">
+                                    @Html.TextBoxFor(m => m.Quantity, new { maxlength = 15, @class = "form-control integeronly", data_toggle = "tooltip", title = "Max 15 characters" })
+                                    @Html.ValidationMessageFor(m => m.Quantity, ResourceName.ICCPForm)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        <span class="text-danger text-default-light">*</span>
+                                        @Html.ResourceValue("Label_Comments", ResourceName.Common)
+                                    </label>
+                                    <div class="col-md-8 ">
+                                        <div class="form-control noborder">
+                                            @Html.TextAreaFor(m => m.CurrentApprover.Comments, new { maxLength = 1000, @class = "form-control", @data_val = "true", @data_val_required = "Please Enter Comments", data_toggle = "tooltip", title = "Max 1000 characters" })
+                                            @Html.HiddenFor(x => x.CurrentApprover.Approver)
+                                            @Html.HiddenFor(x => x.CurrentApprover.Role)
+                                            @Html.HiddenFor(x => x.CurrentApprover.AssignDate)
+                                            @Html.ValidationMessageFor(m => m.CurrentApprover.Comments, ResourceName.Common)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                            </div>
+                        </div>*@
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    }
+</div>

@@ -1,0 +1,127 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.Master
+@using BEL.CommonDataContract
+@model ChangeApproverMaster
+@{
+    ViewBag.Title = Html.ResourceValue("Page_ICDMApprover_Title", ResourceName.ChangeApproverForm);
+}
+<script type="text/javascript">
+    @{
+        List<NameValueData> jobstatusList = new List<NameValueData>();
+        jobstatusList.Add(new NameValueData{ Name = "Yes", Value = "Yes" });
+        jobstatusList.Add(new NameValueData { Name = "No", Value = "No" });
+
+    }
+</script>
+
+<div id="divICDMApprovers" class="card">
+    <div class="card-body in">
+        <div class="form-horizontal">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">                 
+                        <label class="col-md-4 control-label">
+                            <span class="text-danger text-default-light">*</span>
+                            @Html.LabelFor(m => m.RoleName, ResourceName.ChangeApproverForm)
+                        </label>
+                        <div class="col-md-8">
+                            <div class="noborder">
+                                @Html.DropDownListFor(m => m.RoleName, new SelectList(Model.RoleNameList, "Value", "Value"), "Select", new { @id = "RoleName", @name = "RoleName", @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.RoleName, ResourceName.ChangeApproverForm)
+                                <label class="field-validation-error hidden" id="lblRoleNameError">Please select Role Name.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-group">                       
+                        <label class="col-md-4 control-label">
+                            <span class="text-danger text-default-light">*</span>
+                            @Html.LabelFor(m => m.PendingWithWhom, ResourceName.ChangeApproverForm)
+
+                        </label>
+                        <div class="col-md-8">
+                            <div class="noborder">
+                                @Html.DropDownListFor(m => m.PendingWithWhom, new SelectList(Model.PendingWithWhomUserList, "Value", "Name"), "Select", new { @id = "PendingWithWhom", @name = "PendingWithWhom", @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.PendingWithWhom, ResourceName.ChangeApproverForm)
+                                <label class="hidden field-validation-error" id="lblPendingWithWhomError">Please select Approver.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">
+                            @Html.LabelFor(m => m.JobStatus, ResourceName.ChangeApproverForm)
+                        </label>
+                        <div class="col-md-8">
+                            <div class="noborder">
+                                @Html.DropDownListFor(m => m.JobStatus, new SelectList(jobstatusList, "Value", "Name"), "Select", new { @id = "JobStatus", @name = "JobStatus", @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <div class="col-md-12 text-right">
+                            <label class="control-label">
+                                <a href="javascript:void(0);" id="btnSearch" class="btn btn-primary">@Html.ResourceValue("Label_Search", ResourceName.ChangeApproverForm)</a>
+                            </label>
+                            <label class="control-label">
+                                <a id="btnPendingRequest" data-toggle="modal" href="#pendingrequestmodel" class="btn btn-primary">
+                                    @Html.ResourceValue("Label_PendingRequest", ResourceName.ChangeApproverForm)
+                                </a>
+                            </label>
+                            @Ajax.ActionLink("Add Approver Replacement", "GetApproverReplacementApproverById", "ICDMApprover", new AjaxOptions() { UpdateTargetId = "addeditapproverreplacement", HttpMethod = "GET", InsertionMode = InsertionMode.Replace, LoadingElementId = "loading" }, new { @class = "btn btn-primary" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*<div class="row">
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">
+                                @Html.LabelFor(m => m.ReplaceByWhom, ResourceName.ChangeApproverForm)
+                            </label>
+                            <div class="col-md-8 ">
+                                <div class="form-control noborder">
+                                    @Html.DropDownListFor(m => m.ReplaceByWhom, new SelectList(Model.ReplaceByWhomUserList, "Value", "Name"), "Select", new { @id = "ReplaceByWhom", @name = "ReplaceByWhom", @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.ReplaceByWhom, ResourceName.ChangeApproverForm)
+                                    <label class="text-red hidden" id="lblReplaceByWhomError">Please select Replace By whom.</label>
+                                    <label class="text-red hidden" id="lblSameUserError">Selected User is same as Approver.Please select other user.</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label">
+                                <a href="javascript:void(0);" id="btnReplaceApprover" class="btn btn-primary">@Html.ResourceValue("Label_ChangeApprover", ResourceName.ChangeApproverForm)</a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2">
+                    </div>
+                </div>*@
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="tblICDMApproverList">
+                        @Html.Partial("_ICDMApproverList", Model.ChangeApproverMasterList)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="pendingrequestListmodel"></div>
+<div id="addeditapproverreplacement"></div>
+@section scripts{
+    @Scripts.Render("~/bundles/ICDMApproversScript")
+}

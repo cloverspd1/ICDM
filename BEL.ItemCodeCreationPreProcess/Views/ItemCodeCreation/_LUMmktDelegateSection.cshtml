@@ -1,0 +1,178 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.ItemCode
+@using BEL.CommonDataContract
+@using BEL.ItemCodeCreationPreProcess.Models.Master
+@using BEL.ItemCodeCreationPreProcess.Models.Common
+@model LUMMktDelegateSection
+@{
+    string sectionActiveCss = Model.IsActive ? string.Empty : "disabled";   
+}
+<div class="form-horizontal" id="divLUMmmarketingDelegate">
+    @using (Ajax.BeginForm("SaveLUMMarketingDelegateSection", "ItemCodeCreation", new AjaxOptions
+    {
+        HttpMethod = "POST",
+        LoadingElementId = "loading",
+        OnFailure = "OnFailure",
+        OnSuccess = "OnSuccess",
+        OnBegin = "BeginClient"
+    }, new { enctype = "multipart/form-data", @class = sectionActiveCss }))
+    {
+        @Html.HiddenFor(m => m.ListDetails[0].ItemId)
+        @Html.HiddenFor(m => m.ListDetails[0].ListName)
+        @Html.HiddenFor(m => m.SectionName)
+        @Html.HiddenFor(m => m.ActionStatus)
+        @Html.HiddenFor(m => m.SendBackTo)
+        @Html.HiddenFor(m => m.Status)
+        @Html.HiddenFor(m => m.WorkflowStatus)
+        @Html.Partial("_ApproversList", Model.ApproversList)
+        @Html.AntiForgeryToken()
+
+        <div class="card">
+            <div class="card-head" data-toggle="collapse" data-target="#sectionLUMmmarketingDelegate">
+                <b>
+                    @Html.ResourceValue("Section_Title_LUMmktDelegateSection", ResourceName.ICCPForm)
+                </b>
+                <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+            </div>
+            <div class="card-body" id="sectionLUMmmarketingDelegate">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.ItemDescription, ResourceName.ICCPForm)
+
+                                </label>
+                                <div class="col-md-8 ">
+                                    @Html.TextAreaFor(m => m.ItemDescription, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+                                    @Html.ValidationMessageFor(m => m.ItemDescription, ResourceName.ICCPForm)
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.ProductGroup, ResourceName.ICCPForm)
+
+                                </label>
+                                <div class="col-md-8 ">
+                                    @Html.DropDownListFor(m => m.ProductGroup, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.PRODUCTGROUPMASTER)) as ProductGroupMaster).Items, "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.ProductGroup })
+                                    @Html.ValidationMessageFor(m => m.ProductGroup, ResourceName.ICCPForm)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.ConfirmedOrderFromCustomer, ResourceName.ICCPForm)
+
+                                </label>
+                                <div class="col-md-8 ">
+                                    @Html.DropDownListFor(m => m.ConfirmedOrderFromCustomer, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.CONFIRMEDORDERMASTER)) as ConfirmedOrderMaster).Items, "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.ConfirmedOrderFromCustomer })
+                                    @Html.ValidationMessageFor(m => m.ConfirmedOrderFromCustomer, ResourceName.ICCPForm)
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.LabelFor(m => m.TypeOfPackaging, ResourceName.ICCPForm)
+
+                                </label>
+                                <div class="col-md-8 ">
+                                    @Html.DropDownListFor(m => m.TypeOfPackaging, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.TYPEOFPACKAGINGMASTER)) as TypeOfPackagingMaster).Items, "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.TypeOfPackaging })
+                                    @Html.ValidationMessageFor(m => m.TypeOfPackaging, ResourceName.ICCPForm)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @Html.LabelFor(m => m.ReferenceProduct, ResourceName.ICCPForm)
+
+                                </label>
+                                <div class="col-md-8 ">
+                                    @Html.TextBoxFor(m => m.ReferenceProduct, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @Html.LabelFor(m => m.ExpectedAnnualBusinessVolume, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-md-8 ">
+                                    @Html.TextBoxFor(m => m.ExpectedAnnualBusinessVolume, new { maxlength = 15, @class = "form-control numberonly", data_toggle = "tooltip", title = "Max 15 characters" })
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @Html.LabelFor(m => m.ItemToBePhasedOut, ResourceName.ICCPForm)
+
+                                </label>
+                                <div class="col-md-8 ">
+                                    @Html.TextBoxFor(m => m.ItemToBePhasedOut, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @Html.LabelFor(m => m.ItemPhasedOutWithEffectFrom, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-md-8">
+                                    <div class="input-group date datepicker pastDisabled">
+                                        @Html.TextBoxFor(m => m.ItemPhasedOutWithEffectFrom, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+                                        <span class="input-group-addon">
+                                            <span class="fa fa-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">
+                                        <span class="text-danger text-default-light">*</span>
+                                        @Html.ResourceValue("Label_Comments", ResourceName.Common)
+                                    </label>
+                                    <div class="col-md-8 ">
+                                        <div class="form-control noborder">
+                                            @Html.TextAreaFor(m => m.CurrentApprover.Comments, new { maxLength = 1000, @class = "form-control", @data_val = "true", @data_val_required = "Please Enter Comments", data_toggle = "tooltip", title = "Max 1000 characters" })
+                                            @Html.HiddenFor(x => x.CurrentApprover.Approver)
+                                            @Html.HiddenFor(x => x.CurrentApprover.Role)
+                                            @Html.HiddenFor(x => x.CurrentApprover.AssignDate)
+                                            @Html.ValidationMessageFor(m => m.CurrentApprover.Comments, ResourceName.Common)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                            </div>
+                        </div>*@
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    }
+</div>

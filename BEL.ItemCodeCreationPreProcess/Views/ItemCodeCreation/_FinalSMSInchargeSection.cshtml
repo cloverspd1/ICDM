@@ -1,0 +1,143 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.ItemCode
+@using BEL.CommonDataContract
+@using BEL.ItemCodeCreationPreProcess.Models.Master
+@using BEL.ItemCodeCreationPreProcess.Models.Common
+@model FinalSMSInchargeSection
+@{
+    ApproverMaster approverusrelist = Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.APPROVERMASTER)) as ApproverMaster;
+    List<ApproverMasterListItem> finalsmsDelegateUserList = approverusrelist.Items.Where(x => (x as ApproverMasterListItem).Role == ICCPRoles.SMSDELEGATE).ToList().ConvertAll(p => (ApproverMasterListItem)p);
+    finalsmsDelegateUserList = Helper.SplitUser(finalsmsDelegateUserList);
+    LeadTimeMaster leadMasterItem = Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.LEADTIMEMASTER)) as LeadTimeMaster;
+    var RMMasterListItem = leadMasterItem.Items.ConvertAll(p => (LeadTimeMasterListItem)p).Where(e => !string.IsNullOrWhiteSpace(Convert.ToString(e.RMLeadTime))).ToList();
+    var BMMasterListItem = leadMasterItem.Items.ConvertAll(p => (LeadTimeMasterListItem)p).Where(e => !string.IsNullOrWhiteSpace(Convert.ToString(e.BMLeadTime))).ToList();
+    string sectionActiveCss = Model.IsActive ? string.Empty : "disabled";
+}
+<div id="divSMSInchrageSection">
+
+    @using (Ajax.BeginForm("SaveFinalSMSInchrageSection", "ItemCodeCreation", new AjaxOptions
+    {
+        HttpMethod = "POST",
+        LoadingElementId = "loading",
+        OnFailure = "OnFailure",
+        OnSuccess = "OnSuccess",
+        OnBegin = "BeginClient"
+    }, new { enctype = "multipart/form-data", @class = sectionActiveCss }))
+    {
+
+        @Html.HiddenFor(m => m.ListDetails[0].ItemId)
+        @Html.HiddenFor(m => m.ListDetails[0].ListName)
+        @Html.HiddenFor(m => m.SectionName)
+        @Html.HiddenFor(m => m.ActionStatus)
+        @Html.HiddenFor(m => m.Status)
+        @Html.HiddenFor(m => m.WorkflowStatus)
+        @Html.HiddenFor(m => m.SendBackTo)
+        @Html.Partial("_ApproversList", Model.ApproversList)
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" id="hdnIsFinalSMSInchargeSectionActive" value="@sectionActiveCss">
+
+        <div class="card @sectionActiveCss">
+            <div class="card-head" data-toggle="collapse" data-target="#sectionFinalSMSIncharge">
+                <b>
+                    @Html.ResourceValue("Section_Title_FinalSMSInchargeSection", ResourceName.ICCPForm)
+                </b>
+                <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+            </div>
+            <div class="card-body" id="sectionFinalSMSIncharge">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @*<span class="text-danger text-default-light">*</span>*@
+                                    @Html.LabelFor(m => m.FinalSMSDelegate, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-8">
+                                    <div class="form-control noborder text-left">
+
+                                        @{string isddlhide = Model.IsActive ? string.Empty : " hide";}
+                                        <div class=@isddlhide>
+                                            @Html.ListBox("FinalSMSDelegateUser", new MultiSelectList(finalsmsDelegateUserList, "UserID", "UserName"), new { @id = "FinalSMSDelegateUser", @Name = "FinalSMSDelegateUser", @class = "form-control", @data_selected = Model.FinalSMSDelegate })
+                                            @Html.ValidationMessageFor(m => m.FinalSMSDelegate, ResourceName.ICCPForm)
+                                            @Html.ValidationMessage("FinalSMSDelegateUser", Html.ResourceValue("Error_FinalSMSDelegate", ResourceName.ICCPForm))
+                                        </div>
+                                        @Html.HiddenFor(m => m.FinalSMSDelegate)
+                                        @Html.HiddenFor(m => m.FinalSMSDelegateName)
+
+                                        @(!Model.IsActive && !string.IsNullOrEmpty(Model.FinalSMSDelegateName) ? Model.FinalSMSDelegateName.Replace(",", ", ") : string.Empty)
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @*<span class="text-danger text-default-light">*</span>*@
+                                    @Html.LabelFor(m => m.CurrentApprover.Comments, ResourceName.Common)
+                                </label>
+                                <div class="col-md-8 ">
+                                    <div class="form-control noborder">
+                                        @*@Html.TextAreaFor(m => m.CurrentApprover.Comments, new { maxLength = 1000, @class = "form-control requiredOnDelegate", @data_val = "true", @data_val_required = "Please Enter Comments", data_toggle = "tooltip", title = "Max 1000 characters" })*@
+                                        @Html.TextAreaFor(m => m.CurrentApprover.Comments, new { maxLength = 1000, @class = "form-control", data_toggle = "tooltip", @data_val = "false", @data_val_required = "Please Enter Comments", title = "Max 1000 characters" })
+                                        @Html.HiddenFor(x => x.CurrentApprover.Approver)
+                                        @Html.HiddenFor(x => x.CurrentApprover.Role)
+                                        @Html.HiddenFor(x => x.CurrentApprover.AssignDate)
+                                        @Html.ValidationMessageFor(m => m.CurrentApprover.Comments, ResourceName.Common)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+                                            if (Model.IsSubmitted)
+                                            {
+                                                <div class="card @sectionActiveCss">
+                                                    <div class="card-head" data-toggle="collapse" data-target="#sectionFinalSMSDelegate">
+                                                       <b> @Html.ResourceValue("Section_Title_FinalSMSDelegateSection", ResourceName.ICCPForm)</b>
+                                                        <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+                                                    </div>
+                                                    <div class="card-body" id="sectionFinalSMSDelegate">
+                                                        <div class="form-horizontal">
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            <span class="text-danger text-default-light">*</span>
+                                                                            @Html.LabelFor(m => m.RMLeadTime, ResourceName.ICCPForm)
+
+                                                                        </label>
+                                                                        <div class="col-md-8 ">
+                                                                            @*@Html.DropDownListFor(m => m.RMLeadTime, new SelectList(RMMasterListItem, "RMLeadTime", "RMLeadTime"), "Select", new { @class = "form-control", @data_selected = Model.RMLeadTime })*@
+                                                                            @Html.TextBoxFor(m => m.RMLeadTime, new { maxlength = 4, @class = "form-control integeronly", data_toggle = "tooltip", title = "Max 4 characters" })
+                                                                            @Html.ValidationMessageFor(m => m.RMLeadTime, ResourceName.ICCPForm)
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            <span class="text-danger text-default-light">*</span>
+                                                                            @Html.LabelFor(m => m.BMLeadTime, ResourceName.ICCPForm)
+                                                                        </label>
+                                                                        <div class="col-md-8 ">
+                                                                            @*@Html.DropDownListFor(m => m.BMLeadTime, new SelectList(BMMasterListItem, "BMLeadTime", "BMLeadTime"), "Select", new { @class = "form-control", @data_selected = Model.BMLeadTime })*@
+                                                                            @Html.TextBoxFor(m => m.BMLeadTime, new { maxlength = 4, @class = "form-control integeronly", data_toggle = "tooltip", title = "Max 4 characters" })
+                                                                            @Html.ValidationMessageFor(m => m.BMLeadTime, ResourceName.ICCPForm)
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                }
+                                            }
+</div>

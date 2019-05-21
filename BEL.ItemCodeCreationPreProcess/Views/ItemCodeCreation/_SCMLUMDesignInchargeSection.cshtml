@@ -1,0 +1,424 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.ItemCode
+@using BEL.CommonDataContract
+@using BEL.ItemCodeCreationPreProcess.Models.Master
+@using BEL.ItemCodeCreationPreProcess.Models.Common
+@model SCMLUMDesignInchargeSection
+@{
+    ApproverMaster approverusrelist = Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.APPROVERMASTER)) as ApproverMaster;
+    List<ApproverMasterListItem> scmLUMDesignDelegateUserList = approverusrelist.Items.Where(x => (x as ApproverMasterListItem).Role == ICCPRoles.SCMLUMDESIGNDELEGATE).ToList().ConvertAll(p => (ApproverMasterListItem)p);
+    scmLUMDesignDelegateUserList = Helper.SplitUser(scmLUMDesignDelegateUserList);
+
+    //List<VendorItemCode> vendorList = Model.VendorItemCodeList.ToList().ConvertAll(p => (VendorItemCode)p).ToList();
+    //scmLUMDesignDelegateUserList = Helper.SplitUser(scmLUMDesignDelegateUserList);
+
+    string sectionActiveCss = Model.IsActive ? string.Empty : "disabled";
+}
+<div id="divSCMLUMDesignInchrageSection">
+
+    @using (Ajax.BeginForm("SaveSCMLUMDesignInchrageSection", "ItemCodeCreation", new AjaxOptions
+    {
+        HttpMethod = "POST",
+        LoadingElementId = "loading",
+        OnFailure = "OnFailure",
+        OnSuccess = "OnSuccess",
+        OnBegin = "BeginClient"
+    }, new { enctype = "multipart/form-data", @class = sectionActiveCss, @id = "frmSCMLUMDesignInchrage" }))
+    {
+
+        @Html.HiddenFor(m => m.ListDetails[0].ItemId)
+        @Html.HiddenFor(m => m.ListDetails[0].ListName)
+        @Html.HiddenFor(m => m.SectionName)
+        @Html.HiddenFor(m => m.ActionStatus)
+        @Html.HiddenFor(m => m.Status)
+        @Html.HiddenFor(m => m.WorkflowStatus)
+        @Html.HiddenFor(m => m.SendBackTo)
+        @Html.Partial("_ApproversList", Model.ApproversList)
+        @Html.AntiForgeryToken()
+        <input type="hidden" id="hdnIsSCMLUMDesignInchargeSectionActive" value="@sectionActiveCss">
+
+        <div class="card @sectionActiveCss">
+            <div class="card-head" data-toggle="collapse" data-target="#sectionSCMLUMDesignIngincharge">
+                <b>
+                    @Html.ResourceValue("Section_Title_SCMLUMDesignInchargeSection", ResourceName.ICCPForm)
+                </b>
+                <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+            </div>
+            <div class="card-body" id="sectionSCMLUMDesignIngincharge">
+                <div class="form-horizontal">
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @*<span class="text-danger text-default-light">*</span>*@
+                                    @Html.LabelFor(m => m.SCMLUMDesignDelegate, ResourceName.ICCPForm)
+                                </label>
+                                <div class="col-sm-8">
+                                    <div class="form-control noborder text-left">
+
+                                        @{string isddlhide = Model.IsActive ? string.Empty : " hide";}
+                                        <div class=@isddlhide>
+                                            @Html.ListBox("SCMLUMDesignDelegateUser", new MultiSelectList(scmLUMDesignDelegateUserList, "UserID", "UserName"), new { @id = "SCMLUMDesignDelegateUser", @Name = "SCMLUMDesignDelegateUser", @class = "form-control", @data_selected = Model.SCMLUMDesignDelegate })
+                                            @Html.ValidationMessageFor(m => m.SCMLUMDesignDelegate, ResourceName.ICCPForm)
+                                            @Html.ValidationMessage("SCMLUMDesignDelegateUser", Html.ResourceValue("Error_SCMLUMDesignDelegate", ResourceName.ICCPForm))
+                                        </div>
+                                        @Html.HiddenFor(m => m.SCMLUMDesignDelegate)
+                                        @Html.HiddenFor(m => m.SCMLUMDesignDelegateName)
+
+                                        @(!Model.IsActive && !string.IsNullOrEmpty(Model.SCMLUMDesignDelegateName) ? Model.SCMLUMDesignDelegateName.Replace(",", ", ") : string.Empty)
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    @*<span class="text-danger text-default-light">*</span>*@
+                                    @Html.LabelFor(m => m.CurrentApprover.Comments, ResourceName.Common)
+                                </label>
+                                <div class="col-md-8 ">
+                                    <div class="form-control noborder">
+                                        @*@Html.TextAreaFor(m => m.CurrentApprover.Comments, new { maxLength = 1000, @class = "form-control requiredOnDelegate", @data_val = "true", @data_val_required = "Please Enter Comments", data_toggle = "tooltip", title = "Max 1000 characters" })*@
+                                        @Html.TextAreaFor(m => m.CurrentApprover.Comments, new { maxLength = 1000, @class = "form-control", @data_val = "false", @data_val_required = "Please Enter Comments", data_toggle = "tooltip", title = "Max 1000 characters" })
+                                        @Html.HiddenFor(x => x.CurrentApprover.Approver)
+                                        @Html.HiddenFor(x => x.CurrentApprover.Role)
+                                        @Html.HiddenFor(x => x.CurrentApprover.AssignDate)
+                                        @Html.ValidationMessageFor(m => m.CurrentApprover.Comments, ResourceName.Common)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+                                            if (Model.IsSubmitted)
+                                            {
+                                                <div class="card @sectionActiveCss">
+                                                    <div class="card-head" data-toggle="collapse" data-target="#sectionSCMLUMMarketingDelegate">
+                                                        <b>
+                                                            @Html.ResourceValue("Section_Title_SCMLUMDesignDelegateSection", ResourceName.ICCPForm)
+                                                        </b>
+                                                        <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+                                                    </div>
+                                                    <div class="card-body" id="sectionSCMLUMMarketingDelegate">
+                                                        <div class="form-horizontal">
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            <span class="text-danger text-default-light">*</span>
+                                                                            @Html.LabelFor(m => m.BISRegistrationApplicable, ResourceName.ICCPForm)
+
+                                                                        </label>
+                                                                        <div class="col-md-8">
+                                                                            <div class="form-control noborder">
+                                                                                @Html.RadioButtonFor(m => m.BISRegistrationApplicable, "True", new { @Id = "BISRegistrationApplicableYes" })
+                                                                                <label for="BISRegistrationApplicableYes">Yes</label>
+                                                                                @Html.RadioButtonFor(m => m.BISRegistrationApplicable, "False", new { @Id = "BISRegistrationApplicableNo" })
+                                                                                <label for="BISRegistrationApplicableNo">No</label>
+                                                                            </div>
+                                                                            @Html.ValidationMessageFor(m => m.BISRegistrationApplicable, ResourceName.ICCPForm)
+                                                                            @Html.HiddenFor(m => m.BISRegistrationApplicable)
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group RNumber">
+                                                                        <label class="col-md-4 control-label">
+                                                                            <span class="text-danger text-default-light">*</span>
+                                                                            @Html.LabelFor(m => m.RNumber, ResourceName.ICCPForm)
+
+                                                                        </label>
+                                                                        <div class="col-md-8">
+                                                                            @Html.TextBoxFor(m => m.RNumber, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+                                                                            @Html.ValidationMessageFor(m => m.RNumber, ResourceName.ICCPForm)
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            @Html.LabelFor(m => m.UploadArtworkAttachment, ResourceName.ICCPForm)
+                                                                        </label>
+                                                                        <div class="col-md-8 ">
+                                                                            @if (sectionActiveCss == "disabled" && string.IsNullOrWhiteSpace(Model.UploadArtworkAttachment))
+                                                                            {  <div class="form-control noborder">
+                                                                                <span class="text-blue">
+                                                                                    File not uploaded
+                                                                                </span>
+                                                                            </div>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                @*<span class="text-danger text-default-light">
+                                                                                        Note: (Max.up to 2MB per file and you can upload maximum 10 files.)
+                                                                                    </span>*@
+                                                                                <div id="divUploadArtworkAttachment" data-appname="@SiteURLs.ITEMCODECREATIONSITEURL">
+                                                                                </div>
+                                                                                @Html.TextBoxFor(m => m.UploadArtworkAttachment, new { @class = "notvisible form-control" })
+                                                                            }
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            <span class="text-danger text-default-light">*</span>
+                                                                            @Html.LabelFor(m => m.Vendors, ResourceName.ICCPForm)
+                                                                        </label>
+                                                                        <div class="col-md-8 ">
+                                                                            <div class="form-control noborder">
+                                                                                @Html.TextBox("tblVendors", Model.Vendors, new { maxLength = 255, @required = "required", @min_chars = 2, @data_val = "true", @data_val_required = "Please Select Vendor(s)", @class = "form-control user-tags disable paste required", @data_hint = "Type and Select Vendor Name(s)", @data_url = "/ItemCodeCreation/GetVendors", data_toggle = "tooltip", @data_onadd = "VendorAdded", @data_onremove = "VendorRemoved", @data_displaycolumn = "name", @data_prepopulateitems = Model.VendorList != null ? Json.Encode(Model.VendorList.Select(p => new { id = p.Name, name = p.Value })) : null })
+                                                                                @Html.ValidationMessage("tblVendors", ResourceName.ICCPForm)
+                                                                                @Html.HiddenFor(m => m.Vendors, new { @id = "hdnVendors" })
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            @*<div class="row">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group">
+                                                                            <div class="col-md-12 text-right">
+                                                                                @Ajax.ActionLink("Add Vendor Details", "AddEditVendor", "ItemCodeCreation", new AjaxOptions() { UpdateTargetId = "addeditVendor", HttpMethod = "GET", InsertionMode = InsertionMode.Replace, LoadingElementId = "loading" }, new { @class = "btn btn-primary" })
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="divVendor" class="row panel-body grid-view">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group">
+                                                                            <div class="col-sm-12">
+                                                                                @Html.Partial("_VendorGrid", Model.VendorItemCodeList.ToList<ITrans>())
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>*@
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            <span class="text-danger text-default-light">*</span>
+                                                                            @Html.LabelFor(m => m.BuyMake, ResourceName.ICCPForm)
+
+                                                                        </label>
+                                                                        <div class="col-md-8 ">
+                                                                            @Html.DropDownListFor(m => m.BuyMake, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.BUYMAKEMASTER)) as BuyMakeMaster).Items, "Value", "Title"), "Select", new { @class = "form-control BuyMakeSelect", @data_selected = Model.BuyMake })
+                                                                            @Html.ValidationMessageFor(m => m.BuyMake, ResourceName.ICCPForm)
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            <span class="text-danger text-default-light" id="spanBOM">*</span>
+                                                                            @Html.LabelFor(m => m.BOMAttachment, ResourceName.ICCPForm)
+                                                                        </label>
+                                                                        <div class="col-md-8 ">
+                                                                            @if (sectionActiveCss == "disabled" && string.IsNullOrWhiteSpace(Model.BOMAttachment))
+                                                                            {  <div class="form-control noborder">
+                                                                                <span class="text-blue">
+                                                                                    File not uploaded
+                                                                                </span>
+                                                                            </div>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                @*<span class="text-danger text-default-light">
+                                                                                        Note: (Max.up to 2MB per file and you can upload maximum 10 files.)
+                                                                                    </span>*@
+                                                                                <div id="divBOMAttachment" data-appname="@SiteURLs.ITEMCODECREATIONSITEURL">
+                                                                                </div>
+                                                                                @Html.TextBoxFor(m => m.BOMAttachment, new { @class = "notvisible form-control" })
+                                                                                @Html.ValidationMessageFor(m => m.BOMAttachment, ResourceName.ICCPForm)
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            <span class="text-danger text-default-light">*</span>
+                                                                            @Html.LabelFor(m => m.ADSAttachment, ResourceName.ICCPForm)
+                                                                        </label>
+                                                                        <div class="col-md-8 ">
+                                                                            @if (sectionActiveCss == "disabled" && string.IsNullOrWhiteSpace(Model.ADSAttachment))
+                                                                            {  <div class="form-control noborder">
+                                                                                <span class="text-blue">
+                                                                                    File not uploaded
+                                                                                </span>
+                                                                            </div>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                @*<span class="text-danger text-default-light">
+                                                                                        Note: (Max.up to 2MB per file and you can upload maximum 10 files.)
+                                                                                    </span>*@
+                                                                                <div id="divADSAttachment" data-appname="@SiteURLs.ITEMCODECREATIONSITEURL">
+                                                                                </div>
+                                                                                @Html.TextBoxFor(m => m.ADSAttachment, new { @class = "notvisible form-control" })
+                                                                                @Html.ValidationMessageFor(m => m.ADSAttachment, ResourceName.ICCPForm)
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            <span class="text-danger text-default-light">*</span>
+                                                                            @Html.LabelFor(m => m.SpecificationSheetAttachment, ResourceName.ICCPForm)
+                                                                        </label>
+                                                                        <div class="col-md-8 ">
+                                                                            @if (sectionActiveCss == "disabled" && string.IsNullOrWhiteSpace(Model.SpecificationSheetAttachment))
+                                                                            {  <div class="form-control noborder">
+                                                                                <span class="text-blue">
+                                                                                    File not uploaded
+                                                                                </span>
+                                                                            </div>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                @*<span class="text-danger text-default-light">
+                                                                                        Note: (Max.up to 2MB per file and you can upload maximum 10 files.)
+                                                                                    </span>*@
+                                                                                <div id="divSpecificationSheetAttachment" data-appname="@SiteURLs.ITEMCODECREATIONSITEURL">
+                                                                                </div>
+                                                                                @Html.TextBoxFor(m => m.SpecificationSheetAttachment, new { @class = "notvisible form-control" })
+                                                                                @Html.ValidationMessageFor(m => m.SpecificationSheetAttachment, ResourceName.ICCPForm)
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            <span class="text-danger text-default-light">*</span>
+                                                                            @Html.LabelFor(m => m.PackagingDataSheetAttachment, ResourceName.ICCPForm)
+                                                                        </label>
+                                                                        <div class="col-md-8 ">
+                                                                            @if (sectionActiveCss == "disabled" && string.IsNullOrWhiteSpace(Model.PackagingDataSheetAttachment))
+                                                                            {
+                                                                                <div class="form-control noborder">
+                                                                                    <span class="text-blue">
+                                                                                        File not uploaded
+                                                                                    </span>
+                                                                                </div>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                @*<span class="text-danger text-default-light">
+                                                                                        Note: (Max.up to 2MB per file and you can upload maximum 10 files.)
+                                                                                    </span>*@
+                                                                                <div id="divPackagingDataSheetAttachment" data-appname="@SiteURLs.ITEMCODECREATIONSITEURL">
+                                                                                </div>
+                                                                                @Html.TextBoxFor(m => m.PackagingDataSheetAttachment, new { @class = "notvisible form-control" })
+                                                                                @Html.ValidationMessageFor(m => m.PackagingDataSheetAttachment, ResourceName.ICCPForm)
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            @*<span class="text-danger text-default-light">*</span>*@
+                                                                            @Html.LabelFor(m => m.IESFileAttachment, ResourceName.ICCPForm)
+                                                                        </label>
+                                                                        <div class="col-md-8 ">
+                                                                            @if (sectionActiveCss == "disabled" && string.IsNullOrWhiteSpace(Model.IESFileAttachment))
+                                                                            {
+                                                                                <div class="form-control noborder">
+                                                                                    <span class="text-blue">
+                                                                                        File not uploaded
+                                                                                    </span>
+                                                                                </div>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                @*<span class="text-danger text-default-light">
+                                                                                        Note: (Max.up to 2MB per file and you can upload maximum 10 files.)
+                                                                                    </span>*@
+                                                                                <div id="divIESFileAttachment" data-appname="@SiteURLs.ITEMCODECREATIONSITEURL">
+                                                                                </div>
+                                                                                @Html.TextBoxFor(m => m.IESFileAttachment, new { @class = "notvisible form-control" })
+                                                                                @*@Html.ValidationMessageFor(m => m.IESFileAttachment, ResourceName.ICCPForm)*@
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            @*<span class="text-danger text-default-light">*</span>*@
+                                                                            @Html.LabelFor(m => m.LM79Attachment, ResourceName.ICCPForm)
+                                                                        </label>
+                                                                        <div class="col-md-8 ">
+                                                                            @if (sectionActiveCss == "disabled" && string.IsNullOrWhiteSpace(Model.LM79Attachment))
+                                                                            {
+                                                                                <div class="form-control noborder">
+                                                                                    <span class="text-blue">
+                                                                                        File not uploaded
+                                                                                    </span>
+                                                                                </div>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                @*<span class="text-danger text-default-light">
+                                                                                        Note: (Max.up to 2MB per file and you can upload maximum 10 files.)
+                                                                                    </span>*@
+                                                                                <div id="divLM79Attachment" data-appname="@SiteURLs.ITEMCODECREATIONSITEURL">
+                                                                                </div>
+                                                                                @Html.TextBoxFor(m => m.LM79Attachment, new { @class = "notvisible form-control" })
+                                                                                @*@Html.ValidationMessageFor(m => m.LM79Attachment, ResourceName.ICCPForm)*@
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">
+                                                                            @Html.LabelFor(m => m.ProductDrawingAttachment, ResourceName.ICCPForm)
+                                                                        </label>
+                                                                        <div class="col-md-8 ">
+                                                                            @if (sectionActiveCss == "disabled" && string.IsNullOrWhiteSpace(Model.ProductDrawingAttachment))
+                                                                            {
+                                                                                <div class="form-control noborder">
+                                                                                    <span class="text-blue">
+                                                                                        File not uploaded
+                                                                                    </span>
+                                                                                </div>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                @*<span class="text-danger text-default-light">
+                                                                                        Note: (Max.up to 2MB per file and you can upload maximum 10 files.)
+                                                                                    </span>*@
+                                                                                <div id="divProductDrawingAttachment" data-appname="@SiteURLs.ITEMCODECREATIONSITEURL">
+                                                                                </div>
+                                                                                @Html.TextBoxFor(m => m.ProductDrawingAttachment, new { @class = "notvisible form-control" })
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                }
+                                            }
+</div>

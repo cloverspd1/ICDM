@@ -1,0 +1,61 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.Reports
+@model List<ReportDetails>
+
+<div class="panel-body grid-view" style="overflow-x:scroll;">
+    <table id="ItemCodeReports" class="table table-hover table-bordered someTable">
+        <thead>
+            <tr>
+                <th width="8%">@Html.ResourceValue("Grid_ICDMNo", ResourceName.Report)</th>
+                <th width="8%">@Html.ResourceValue("Grid_ItemCode", ResourceName.Report)</th>
+                <th width="15%">@Html.ResourceValue("Grid_ItemDescription", ResourceName.Report)</th>
+                <th width="7%">@Html.ResourceValue("Grid_ProductGroup", ResourceName.Report)</th>
+                <th width="10%">@Html.ResourceValue("Grid_TypeofPackaging", ResourceName.Report)</th>
+                <th width="5%">@Html.ResourceValue("Grid_BuyMake", ResourceName.Report)</th>
+                @*<th width="5%">@Html.ResourceValue("Grid_Quantity", ResourceName.Report)</th>*@
+                <th width="5%">@Html.ResourceValue("Grid_CostPrice", ResourceName.Report)</th>
+                <th width="5%">@Html.ResourceValue("Grid_GSTRate", ResourceName.Report)</th>
+                @*<th width="5%">@Html.ResourceValue("Grid_Warranty", ResourceName.Report)</th>*@
+
+                <th width="10%">@Html.ResourceValue("Grid_CreatedBy", ResourceName.Report)</th>
+                <th width="7%">@Html.ResourceValue("Grid_CreatedDate", ResourceName.Report)</th>
+                <th width="5%">@Html.ResourceValue("Grid_Status", ResourceName.Report)</th>
+                <th width="10%">@Html.ResourceValue("Grid_PendingWith", ResourceName.Report)</th>
+            <tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Count > 0)
+            {
+                foreach (ReportDetails item in Model)
+                {
+                    <tr>
+                        <td class="nowordwrap">@(item.ICCPNo == "View" ? string.Empty : item.ICCPNo)</td>
+                        <td class="nowordwrap">@item.ItemCode</td>
+                        <td>@item.ItemDescription</td>
+                        <td>@item.ProductGroup</td>
+                        <td>@item.TypeofPackaging</td>
+                        <td>@item.BuyMake</td>
+                        @*<td>@item.Quantity</td>*@
+                        <td>@item.CostPrice</td>
+                        <td>@item.GSTRate</td>
+                        @*<td>@item.Warranty</td>*@
+                        <td>@item.CreatedBy</td>
+                        <td>
+                            @(!string.IsNullOrWhiteSpace(item.CreatedDate) ? string.Format("{0:dd-MM-yyyy}", Convert.ToDateTime(item.CreatedDate).ToShortDateString()) : string.Empty)
+                        </td>
+                        <td> @item.Status </td>
+                        <td> @item.PendingWith </td>
+
+                    </tr>
+                }
+            }
+            @*else
+                {
+                    <tr>
+                        <td colspan="14" class="text-center text-danger">
+                            @Html.ResourceValue("Grid_Text_NoData", ResourceName.Common)
+                        </td>
+                    </tr>
+                }*@
+        </tbody>
+    </table>
+</div>

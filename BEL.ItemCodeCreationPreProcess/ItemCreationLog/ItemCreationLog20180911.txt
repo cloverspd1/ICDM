@@ -1,0 +1,374 @@
+2018-09-11 15:01:26,359 [5] INFO  - WCF - Application_Start_Done, 
+2018-09-11 15:01:26,498 [7] INFO  - WCF - Begin Request http://localhost:62403/, 
+2018-09-11 15:01:35,246 [5] INFO  - MVC - sp user == , 
+2018-09-11 15:01:39,397 [7] INFO  - MVC -  ViewBag.UserID =, String="9"
+2018-09-11 15:01:39,410 [5] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-09-11 15:01:40,094 [5] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', 
+2018-09-11 15:01:40,094 [7] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-09-11 15:01:40,094 [8] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-09-11 15:01:40,094 [13] INFO  - WCF - Called Helper GetFormData, 
+2018-09-11 15:01:42,234 [5] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-09-11 15:01:42,202 [7] INFO  - WCF - Called Helper.GetEnableSectionNames {"LUM Marketing Incharge Section":true}, 
+2018-09-11 15:01:57,623 [8] INFO  - WCF - called Helper.GetFormData, 
+2018-09-11 15:01:58,379 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:01:58,388 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:01:58,402 [7] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:01:58,408 [7] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:01:58,414 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:01:58,419 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:01:58,425 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:01:58,384 [8] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:01:58,384 [13] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-09-11 15:01:58,439 [13] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:01:58,444 [13] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:01:58,448 [13] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:01:58,453 [13] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:01:58,459 [13] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-09-11 15:01:58,431 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:01:58,436 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:01:58,475 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:01:58,480 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:01:58,484 [8] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:01:58,489 [8] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:01:58,464 [13] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-09-11 15:01:58,469 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:02:01,015 [7] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-09-11 15:02:01,015 [8] INFO  - WCF - Helper.GetAllButtons, 
+2018-09-11 15:02:08,237 [5] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='', other params={}, 
+2018-09-11 15:02:20,986 [7] INFO  - MVC - sp user == , 
+2018-09-11 15:02:20,987 [8] INFO  - WCF - Begin Request http://localhost:62403/?ID=213, 
+2018-09-11 15:02:21,483 [8] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-09-11 15:02:21,488 [8] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-09-11 15:02:21,483 [7] INFO  - WCF - Called Helper GetFormData, 
+2018-09-11 15:02:21,483 [13] INFO  - MVC -  ViewBag.UserID =, String="9"
+2018-09-11 15:02:23,197 [13] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=SMS Incharge, 
+2018-09-11 15:02:23,591 [13] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:02:23,591 [8] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:02:23,599 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:02:23,604 [8] INFO  - WCF - called Helper.GetFormData, 
+2018-09-11 15:02:23,610 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:02:23,591 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:02:23,615 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:02:23,596 [13] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:02:23,628 [13] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:02:23,624 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:02:24,152 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:02:24,186 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:02:24,186 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:02:24,215 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:02:24,608 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:02:24,614 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:02:24,608 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:02:24,776 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:02:24,776 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:02:24,946 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:02:24,946 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:02:25,200 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:02:25,200 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:02:25,404 [6] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:02:25,404 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:02:25,716 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:02:25,716 [6] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:02:26,357 [6] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-09-11 15:02:26,633 [6] INFO  - WCF - User resolved : , String="dcrdcnuser2@bajajelectricals.com"
+2018-09-11 15:02:26,663 [8] INFO  - WCF - Helper.GetButtons for role 'SMS Incharge', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='Submitted', other params={"CurrentFromLevel":"3"}, 
+2018-09-11 15:03:02,959 [5] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/VerifyDownloadFileForm Data: ["url","applicationName"], 
+2018-09-11 15:07:46,866 [12] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/KeepSessionAlive, 
+2018-09-11 15:09:03,548 [5] INFO  - MVC - System Name: SVT-PC-192.SYNOVERGETECH.COM, 
+2018-09-11 15:09:03,594 [6] ERROR - The remote server returned an error: (401) Unauthorized.
+System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   at Microsoft.SharePoint.Client.File.OpenBinaryDirect(ClientContext context, String serverRelativeUrl)
+   at BEL.DataAccessLayer.BELDataAccessLayer.GetFileBytesByUrl(ClientContext context, String url) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 917
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.DownloadFile(String url, String applicationName) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 77
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.VerifyDownloadFile(String url, String applicationName) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 574
+2018-09-11 15:09:39,240 [7] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/VerifyDownloadFileForm Data: ["url","applicationName"], 
+2018-09-11 15:10:52,434 [5] ERROR - The remote server returned an error: (401) Unauthorized.
+System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   at Microsoft.SharePoint.Client.File.OpenBinaryDirect(ClientContext context, String serverRelativeUrl)
+   at BEL.DataAccessLayer.BELDataAccessLayer.GetFileBytesByUrl(ClientContext context, String url) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 917
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.DownloadFile(String url, String applicationName) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 77
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.VerifyDownloadFile(String url, String applicationName) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 574
+2018-09-11 15:11:22,639 [6] INFO  - WCF - Application_Start_Done, 
+2018-09-11 15:11:22,729 [6] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/VerifyDownloadFileForm Data: ["url","applicationName"], 
+2018-09-11 15:11:32,639 [7] ERROR - The remote server returned an error: (401) Unauthorized.
+System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   at Microsoft.SharePoint.Client.File.OpenBinaryDirect(ClientContext context, String serverRelativeUrl)
+   at BEL.DataAccessLayer.BELDataAccessLayer.GetFileBytesByUrl(ClientContext context, String url) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 917
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.DownloadFile(String url, String applicationName) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 77
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.VerifyDownloadFile(String url, String applicationName) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 574
+2018-09-11 15:11:40,540 [8] INFO  - WCF - Begin Request http://localhost:62403/?ID=213, 
+2018-09-11 15:11:41,870 [11] INFO  - MVC - sp user == , 
+2018-09-11 15:11:46,418 [7] INFO  - MVC -  ViewBag.UserID =, String="19"
+2018-09-11 15:11:46,451 [8] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-09-11 15:11:50,446 [11] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=19, 
+2018-09-11 15:11:50,446 [9] INFO  - WCF - Called Helper GetFormData, 
+2018-09-11 15:11:51,514 [7] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=Viewer, 
+2018-09-11 15:11:52,079 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:11:52,086 [9] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:11:52,086 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:11:52,104 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:11:52,104 [9] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:11:52,104 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:11:52,123 [11] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:11:52,120 [9] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:11:52,104 [7] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:11:52,120 [8] INFO  - WCF - called Helper.GetFormData, 
+2018-09-11 15:11:53,467 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:11:53,494 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:11:53,506 [7] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-09-11 15:11:53,523 [7] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:11:53,467 [8] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:11:53,467 [11] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-09-11 15:11:53,541 [11] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:11:53,547 [11] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-09-11 15:11:53,553 [11] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:11:53,529 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:11:53,535 [8] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:11:53,570 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:11:53,576 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:11:53,581 [8] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:11:53,558 [11] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:11:53,564 [7] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:11:53,600 [7] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:11:53,607 [7] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:11:53,613 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:11:53,588 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:11:53,594 [11] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:11:53,618 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:11:54,107 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:11:54,135 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:11:54,150 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:11:54,150 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:11:55,155 [7] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:11:55,165 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:11:55,165 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:11:55,744 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:11:55,744 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:11:56,059 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:11:56,059 [7] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:11:56,636 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:11:56,636 [7] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:11:57,149 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:11:57,149 [7] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:11:57,419 [7] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:11:57,420 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:11:57,899 [7] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-09-11 15:11:58,173 [7] INFO  - WCF - User resolved : , String="dcrdcnuser2@bajajelectricals.com"
+2018-09-11 15:11:58,221 [9] INFO  - WCF - Helper.GetAllButtons, 
+2018-09-11 15:11:58,221 [11] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-09-11 15:12:04,965 [9] INFO  - WCF - Helper.GetButtons for role 'Viewer', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='Submitted', other params={"CurrentFromLevel":"3"}, 
+2018-09-11 15:12:37,416 [11] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/VerifyDownloadFileForm Data: ["url","applicationName"], 
+2018-09-11 15:29:33,024 [7] INFO  - WCF - Application_Start_Done, 
+2018-09-11 15:29:33,049 [8] INFO  - WCF - Begin Request http://localhost:62403/?ID=213, 
+2018-09-11 15:29:35,061 [7] INFO  - MVC - sp user == , 
+2018-09-11 15:29:37,132 [7] INFO  - MVC -  ViewBag.UserID =, String="9"
+2018-09-11 15:29:37,132 [8] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-09-11 15:29:37,837 [7] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-09-11 15:29:37,837 [8] INFO  - WCF - Called Helper GetFormData, 
+2018-09-11 15:29:39,842 [9] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=SMS Incharge, 
+2018-09-11 15:29:40,344 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:29:40,352 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:29:40,364 [7] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:29:40,353 [11] INFO  - WCF - called Helper.GetFormData, 
+2018-09-11 15:29:40,379 [11] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:29:40,391 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:29:40,402 [11] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:29:40,344 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:29:40,344 [9] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:29:40,370 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:29:41,148 [8] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:29:41,154 [8] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-09-11 15:29:41,164 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:29:41,172 [8] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:29:41,179 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:29:41,187 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:29:41,193 [8] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:29:41,200 [8] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-09-11 15:29:41,209 [8] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:29:41,216 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:29:41,223 [8] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:29:41,151 [11] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:29:41,148 [9] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:29:41,152 [7] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-09-11 15:29:41,254 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:29:41,261 [7] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:29:41,267 [7] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:29:41,273 [7] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:29:41,279 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:29:41,247 [9] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:29:41,229 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:29:41,237 [11] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:29:41,822 [11] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:29:41,858 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:29:41,858 [9] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:29:41,858 [7] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:29:42,748 [7] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:29:42,760 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:29:42,760 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:29:43,496 [7] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:29:43,496 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:29:43,683 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:29:43,690 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:29:44,259 [7] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:29:44,259 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:29:44,712 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:29:44,712 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:29:44,920 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:29:44,920 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:29:45,617 [9] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-09-11 15:29:45,778 [7] INFO  - WCF - Helper.GetAllButtons, 
+2018-09-11 15:29:45,778 [11] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-09-11 15:29:45,778 [9] INFO  - WCF - User resolved : , String="dcrdcnuser2@bajajelectricals.com"
+2018-09-11 15:29:52,243 [7] INFO  - WCF - Helper.GetButtons for role 'SMS Incharge', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='Submitted', other params={"CurrentFromLevel":"3"}, 
+2018-09-11 15:30:42,824 [8] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/VerifyDownloadFileForm Data: ["url","applicationName"], 
+2018-09-11 15:30:53,664 [6] ERROR - The remote server returned an error: (401) Unauthorized.
+System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   at Microsoft.SharePoint.Client.File.OpenBinaryDirect(ClientContext context, String serverRelativeUrl)
+   at BEL.DataAccessLayer.BELDataAccessLayer.GetFileBytesByUrl(ClientContext context, String url) in d:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.DataAccessLayer\Common\BELDataAccessLayer.cs:line 917
+   at BEL.ItemCodeCreationPreProcess.BusinessLayer.CommonBusinessLayer.DownloadFile(String url, String applicationName) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\BusinessLayer\CommonBusinessLayer.cs:line 77
+   at BEL.ItemCodeCreationPreProcess.Controllers.BaseController.VerifyDownloadFile(String url, String applicationName) in D:\Projects\BEL-Item Code Creation Pre-Process\06.Source Code\02.Development\BEL.ItemCodeCreationPreProcess\BEL.ItemCodeCreationPreProcess\Controllers\BaseController.cs:line 574
+2018-09-11 15:31:02,745 [7] INFO  - WCF - Called Helper GetFormData, 
+2018-09-11 15:31:02,751 [7] INFO  - MVC -  ViewBag.UserID =, String="9"
+2018-09-11 15:31:02,758 [7] INFO  - WCF - Begin Request http://localhost:62403/?ID=213, 
+2018-09-11 15:31:02,745 [8] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-09-11 15:31:02,745 [9] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-09-11 15:31:04,872 [9] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=SMS Incharge, 
+2018-09-11 15:31:05,417 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:31:05,431 [19] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:31:05,432 [14] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:31:05,431 [13] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:31:05,445 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:31:05,486 [21] INFO  - WCF - called Helper.GetFormData, 
+2018-09-11 15:31:05,436 [15] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:31:05,433 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:31:05,433 [9] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:31:05,505 [17] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:31:05,920 [17] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:31:05,920 [7] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:31:05,920 [16] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:31:05,920 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:31:06,492 [17] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:31:06,492 [13] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:31:06,492 [14] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:31:06,664 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:31:06,664 [7] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:31:06,889 [7] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:31:06,889 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:31:07,213 [7] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:31:07,213 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:31:07,450 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:31:07,450 [7] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:31:07,664 [15] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:31:07,664 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:31:08,026 [7] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-09-11 15:31:08,248 [7] INFO  - WCF - Helper.GetButtons for role 'SMS Incharge', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='Submitted', other params={"CurrentFromLevel":"3"}, 
+2018-09-11 15:31:08,248 [8] INFO  - WCF - User resolved : , String="dcrdcnuser2@bajajelectricals.com"
+2018-09-11 15:31:27,286 [9] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/VerifyDownloadFileForm Data: ["url","applicationName"], 
+2018-09-11 15:34:19,810 [7] INFO  - WCF - Begin Request http://localhost:62403/?ID=213, 
+2018-09-11 15:34:19,810 [8] INFO  - WCF - Application_Start_Done, 
+2018-09-11 15:34:22,154 [7] INFO  - MVC - sp user == , 
+2018-09-11 15:34:23,955 [8] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-09-11 15:34:23,955 [7] INFO  - MVC -  ViewBag.UserID =, String="9"
+2018-09-11 15:34:24,542 [8] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-09-11 15:34:24,542 [7] INFO  - WCF - Called Helper GetFormData, 
+2018-09-11 15:34:26,372 [9] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=SMS Incharge, 
+2018-09-11 15:34:26,829 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:26,839 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:26,846 [8] INFO  - WCF - called Helper.GetFormData, 
+2018-09-11 15:34:26,851 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:34:26,856 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:26,862 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:26,867 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:34:26,829 [9] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:34:26,829 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:26,829 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:34:27,636 [7] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:27,646 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:34:27,651 [7] INFO  - WCF - Start Helper.GetAlias, Int32=28
+2018-09-11 15:34:27,656 [7] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:34:27,662 [7] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:34:27,636 [8] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:34:27,636 [11] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:27,636 [9] INFO  - WCF - Start Helper.GetAlias, Int32=29
+2018-09-11 15:34:27,683 [9] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:34:27,688 [9] INFO  - WCF - Start Helper.GetAlias, Int32=27
+2018-09-11 15:34:27,694 [9] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:34:27,701 [9] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:34:27,673 [8] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:34:27,678 [11] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:34:27,716 [11] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:34:27,722 [11] INFO  - WCF - Start Helper.GetAlias, Int32=22
+2018-09-11 15:34:27,730 [11] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:27,736 [11] INFO  - WCF - Start Helper.GetAlias, Int32=21
+2018-09-11 15:34:27,705 [9] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:34:27,710 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:34:27,741 [11] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:34:27,748 [9] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:34:28,090 [9] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:28,107 [11] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:28,118 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:34:28,118 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:34:28,967 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:34:28,967 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:34:28,967 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:34:29,435 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:34:29,435 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:34:29,814 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:34:29,814 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:34:30,262 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:34:30,262 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:34:30,793 [7] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:34:30,793 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:34:31,165 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:34:31,165 [7] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:34:31,680 [7] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-09-11 15:34:31,820 [7] INFO  - WCF - User resolved : , String="dcrdcnuser2@bajajelectricals.com"
+2018-09-11 15:34:31,838 [8] INFO  - WCF - Helper.GetAllButtons, 
+2018-09-11 15:34:31,838 [9] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-09-11 15:34:36,682 [7] INFO  - WCF - Helper.GetButtons for role 'SMS Incharge', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='Submitted', other params={"CurrentFromLevel":"3"}, 
+2018-09-11 15:34:43,369 [11] INFO  - MVC - sp user == , 
+2018-09-11 15:34:43,369 [9] INFO  - WCF - Begin Request http://localhost:62403/?ID=213, 
+2018-09-11 15:34:43,854 [8] INFO  - WCF - Called Helper GetFormData, 
+2018-09-11 15:34:43,860 [8] INFO  - MVC -  ViewBag.UserID =, String="9"
+2018-09-11 15:34:43,854 [9] INFO  - MVC -   ViewBag.UserName = , String="app@sharepoint"
+2018-09-11 15:34:43,854 [11] INFO  - WCF - Helper GetFormData Condition passed for appname=Item Code Creation Preprocess, formNameItem Code Preprocess Form, User Id=9, 
+2018-09-11 15:34:45,045 [11] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=SMS Incharge, 
+2018-09-11 15:34:45,620 [11] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:45,634 [8] INFO  - WCF - called Helper.GetFormData, 
+2018-09-11 15:34:45,639 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:45,645 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:45,650 [8] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:34:45,654 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:45,659 [8] INFO  - WCF - Start Helper.GetAlias, Int32=20
+2018-09-11 15:34:45,634 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:34:45,669 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:34:45,663 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:46,212 [8] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:46,228 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:34:46,233 [11] INFO  - WCF - Start Helper.GetAlias, Int32=9
+2018-09-11 15:34:46,228 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:34:46,806 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:34:46,811 [11] INFO  - WCF - Start Helper.GetAlias, Int32=19
+2018-09-11 15:34:46,806 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:34:47,040 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:34:47,040 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:34:47,308 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:34:47,308 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:34:47,480 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:34:47,480 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:34:47,668 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:34:47,668 [6] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:34:47,837 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=9
+2018-09-11 15:34:47,837 [6] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-11 15:34:48,419 [6] INFO  - WCF - User resolved : , String="Dcrdcnuser1@bajajelectricals.com"
+2018-09-11 15:34:48,686 [8] INFO  - WCF - User resolved : , String="dcrdcnuser2@bajajelectricals.com"
+2018-09-11 15:34:48,700 [11] INFO  - WCF - Helper.GetButtons for role 'SMS Incharge', appName='Item Code Creation Preprocess', formName='Item Code Preprocess Form', status='Submitted', other params={"CurrentFromLevel":"3"}, 
+2018-09-11 15:35:04,175 [12] INFO  - WCF - Begin Ajax Request http://localhost:62403/Master/VerifyDownloadFileForm Data: ["url","applicationName"], 

@@ -1,0 +1,51 @@
+﻿@using BEL.ItemCodeCreationPreProcess.Models.ItemCode
+@using BEL.CommonDataContract
+@model List<ITrans>
+
+<div class="table-responsive" id="vendortablefrommodel">
+    <h4>
+        Vendor Details
+    </h4>
+    <table class="table table-hover table-bordered someTable" id="vendortable">
+        <thead>
+            <tr>
+                <th width="40%">@Html.ResourceValue("Grid_Title_VendorName", ResourceName.ICCPForm)</th>
+                <th width="15%">@Html.ResourceValue("Grid_Title_FGStock", ResourceName.ICCPForm)</th>
+                <th width="15%">@Html.ResourceValue("Grid_Title_ExistingComponentStock", ResourceName.ICCPForm)</th>
+                <th width="15%">@Html.ResourceValue("Grid_Title_DateOfImplementation", ResourceName.ICCPForm)</th>
+                <th width="15%">@Html.ResourceValue("Grid_Title_Action", ResourceName.Common)</th>
+            </tr>
+        </thead>
+        <tbody id="vendortbody">
+            @if (Model != null && Model.Count() > 0)
+            {
+                foreach (VendorItemCode item in Model)
+                {
+                    <tr>
+                        <td width="40%">@item.VendorName</td>
+                        <td width="15%">@item.FGStock</td>
+                        <td width="15%">@item.ExistingComponentStock</td>
+                        <td width="15%">@(item.DateOfImplementation.HasValue ? item.DateOfImplementation.Value.ToString("dd/MM/yyyy") : "")</td>
+                        <td width="15%">
+                            <a class="btn ink-reaction btn-floating-action" data-ajax="true" data-ajax-loading="#loading" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#addeditVendor" href="@Url.Action("AddEditVendor", "ItemCodeCreation", new { index = @item.Index })">
+                                <i class='fa fa-edit'></i>
+                            </a>
+                            <a class="btn ink-reaction btn-floating-action btn-danger" onclick="VendorDelete('@item.Index');">
+                                <i class='fa fa-trash-o'></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5" class="text-center text-danger" id="nodata">
+                        @Html.ResourceValue("Grid_Text_NoVendorData", ResourceName.ICCPForm)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
